@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Veré - Make Friends & Build Deeper Relationships",
   "main": "index.html",
-  "scripts": {
-    "build": "echo 'Static site - no build required'",
-    "start": "echo 'Static site - serve index.html'"
-  },
+  "private": true,
   "keywords": ["vere", "friendship", "social", "website"],
   "author": "Veré",
   "license": "MIT"
