@@ -2408,6 +2408,7 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 0.9rem;
                 margin-top: 1rem;
+                margin-bottom: 2rem;
             }
             
             .goals-stunning-bg {
@@ -2540,39 +2541,167 @@
             
             /* Modal adjustments for mobile */
             .analog-modal, .reflection-modal, .phone-modal {
-                width: 95vw;
-                max-width: 95vw;
-                margin: 1rem;
-                max-height: 90vh;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
+                width: 92vw !important;
+                max-width: 92vw !important;
+                margin: 0.5rem !important;
+                max-height: 85vh !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                border-radius: 20px !important;
+                background: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(20px) !important;
+                border: 1px solid rgba(255, 255, 255, 0.3) !important;
             }
             
             /* Improve modal backdrop for mobile */
             .analog-modal-backdrop, .reflection-modal-backdrop, .phone-modal-backdrop {
-                padding: 1rem;
-                align-items: flex-start;
-                padding-top: 2rem;
+                padding: 1rem !important;
+                align-items: center !important;
+                padding-top: 1rem !important;
+                background: rgba(0, 0, 0, 0.7) !important;
             }
             
             .modal-header, .reflection-modal-header {
-                padding: 1.5rem 1rem 1rem 1rem;
-                font-size: 1.2rem;
+                padding: 2rem 1.5rem 1rem 1.5rem !important;
+                font-size: 1.4rem !important;
+                font-weight: 700 !important;
+                line-height: 1.3 !important;
+                text-align: center !important;
+            }
+            
+            .modal-header .icon, .reflection-modal-header .icon {
+                font-size: 1.8rem !important;
+                margin-right: 0.5rem !important;
             }
             
             .modal-content, .reflection-modal-content {
-                padding: 1.5rem 1rem;
-                font-size: 1rem;
+                padding: 1rem 1.5rem 2rem 1.5rem !important;
+                font-size: 1.1rem !important;
+                line-height: 1.6 !important;
             }
             
             .challenge-steps li {
-                padding: 0.7rem 0.8rem;
-                font-size: 0.9rem;
+                padding: 1rem 0.8rem !important;
+                font-size: 1rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .challenge-steps .step-num {
+                font-weight: 700 !important;
+                color: #5DE0E6 !important;
+                margin-right: 0.8rem !important;
+            }
+            
+            .modal-info-card {
+                padding: 1.5rem !important;
+                margin: 1.5rem 0 !important;
+                border-radius: 12px !important;
+                background: rgba(93, 224, 230, 0.1) !important;
+                border: 1px solid rgba(93, 224, 230, 0.2) !important;
+            }
+            
+            .modal-info-card .info-icon {
+                font-size: 1.5rem !important;
+                margin-right: 0.8rem !important;
+            }
+            
+            .modal-prompt-card {
+                padding: 1.5rem !important;
+                margin: 1.5rem 0 !important;
+                border-radius: 12px !important;
+                background: rgba(255, 255, 255, 0.8) !important;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+                font-style: italic !important;
+                font-size: 1.1rem !important;
+                text-align: center !important;
+            }
+            
+            .modal-reflect {
+                margin-top: 2rem !important;
+                padding: 1.5rem !important;
+                border-radius: 12px !important;
+                background: rgba(255, 255, 255, 0.5) !important;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            .modal-reflect-label {
+                font-weight: 600 !important;
+                margin-bottom: 1rem !important;
+                font-size: 1.1rem !important;
+            }
+            
+            .modal-reflect-box {
+                padding: 1rem !important;
+                margin-bottom: 1.5rem !important;
+                border-radius: 8px !important;
+                background: rgba(255, 255, 255, 0.8) !important;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+                font-size: 1rem !important;
+                line-height: 1.5 !important;
             }
             
             .modal-reflect-btn, .reflection-cta, #submitPhoneBtn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
+                padding: 1rem 2rem !important;
+                font-size: 1.1rem !important;
+                font-weight: 600 !important;
+                width: 100% !important;
+                border-radius: 50px !important;
+                text-align: center !important;
+                display: block !important;
+            }
+            
+            /* Improve close button for mobile */
+            .analog-modal-close, .reflection-modal-close, .phone-modal-close {
+                position: absolute !important;
+                top: 1rem !important;
+                right: 1rem !important;
+                width: 40px !important;
+                height: 40px !important;
+                border-radius: 50% !important;
+                background: rgba(0, 0, 0, 0.1) !important;
+                border: none !important;
+                color: #333 !important;
+                font-size: 1.5rem !important;
+                font-weight: 700 !important;
+                cursor: pointer !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                transition: all 0.3s ease !important;
+                z-index: 10 !important;
+            }
+            
+            .analog-modal-close:hover, .reflection-modal-close:hover, .phone-modal-close:hover {
+                background: rgba(0, 0, 0, 0.2) !important;
+                transform: scale(1.1) !important;
+            }
+            
+            /* Reflection modal specific improvements */
+            .reflection-prompt-label {
+                font-weight: 600 !important;
+                margin-bottom: 1rem !important;
+                font-size: 1.1rem !important;
+                color: #333 !important;
+            }
+            
+            .reflection-prompt-box {
+                padding: 1.5rem !important;
+                margin: 1rem 0 2rem 0 !important;
+                border-radius: 12px !important;
+                background: rgba(255, 255, 255, 0.8) !important;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+                font-style: italic !important;
+                font-size: 1.2rem !important;
+                text-align: center !important;
+                line-height: 1.5 !important;
+            }
+            
+            .reflection-desc {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+                margin-bottom: 2rem !important;
+                color: #555 !important;
             }
         }
         
