@@ -315,6 +315,17 @@
             transform: scale(1.1);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
+        
+        /* Desktop only - hide mobile menu */
+        @media (min-width: 768px) {
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+            
+            .mobile-overlay {
+                display: none !important;
+            }
+        }
 
         .content-section {
             padding: 4rem 2rem;
@@ -1944,13 +1955,22 @@
             
             /* Hide social icons on mobile when not in menu */
             .social-icons {
-                display: none;
+                display: none !important;
             }
             
             .nav-header .social-icons {
-                display: flex;
+                display: flex !important;
                 margin-bottom: 2rem;
                 gap: 1rem;
+            }
+            
+            /* Ensure no floating buttons on mobile */
+            .nav-header {
+                display: none;
+            }
+            
+            .nav-header.active {
+                display: flex;
             }
             .hero-section {
                 min-height: 100vh;
@@ -2064,46 +2084,58 @@
             }
             
             .section-a-container, .section-b-container {
-                padding: 3rem 1.5rem;
+                padding: 3rem 2rem;
                 gap: 2.5rem;
                 max-width: 100%;
                 margin: 0 auto;
             }
             
             .section-a-left, .section-b-left {
-                padding: 0 1rem;
+                padding: 0 1.5rem;
             }
             
             .section-a-right, .section-b-right {
-                padding: 0 1rem;
+                padding: 0 1.5rem;
             }
             
             /* Fix all content sections padding */
             .content-section {
-                padding: 2rem 1.5rem;
+                padding: 3rem 2rem;
             }
             
             .vere-podcast-wow, .goals-stunning, .vere-pro, .footer {
-                padding: 2rem 1.5rem;
+                padding: 3rem 2rem;
                 max-width: 100%;
                 margin: 0 auto;
             }
             
             /* Fix specific content boxes */
             .vere-podcast-wow-content, .goals-stunning-content, .vere-pro-content {
-                padding: 2rem 1.5rem;
-                margin: 0 1rem;
+                padding: 2.5rem 2rem;
+                margin: 0 1.5rem;
                 border-radius: 12px;
             }
             
             /* Fix vision feature lists */
             .vision-feature-list, .vision-feature-list-b {
-                padding: 0 1rem;
+                padding: 0 1.5rem;
             }
             
             .vision-feature-item, .vision-feature-item-b {
-                padding: 1.5rem;
-                margin: 0 0.5rem 1rem 0.5rem;
+                padding: 2rem;
+                margin: 0 1rem 1.5rem 1rem;
+            }
+            
+            /* Fix hero content padding */
+            .hero-content h1 {
+                padding: 0 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-btn {
+                margin: 1rem 2rem;
+                width: calc(100% - 4rem);
+                max-width: 300px;
             }
             
             .section-a-headline, .section-b-headline {
