@@ -315,7 +315,7 @@
             transform: scale(1.1);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        
+
         /* Desktop only - hide mobile menu */
         @media (min-width: 768px) {
             .mobile-menu-toggle {
@@ -1955,36 +1955,16 @@
                 display: flex;
             }
             
-            /* Clean mobile menu styling */
-            .nav-header .social-icons {
-                display: flex !important;
-                margin-bottom: 3.5rem;
-                gap: 1rem;
+            /* Simple mobile menu styling */
+            .nav-header {
+                display: none;
                 flex-direction: column;
-                width: 100%;
+                gap: 1rem;
+                padding: 2rem;
             }
             
-            .nav-header .social-icon {
-                width: 100%;
-                height: 60px;
-                border-radius: 12px;
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.2);
+            .nav-header.active {
                 display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                padding: 0 2rem;
-                color: white;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 1.1rem;
-                transition: all 0.3s ease;
-            }
-            
-            .nav-header .social-icon:hover {
-                background: rgba(93, 224, 230, 0.2);
-                border-color: rgba(93, 224, 230, 0.4);
-                transform: translateY(-2px);
             }
             
             /* Hide social icons on mobile when not in menu */
@@ -2016,11 +1996,11 @@
             }
             
             .hero-content h1 {
-                font-size: 2.4rem !important;
-                margin-bottom: 2rem !important;
-                line-height: 1.3 !important;
-                padding: 0 2rem !important;
-                font-weight: 600 !important;
+                font-size: 2.4rem;
+                margin-bottom: 2rem;
+                line-height: 1.3;
+                padding: 0 2rem;
+                font-weight: 600;
             }
             
             .hero-illustration {
@@ -2031,13 +2011,13 @@
             }
             
             .hero-btn {
-                padding: 1.2rem 2.5rem !important;
-                font-size: 1.3rem !important;
-                margin: 2rem 2rem !important;
-                width: calc(100% - 4rem) !important;
-                max-width: 320px !important;
-                border-radius: 16px !important;
-                font-weight: 600 !important;
+                padding: 1.2rem 2.5rem;
+                font-size: 1.3rem;
+                margin: 2rem 2rem;
+                width: calc(100% - 4rem);
+                max-width: 320px;
+                border-radius: 16px;
+                font-weight: 600;
             }
             
             .nav-header {
@@ -2057,30 +2037,20 @@
             }
             
             .nav-btn {
-                padding: 1.2rem 2rem;
-                font-size: 1.1rem;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
                 width: 100%;
                 text-align: left;
-                min-width: auto;
-                line-height: 1.2;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                height: auto;
-                margin-bottom: 1.2rem;
-                border-radius: 12px;
-                transition: all 0.3s ease;
                 color: white;
                 text-decoration: none;
-                font-weight: 600;
                 background: rgba(255, 255, 255, 0.1);
                 border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                transition: background-color 0.2s ease;
             }
             
             .nav-btn:hover {
                 background-color: rgba(93, 224, 230, 0.2);
-                border-color: rgba(93, 224, 230, 0.4);
-                transform: translateY(-2px);
             }
             
             .nav-header .social-icons {
@@ -4351,48 +4321,6 @@
                 height: 36px !important;
                 width: auto !important;
             }
-            
-            /* Force mobile styles with higher specificity */
-            .hero-content h1 {
-                font-size: 2.4rem !important;
-                margin-bottom: 2rem !important;
-                line-height: 1.3 !important;
-                padding: 0 2rem !important;
-                font-weight: 600 !important;
-            }
-            
-            .hero-btn {
-                padding: 1.2rem 2.5rem !important;
-                font-size: 1.3rem !important;
-                margin: 2rem 2rem !important;
-                width: calc(100% - 4rem) !important;
-                max-width: 320px !important;
-                border-radius: 16px !important;
-                font-weight: 600 !important;
-            }
-            
-            .vere-podcast-wow-title {
-                font-size: 2.6rem !important;
-                line-height: 1.3 !important;
-                margin-bottom: 2.5rem !important;
-                padding: 0 2rem !important;
-                font-weight: 700 !important;
-            }
-            
-            .vere-podcast-wow-content p {
-                font-size: 1.3rem !important;
-                line-height: 1.6 !important;
-                margin-bottom: 3rem !important;
-                padding: 0 2rem !important;
-            }
-            
-            .goals-stunning-title {
-                font-size: 2.6rem !important;
-                line-height: 1.3 !important;
-                margin-bottom: 2.5rem !important;
-                padding: 0 2rem !important;
-                font-weight: 700 !important;
-            }
         }
         
         @media (max-width: 479px) {
@@ -4402,28 +4330,6 @@
             
             .site-logo-fixed img {
                 height: 32px !important;
-            }
-            
-            /* Extra small mobile styles */
-            .hero-content h1 {
-                font-size: 2.2rem !important;
-                padding: 0 1.5rem !important;
-            }
-            
-            .hero-btn {
-                font-size: 1.2rem !important;
-                padding: 1rem 2rem !important;
-                margin: 1.5rem 1.5rem !important;
-            }
-            
-            .vere-podcast-wow-title {
-                font-size: 2.4rem !important;
-                padding: 0 1.5rem !important;
-            }
-            
-            .goals-stunning-title {
-                font-size: 2.4rem !important;
-                padding: 0 1.5rem !important;
             }
         }
 
@@ -4487,29 +4393,9 @@
         </div>
         
         <nav class="nav-header" role="navigation" aria-label="Main navigation" id="navHeader">
-        <div class="social-icons">
-            <a href="https://www.instagram.com/atvereofficial/" class="social-icon" target="_blank" aria-label="Instagram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" rx="7" fill="currentColor" fill-opacity="0.2"/>
-                    <path d="M12 8.5A3.5 3.5 0 1 0 12 15.5A3.5 3.5 0 1 0 12 8.5Z" stroke="currentColor" stroke-width="1.5"/>
-                    <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/>
-                </svg>
-            </a>
-            <a href="https://www.tiktok.com/@vere_official" class="social-icon" target="_blank" aria-label="TikTok">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" rx="7" fill="currentColor" fill-opacity="0.2"/>
-                    <path d="M16.5 7.5V13.5C16.5 15.1569 15.1569 16.5 13.5 16.5C11.8431 16.5 10.5 15.1569 10.5 13.5C10.5 11.8431 11.8431 10.5 13.5 10.5H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16.5 7.5C17.3284 7.5 18 6.82843 18 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-            </a>
-            <a href="https://www.youtube.com/channel/UCpKJ92JZyTOSZLDW3q5JFJw" class="social-icon" target="_blank" aria-label="YouTube">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" rx="7" fill="currentColor" fill-opacity="0.2"/>
-                    <path d="M10 9.5L15.5 12L10 14.5V9.5Z" fill="currentColor"/>
-                    <rect x="3.5" y="6.5" width="17" height="11" rx="3.5" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-            </a>
-        </div>
+        <a href="https://www.instagram.com/atvereofficial/" class="nav-btn" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@vere_official" class="nav-btn" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/channel/UCpKJ92JZyTOSZLDW3q5JFJw" class="nav-btn" target="_blank">YouTube</a>
         <a href="#" class="nav-btn" id="showPhoneModalBtn">Get weekly connection tips</a>
         <a href="https://app.vereofficial.com" class="nav-btn">Login</a>
         <a href="https://app.vereofficial.com" class="nav-btn">Sign Up</a>
