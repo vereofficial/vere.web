@@ -1862,13 +1862,69 @@
             }
         }
         
+        /* Mobile Hamburger Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1000;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background: #333;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
         /* Mobile Styles (480px - 767px) */
         @media (max-width: 767px) {
             /* iPhone safe area handling */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
             .nav-header {
-                padding-top: max(0.6rem, env(safe-area-inset-top));
-                padding-right: max(0.6rem, env(safe-area-inset-right));
-                padding-left: max(0.6rem, env(safe-area-inset-left));
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 4rem 2rem 2rem 2rem;
+                transition: right 0.3s ease;
+                z-index: 999;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-header.active {
+                right: 0;
             }
             .hero-section {
                 min-height: 100vh;
@@ -1877,7 +1933,14 @@
             .hero-side {
                 height: 50vh;
                 min-height: 350px;
+                padding: 2rem 1.5rem;
+                margin: 0;
+            }
+            
+            .hero-content {
                 padding: 1rem;
+                max-width: 100%;
+                margin: 0 auto;
             }
             
             /* Ensure videos are properly sized on mobile */
@@ -1924,21 +1987,28 @@
             }
             
             .nav-btn {
-                padding: 0.3rem 0.6rem;
-                font-size: 0.7rem;
-                width: auto;
-                text-align: center;
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+                width: 100%;
+                text-align: left;
                 min-width: auto;
                 line-height: 1.2;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 height: auto;
+                margin-bottom: 0.5rem;
+                border-radius: 8px;
+                transition: background-color 0.2s ease;
             }
             
-            /* Hide Sign Up button on mobile */
-            .nav-btn[href*="app.vereofficial.com"]:last-child {
-                display: none;
+            .nav-btn:hover {
+                background-color: rgba(93, 224, 230, 0.1);
+            }
+            
+            .social-icons {
+                margin-bottom: 2rem;
+                gap: 1rem;
             }
             
             .social-icons {
@@ -1961,8 +2031,18 @@
             }
             
             .section-a-container, .section-b-container {
-                padding: 2rem 1rem;
-                gap: 2rem;
+                padding: 3rem 1.5rem;
+                gap: 2.5rem;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            
+            .section-a-left, .section-b-left {
+                padding: 0 0.5rem;
+            }
+            
+            .section-a-right, .section-b-right {
+                padding: 0 0.5rem;
             }
             
             .section-a-headline, .section-b-headline {
@@ -4111,7 +4191,15 @@
         <div class="site-logo-fixed">
             <img src="vere side-by-side logo.png" alt="Veré Logo" style="height:48px;width:auto;object-fit:contain;" />
         </div>
-        <nav class="nav-header" role="navigation" aria-label="Main navigation">
+        
+        <!-- Mobile Hamburger Menu -->
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav class="nav-header" role="navigation" aria-label="Main navigation" id="navHeader">
         <div class="social-icons">
             <a href="https://www.instagram.com/atvereofficial/" class="social-icon" target="_blank" aria-label="Instagram">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4482,8 +4570,46 @@
     </div>
 
     <script>
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            const navHeader = document.getElementById('navHeader');
+            
+            if (menuToggle && navHeader) {
+                menuToggle.classList.toggle('active');
+                navHeader.classList.toggle('active');
+            }
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            const navHeader = document.getElementById('navHeader');
+            
+            if (menuToggle && navHeader && !menuToggle.contains(event.target) && !navHeader.contains(event.target)) {
+                menuToggle.classList.remove('active');
+                navHeader.classList.remove('active');
+            }
+        });
+        
+        // Initialize mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', toggleMobileMenu);
+            }
+        });
+        
         function showSection(section) {
             console.log('showSection called with:', section); // Debug log
+            
+            // Close mobile menu if open
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            const navHeader = document.getElementById('navHeader');
+            if (menuToggle && navHeader) {
+                menuToggle.classList.remove('active');
+                navHeader.classList.remove('active');
+            }
             
             // Hide both sections first
             const sectionA = document.getElementById('sectionA');
