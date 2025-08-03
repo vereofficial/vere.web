@@ -138,11 +138,43 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
+            background: #ffffff;
+        }
+        
+        /* System theme detection */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #000000 !important;
+                color: #ffffff !important;
+            }
+            
+            /* Override teal backgrounds in dark mode */
+            .hero-section,
+            .content-section,
+            .vere-podcast-wow-hero,
+            .goals-stunning-bg,
+            .vere-pro-bg {
+                background: #000000 !important;
+            }
+        }
+        
+        @media (prefers-color-scheme: light) {
+            body {
+                background: #ffffff !important;
+                color: #333333 !important;
+            }
+            
+            /* Override teal backgrounds in light mode */
+            .hero-section,
+            .content-section,
+            .vere-podcast-wow-hero,
+            .goals-stunning-bg,
+            .vere-pro-bg {
+                background: #ffffff !important;
+            }
         }
 
-        .gradient-bg {
-            background: linear-gradient(135deg, #5DE0E6 0%, #004AAD 100%);
-        }
+        /* Removed hardcoded teal gradient - now uses system theme */
 
         .hero-section {
             height: 100vh;
@@ -193,6 +225,19 @@
 
         .hero-right {
             background: linear-gradient(135deg, #A8E6CF 0%, #2E8B57 100%);
+        }
+        
+        /* Override hero backgrounds for system theme */
+        @media (prefers-color-scheme: dark) {
+            .hero-left, .hero-right {
+                background: #000000 !important;
+            }
+        }
+        
+        @media (prefers-color-scheme: light) {
+            .hero-left, .hero-right {
+                background: #ffffff !important;
+            }
         }
 
         .hero-content {
