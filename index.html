@@ -1958,30 +1958,32 @@
             /* Clean mobile menu styling */
             .nav-header .social-icons {
                 display: flex !important;
-                margin-bottom: 2rem;
-                gap: 1rem;
+                margin-bottom: 3rem;
+                gap: 0.8rem;
                 flex-direction: column;
                 width: 100%;
             }
             
             .nav-header .social-icon {
                 width: 100%;
-                height: 50px;
-                border-radius: 8px;
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.2);
+                height: 55px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.15);
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                padding: 0 1rem;
+                padding: 0 1.5rem;
                 color: white;
                 text-decoration: none;
                 font-weight: 500;
-                transition: background-color 0.2s ease;
+                font-size: 1rem;
+                transition: all 0.2s ease;
             }
             
             .nav-header .social-icon:hover {
-                background: rgba(93, 224, 230, 0.2);
+                background: rgba(93, 224, 230, 0.15);
+                border-color: rgba(93, 224, 230, 0.3);
             }
             
             /* Hide social icons on mobile when not in menu */
@@ -2013,9 +2015,10 @@
             }
             
             .hero-content h1 {
-                font-size: 1.4rem;
-                margin-bottom: 0.6rem;
+                font-size: 2rem;
+                margin-bottom: 1rem;
                 line-height: 1.3;
+                padding: 0 1rem;
             }
             
             .hero-illustration {
@@ -2026,10 +2029,12 @@
             }
             
             .hero-btn {
-                padding: 0.7rem 1.2rem;
-                font-size: 0.9rem;
-                margin-top: 1.5rem;
-                margin-bottom: 3rem;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                margin: 1rem 2rem;
+                width: calc(100% - 4rem);
+                max-width: 280px;
+                border-radius: 12px;
             }
             
             .nav-header {
@@ -2134,31 +2139,40 @@
             
             /* Fix podcast section mobile styling */
             .vere-podcast-wow-title {
-                font-size: 1.8rem !important;
+                font-size: 2.2rem !important;
                 line-height: 1.3;
-                margin-bottom: 1.5rem;
-                padding: 0 1rem;
+                margin-bottom: 2rem;
+                padding: 0 1.5rem;
+                font-weight: 600;
             }
             
             .vere-podcast-wow-content p {
-                font-size: 1rem;
+                font-size: 1.1rem;
                 line-height: 1.6;
-                margin-bottom: 2rem;
-                padding: 0 1rem;
+                margin-bottom: 2.5rem;
+                padding: 0 1.5rem;
             }
             
             .vere-podcast-wow-content .cta-button {
-                font-size: 1rem;
-                padding: 1rem 2rem;
-                margin: 1rem;
-                width: calc(100% - 2rem);
-                max-width: 300px;
+                font-size: 1.1rem;
+                padding: 1.2rem 2.5rem;
+                margin: 1.5rem;
+                width: calc(100% - 3rem);
+                max-width: 320px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
             
             .vere-podcast-wow-content .now-playing-btn {
-                font-size: 0.9rem;
-                padding: 0.8rem 1.5rem;
-                margin: 1rem;
+                font-size: 1rem;
+                padding: 1rem 2rem;
+                margin: 1.5rem;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: calc(100% - 3rem);
+                max-width: 280px;
             }
             
             /* Fix vision feature lists */
@@ -2173,22 +2187,30 @@
             
             /* Fix goals screenshot box - make it smaller on mobile */
             .goals-stunning-content {
-                max-width: 90% !important;
+                max-width: 85% !important;
                 margin: 0 auto !important;
-                padding: 2rem 1.5rem !important;
+                padding: 2.5rem 2rem !important;
             }
             
             .goals-stunning-title {
-                font-size: 1.6rem !important;
+                font-size: 2.2rem !important;
                 line-height: 1.3;
-                margin-bottom: 1.5rem;
-                padding: 0 1rem;
+                margin-bottom: 2rem;
+                padding: 0 1.5rem;
+                font-weight: 600;
             }
             
             .goals-stunning-card {
-                padding: 1.5rem;
-                margin: 1rem 0;
+                padding: 2rem;
+                margin: 1.5rem 0;
                 border-radius: 12px;
+                max-width: 100%;
+            }
+            
+            .goals-mockup-img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
             }
             
             /* Fix hero content padding */
@@ -4801,10 +4823,12 @@
             if (section === 'a' && sectionA) {
                 sectionA.classList.remove('hidden-section');
                 sectionA.classList.add('visible-section', 'animate-in');
+                sectionA.style.display = 'block';
                 console.log('Section A shown'); // Debug log
             } else if (section === 'b' && sectionB) {
                 sectionB.classList.remove('hidden-section');
                 sectionB.classList.add('visible-section', 'animate-in');
+                sectionB.style.display = 'block';
                 console.log('Section B shown'); // Debug log
             }
             
@@ -4836,9 +4860,27 @@
             
             if (sectionA) {
                 sectionA.classList.add('hidden-section');
+                sectionA.style.display = 'none';
             }
             if (sectionB) {
                 sectionB.classList.add('hidden-section');
+                sectionB.style.display = 'none';
+            }
+            
+            // Add click handlers for hero buttons
+            const showMeHowBtn = document.querySelector('button[onclick="showSection(\'a\')"]');
+            const helpMeGrowBtn = document.querySelector('button[onclick="showSection(\'b\')"]');
+            
+            if (showMeHowBtn) {
+                showMeHowBtn.addEventListener('click', function() {
+                    showSection('a');
+                });
+            }
+            
+            if (helpMeGrowBtn) {
+                helpMeGrowBtn.addEventListener('click', function() {
+                    showSection('b');
+                });
             }
         });
 
