@@ -4467,7 +4467,7 @@
                 <div class="hero-content" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;">
                     <div class="hero-illustration" style="background:rgba(255,255,255,0.25);backdrop-filter:none;margin-bottom:1.5rem;" aria-hidden="true">☕</div>
                     <h1 style="text-shadow:none;text-align:center;margin-bottom:1.2rem;">I wish it were easier to make new friends</h1>
-                    <button class="hero-btn sora-btn" onclick="showSection('a')" data-section="a" aria-label="Show me how to make new friends">Show me how</button>
+                    <button class="hero-btn sora-btn" data-section="a" aria-label="Show me how to make new friends">Show me how</button>
                 </div>
             </div>
             
@@ -4476,7 +4476,7 @@
                 <div class="hero-content" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;">
                     <div class="hero-illustration" style="background:rgba(255,255,255,0.25);backdrop-filter:none;margin-bottom:1.5rem;" aria-hidden="true">🤝</div>
                     <h1 style="text-shadow:none;text-align:center;margin-bottom:1.2rem;">I want deeper relationships with the friends I already have</h1>
-                    <button class="hero-btn sora-btn" onclick="showSection('b')" data-section="b" aria-label="Help me grow deeper relationships">Help me grow</button>
+                    <button class="hero-btn sora-btn" data-section="b" aria-label="Help me grow deeper relationships">Help me grow</button>
                 </div>
             </div>
         </section>
@@ -4930,24 +4930,22 @@
             }
             
             // Add click handlers for hero buttons
-            const showMeHowBtn = document.querySelector('button[onclick="showSection(\'a\')"]');
-            const helpMeGrowBtn = document.querySelector('button[onclick="showSection(\'b\')"]');
+            const heroButtons = document.querySelectorAll('.hero-btn[data-section]');
             
-            if (showMeHowBtn) {
-                showMeHowBtn.addEventListener('click', function(e) {
+            heroButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
                     e.preventDefault();
-                    showSection('a');
+                    const section = this.getAttribute('data-section');
+                    console.log('Button clicked, section:', section);
+                    showSection(section);
                 });
-            }
-            
-            if (helpMeGrowBtn) {
-                helpMeGrowBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    showSection('b');
-                });
-            }
+            });
             
             console.log('Mobile buttons initialized');
+            
+            // Test section accessibility
+            console.log('Section A accessible:', !!document.getElementById('sectionA'));
+            console.log('Section B accessible:', !!document.getElementById('sectionB'));
         });
 
         function handleFooterSubmit() {
