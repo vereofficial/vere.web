@@ -1935,24 +1935,27 @@
             
             .nav-header {
                 position: fixed;
-                top: 0;
-                right: -100%;
-                width: 280px;
-                height: 100vh;
-                background: #1a1a1a;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 320px;
+                background: #000000;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding: 5rem 2rem 2rem 2rem;
-                transition: right 0.3s ease;
+                padding: 2rem;
+                border-radius: 16px;
                 z-index: 999;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
                 display: none;
+                opacity: 0;
+                transition: opacity 0.3s ease;
             }
             
             .nav-header.active {
-                right: 0;
                 display: flex;
+                opacity: 1;
             }
             
             /* Simple mobile menu styling */
@@ -1961,6 +1964,8 @@
                 flex-direction: column;
                 gap: 0.5rem;
                 padding: 2rem;
+                background: #000000;
+                border-radius: 16px;
             }
             
             .nav-header.active {
@@ -2037,20 +2042,22 @@
             }
             
             .nav-btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                font-size: 1.1rem;
                 width: 100%;
                 text-align: left;
                 color: white;
                 text-decoration: none;
                 background: rgba(255, 255, 255, 0.1);
                 border: 1px solid rgba(255, 255, 255, 0.2);
-                border-radius: 8px;
-                transition: background-color 0.2s ease;
+                border-radius: 12px;
+                transition: all 0.2s ease;
+                font-weight: 500;
             }
             
             .nav-btn:hover {
                 background-color: rgba(93, 224, 230, 0.2);
+                transform: translateY(-1px);
             }
             
             .nav-header .social-icons {
