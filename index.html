@@ -2267,6 +2267,19 @@
                 display: none !important;
             }
             
+            /* Ensure sections are properly visible on mobile when shown */
+            .content-section.visible-section {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+            
+            .content-section.hidden-section {
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+            
             /* Fix hero content padding */
             .hero-content h1 {
                 padding: 0 2rem;
@@ -4838,13 +4851,22 @@
             const sectionA = document.getElementById('sectionA');
             const sectionB = document.getElementById('sectionB');
             
+            console.log('Section A element:', sectionA); // Debug log
+            console.log('Section B element:', sectionB); // Debug log
+            
             if (sectionA) {
                 sectionA.classList.add('hidden-section');
                 sectionA.classList.remove('visible-section', 'animate-in');
+                sectionA.style.display = 'none';
+                sectionA.style.opacity = '0';
+                sectionA.style.visibility = 'hidden';
             }
             if (sectionB) {
                 sectionB.classList.add('hidden-section');
                 sectionB.classList.remove('visible-section', 'animate-in');
+                sectionB.style.display = 'none';
+                sectionB.style.opacity = '0';
+                sectionB.style.visibility = 'hidden';
             }
 
             // Hide the hero prompt
@@ -4859,12 +4881,14 @@
                 sectionA.classList.add('visible-section', 'animate-in');
                 sectionA.style.display = 'block';
                 sectionA.style.opacity = '1';
+                sectionA.style.visibility = 'visible';
                 console.log('Section A shown'); // Debug log
             } else if (section === 'b' && sectionB) {
                 sectionB.classList.remove('hidden-section');
                 sectionB.classList.add('visible-section', 'animate-in');
                 sectionB.style.display = 'block';
                 sectionB.style.opacity = '1';
+                sectionB.style.visibility = 'visible';
                 console.log('Section B shown'); // Debug log
             }
             
