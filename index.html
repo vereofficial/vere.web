@@ -1947,30 +1947,46 @@
                 transition: right 0.3s ease;
                 z-index: 999;
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                display: none;
             }
             
             .nav-header.active {
                 right: 0;
+                display: flex;
+            }
+            
+            /* Clean mobile menu styling */
+            .nav-header .social-icons {
+                display: flex !important;
+                margin-bottom: 2rem;
+                gap: 1rem;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-header .social-icon {
+                width: 100%;
+                height: 50px;
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 0 1rem;
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: background-color 0.2s ease;
+            }
+            
+            .nav-header .social-icon:hover {
+                background: rgba(93, 224, 230, 0.2);
             }
             
             /* Hide social icons on mobile when not in menu */
             .social-icons {
                 display: none !important;
-            }
-            
-            .nav-header .social-icons {
-                display: flex !important;
-                margin-bottom: 2rem;
-                gap: 1rem;
-            }
-            
-            /* Ensure no floating buttons on mobile */
-            .nav-header {
-                display: none;
-            }
-            
-            .nav-header.active {
-                display: flex;
             }
             .hero-section {
                 min-height: 100vh;
@@ -2116,6 +2132,35 @@
                 border-radius: 12px;
             }
             
+            /* Fix podcast section mobile styling */
+            .vere-podcast-wow-title {
+                font-size: 1.8rem !important;
+                line-height: 1.3;
+                margin-bottom: 1.5rem;
+                padding: 0 1rem;
+            }
+            
+            .vere-podcast-wow-content p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+                padding: 0 1rem;
+            }
+            
+            .vere-podcast-wow-content .cta-button {
+                font-size: 1rem;
+                padding: 1rem 2rem;
+                margin: 1rem;
+                width: calc(100% - 2rem);
+                max-width: 300px;
+            }
+            
+            .vere-podcast-wow-content .now-playing-btn {
+                font-size: 0.9rem;
+                padding: 0.8rem 1.5rem;
+                margin: 1rem;
+            }
+            
             /* Fix vision feature lists */
             .vision-feature-list, .vision-feature-list-b {
                 padding: 0 1.5rem;
@@ -2124,6 +2169,26 @@
             .vision-feature-item, .vision-feature-item-b {
                 padding: 2rem;
                 margin: 0 1rem 1.5rem 1rem;
+            }
+            
+            /* Fix goals screenshot box - make it smaller on mobile */
+            .goals-stunning-content {
+                max-width: 90% !important;
+                margin: 0 auto !important;
+                padding: 2rem 1.5rem !important;
+            }
+            
+            .goals-stunning-title {
+                font-size: 1.6rem !important;
+                line-height: 1.3;
+                margin-bottom: 1.5rem;
+                padding: 0 1rem;
+            }
+            
+            .goals-stunning-card {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                border-radius: 12px;
             }
             
             /* Fix hero content padding */
@@ -4763,6 +4828,19 @@
                 }
             }, 300);
         }
+        
+        // Ensure sections are properly initialized
+        document.addEventListener('DOMContentLoaded', function() {
+            const sectionA = document.getElementById('sectionA');
+            const sectionB = document.getElementById('sectionB');
+            
+            if (sectionA) {
+                sectionA.classList.add('hidden-section');
+            }
+            if (sectionB) {
+                sectionB.classList.add('hidden-section');
+            }
+        });
 
         function handleFooterSubmit() {
             const input = document.getElementById('footerInput');
