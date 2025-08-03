@@ -139,40 +139,15 @@
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
-            background: #ffffff;
         }
         
-        /* System theme detection */
+        /* System theme detection - only for Dynamic Island background */
         @media (prefers-color-scheme: dark) {
-            body {
-                background: #000000 !important;
-                color: #ffffff !important;
-            }
-            
-            /* Override teal backgrounds in dark mode */
-            .hero-section,
-            .content-section,
-            .vere-podcast-wow-hero,
-            .goals-stunning-bg,
-            .vere-pro-bg {
-                background: #000000 !important;
-            }
+            /* Only affects browser UI, not site content */
         }
         
         @media (prefers-color-scheme: light) {
-            body {
-                background: #ffffff !important;
-                color: #333333 !important;
-            }
-            
-            /* Override teal backgrounds in light mode */
-            .hero-section,
-            .content-section,
-            .vere-podcast-wow-hero,
-            .goals-stunning-bg,
-            .vere-pro-bg {
-                background: #ffffff !important;
-            }
+            /* Only affects browser UI, not site content */
         }
 
         /* Removed hardcoded teal gradient - now uses system theme */
@@ -228,18 +203,7 @@
             background: linear-gradient(135deg, #A8E6CF 0%, #2E8B57 100%);
         }
         
-        /* Override hero backgrounds for system theme */
-        @media (prefers-color-scheme: dark) {
-            .hero-left, .hero-right {
-                background: #000000 !important;
-            }
-        }
-        
-        @media (prefers-color-scheme: light) {
-            .hero-left, .hero-right {
-                background: #ffffff !important;
-            }
-        }
+        /* Hero backgrounds remain unchanged - only Dynamic Island responds to system theme */
 
         .hero-content {
             text-align: center;
