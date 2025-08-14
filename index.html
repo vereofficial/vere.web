@@ -5587,76 +5587,25 @@
                     return;
                 }
                 
-                // Create a proper subscription form that submits to Beehiiv
+                                // Open the actual Beehiiv newsletter signup page
                 try {
-                    console.log('Attempting to subscribe email:', email);
+                    console.log('Opening Beehiiv newsletter signup page for email:', email);
                     
-                    // Create a hidden iframe to submit the form
-                    const iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.name = 'beehiiv-subscription';
-                    document.body.appendChild(iframe);
+                    // Open your actual Beehiiv newsletter signup page in a new tab
+                    const newsletterUrl = 'https://vers-newsletter-072b21.beehiiv.com/subscribe';
+                    window.open(newsletterUrl, '_blank');
                     
-                    // Create the subscription form
-                    const form = document.createElement('form');
-                    form.method = 'POST';
-                    form.action = 'https://api.beehiiv.com/v2/publications/pub_0fdea76e-fbbd-4dcd-867f-4ea7ae96fcc1/subscriptions';
-                    form.target = 'beehiiv-subscription';
-                    
-                    // Add the Authorization header as a hidden field (Beehiiv might accept this)
-                    const authField = document.createElement('input');
-                    authField.type = 'hidden';
-                    authField.name = 'Authorization';
-                    authField.value = 'Bearer 6ed7ULlgvJ9QPgC63r54rlp34mMYUosC2bM0oVmrqo13n2JVA2qvPpxWQtkhrWUX';
-                    
-                    // Add email field
-                    const emailField = document.createElement('input');
-                    emailField.type = 'hidden';
-                    emailField.name = 'email';
-                    emailField.value = email;
-                    
-                    // Add other fields
-                    const reactivateField = document.createElement('input');
-                    reactivateField.type = 'hidden';
-                    reactivateField.name = 'reactivate_existing';
-                    reactivateField.value = 'false';
-                    
-                    const welcomeField = document.createElement('input');
-                    welcomeField.type = 'hidden';
-                    welcomeField.name = 'send_welcome_email';
-                    welcomeField.value = 'true';
-                    
-                    // Append fields
-                    form.appendChild(authField);
-                    form.appendChild(emailField);
-                    form.appendChild(reactivateField);
-                    form.appendChild(welcomeField);
-                    
-                    // Submit form
-                    document.body.appendChild(form);
-                    form.submit();
-                    
-                    // Clean up
-                    setTimeout(() => {
-                        document.body.removeChild(form);
-                        document.body.removeChild(iframe);
-                    }, 1000);
-                    
-                    console.log('Subscription form submitted');
+                    console.log('Opened Beehiiv newsletter signup page');
                     
                     // Show success message
-                    alert('Thank you! You\'ve been subscribed to our weekly connection tips newsletter.');
+                    alert('Perfect! We\'ve opened our newsletter signup page for you. Please enter your email there to subscribe to our weekly connection tips!');
                     emailInput.value = '';
                     newsletterConsent.checked = false;
                     phoneModalBackdrop.classList.remove('active');
                     
                 } catch (error) {
-                    console.error('Error with subscription form:', error);
-                    // Fallback: just show success and let user know they're subscribed
-                    alert('Thank you! You\'ve been subscribed to our weekly connection tips newsletter.');
-                    emailInput.value = '';
-                    newsletterConsent.checked = false;
-                    phoneModalBackdrop.classList.remove('active');
+                    console.error('Error opening newsletter signup page:', error);
+                    alert('Sorry, there was an error opening the newsletter signup page. Please try again.');
                 }
             });
         }
