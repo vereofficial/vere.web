@@ -5587,84 +5587,27 @@
                     return;
                 }
                 
-                // Send to Beehiiv using form submission approach
+                // Use Beehiiv's public subscription form
                 try {
                     console.log('Attempting to subscribe email:', email);
                     
-                    // Create a hidden form and submit it to Beehiiv's subscription endpoint
-                    const form = document.createElement('form');
-                    form.method = 'POST';
-                    form.action = 'https://api.beehiiv.com/v2/publications/pub_0fdea76e-fbbd-4dcd-867f-4ea7ae96fcc1/subscriptions';
-                    form.target = '_blank'; // Open in new tab to avoid CORS issues
+                    // Open Beehiiv's public subscription form in a new tab
+                    const beehiivUrl = `https://www.beehiiv.com/subscribe?publication_id=pub_0fdea76e-fbbd-4dcd-867f-4ea7ae96fcc1&email=${encodeURIComponent(email)}&utm_source=vere-website&utm_medium=modal&utm_campaign=weekly-tips`;
                     
-                    // Add form fields
-                    const emailField = document.createElement('input');
-                    emailField.type = 'hidden';
-                    emailField.name = 'email';
-                    emailField.value = email;
+                    // Open in new tab
+                    window.open(beehiivUrl, '_blank');
                     
-                    const reactivateField = document.createElement('input');
-                    reactivateField.type = 'hidden';
-                    reactivateField.name = 'reactivate_existing';
-                    reactivateField.value = 'false';
-                    
-                    const welcomeField = document.createElement('input');
-                    welcomeField.type = 'hidden';
-                    welcomeField.name = 'send_welcome_email';
-                    welcomeField.value = 'true';
-                    
-                    const utmSourceField = document.createElement('input');
-                    utmSourceField.type = 'hidden';
-                    utmSourceField.name = 'utm_source';
-                    utmSourceField.value = 'vere-website';
-                    
-                    const utmMediumField = document.createElement('input');
-                    utmMediumField.type = 'hidden';
-                    utmMediumField.name = 'utm_medium';
-                    utmMediumField.value = 'modal';
-                    
-                    const utmCampaignField = document.createElement('input');
-                    utmCampaignField.type = 'hidden';
-                    utmCampaignField.name = 'utm_campaign';
-                    utmCampaignField.value = 'weekly-tips';
-                    
-                    // Append fields to form
-                    form.appendChild(emailField);
-                    form.appendChild(reactivateField);
-                    form.appendChild(welcomeField);
-                    form.appendChild(utmSourceField);
-                    form.appendChild(utmMediumField);
-                    form.appendChild(utmCampaignField);
-                    
-                    // Add form to page temporarily
-                    document.body.appendChild(form);
-                    
-                    // Submit the form
-                    form.submit();
-                    
-                    // Remove the form
-                    document.body.removeChild(form);
-                    
-                    // Since we can't get a response from the form submission, 
-                    // we'll assume success and show a success message
-                    console.log('Form submitted successfully');
+                    console.log('Opened Beehiiv subscription form');
                     
                     // Show success message
-                    alert('Thank you! You\'ve been subscribed to our weekly connection tips newsletter.');
+                    alert('Thank you! We\'ve opened the newsletter signup form for you. Please complete the subscription there.');
                     emailInput.value = '';
                     newsletterConsent.checked = false;
                     phoneModalBackdrop.classList.remove('active');
-                    
-                    return; // Exit early since we handled success
                     
                 } catch (error) {
-                    console.error('Error with form submission:', error);
-                    // Fall back to showing success message since form submission usually works
-                    alert('Thank you! You\'ve been subscribed to our weekly connection tips newsletter.');
-                    emailInput.value = '';
-                    newsletterConsent.checked = false;
-                    phoneModalBackdrop.classList.remove('active');
-                    return;
+                    console.error('Error opening subscription form:', error);
+                    alert('Sorry, there was an error opening the subscription form. Please try again.');
                 }
             });
         }
