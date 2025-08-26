@@ -1,0 +1,21 @@
+{
+    "name": "Veré - Make Friends & Build Deeper Relationships",
+    "short_name": "Veré",
+    "description": "Transform your social life with Veré. Make new friends with low-pressure challenges and build deeper relationships through meaningful conversations.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#5DE0E6",
+    "icons": [
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}
