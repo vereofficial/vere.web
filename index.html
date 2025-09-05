@@ -15,10 +15,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     
     <!-- Primary Meta Tags -->
-    <title>Veré - Make Friends & Build Deeper Relationships | Social Connection App</title>
-    <meta name="title" content="Veré - Make Friends & Build Deeper Relationships | Social Connection App">
-    <meta name="description" content="Transform your social life with Veré. Make new friends with low-pressure challenges and build deeper relationships through meaningful conversations. Start your friendship journey today.">
-    <meta name="keywords" content="make friends, social connection, friendship app, build relationships, social anxiety, meaningful conversations, adult friendships, social skills">
+    <title>Veré - Step into a Life Less Ordinary | Weekly Challenge App</title>
+    <meta name="title" content="Veré - Step into a Life Less Ordinary | Weekly Challenge App">
+    <meta name="description" content="Break out of autopilot with Veré. Weekly challenges that pull you into discovery, build streaks with friends, and create unforgettable experiences. Start your adventure today.">
+    <meta name="keywords" content="weekly challenges, adventure app, break routine, discovery, pods, streaks, college students, exploration, social challenges">
     <meta name="author" content="Veré">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -27,8 +27,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vereofficial.com/">
-    <meta property="og:title" content="Veré - Make Friends & Build Deeper Relationships">
-    <meta property="og:description" content="Transform your social life with Veré. Make new friends with low-pressure challenges and build deeper relationships through meaningful conversations.">
+    <meta property="og:title" content="Veré - Step into a Life Less Ordinary">
+    <meta property="og:description" content="Break out of autopilot with Veré. Weekly challenges that pull you into discovery, build streaks with friends, and create unforgettable experiences.">
     <meta property="og:image" content="https://vereofficial.com/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -38,8 +38,8 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://vereofficial.com/">
-    <meta property="twitter:title" content="Veré - Make Friends & Build Deeper Relationships">
-    <meta property="twitter:description" content="Transform your social life with Veré. Make new friends with low-pressure challenges and build deeper relationships through meaningful conversations.">
+    <meta property="twitter:title" content="Veré - Step into a Life Less Ordinary">
+    <meta property="twitter:description" content="Break out of autopilot with Veré. Weekly challenges that pull you into discovery, build streaks with friends, and create unforgettable experiences.">
     <meta property="twitter:image" content="https://vereofficial.com/twitter-image.jpg">
     
     <!-- Additional SEO Meta Tags -->
@@ -73,9 +73,9 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Veré",
-        "description": "Transform your social life with Veré. Make new friends with low-pressure challenges and build deeper relationships through meaningful conversations.",
+        "description": "Break out of autopilot with Veré. Weekly challenges that pull you into discovery, build streaks with friends, and create unforgettable experiences.",
         "url": "https://vereofficial.com",
-        "applicationCategory": "SocialNetworkingApplication",
+        "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Web, iOS, Android",
         "offers": {
             "@type": "Offer",
@@ -88,11 +88,11 @@
             "url": "https://vereofficial.com"
         },
         "featureList": [
-            "Low-pressure social challenges",
-            "Meaningful conversation prompts",
-            "Friendship goal tracking",
-            "Social anxiety support",
-            "Relationship building tools"
+            "Weekly discovery challenges",
+            "Pod-based social groups",
+            "Streak tracking and leaderboards",
+            "Special edition challenge packs",
+            "Campus and city exploration"
         ],
         "screenshot": "https://vereofficial.com/app-screenshot.jpg",
         "aggregateRating": {
@@ -155,6 +155,9 @@
             display: flex;
             position: relative;
             overflow: hidden;
+            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-prompt {
@@ -203,11 +206,965 @@
         
         /* Hero backgrounds remain unchanged - only Dynamic Island responds to system theme */
 
+        .hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
         .hero-content {
             text-align: center;
             color: white;
-            max-width: 400px;
-            transition: all 0.5s ease;
+            max-width: 800px;
+            z-index: 2;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .primary-btn {
+            background: #5DE0E6;
+            color: #004AAD;
+            box-shadow: 0 8px 25px rgba(93, 224, 230, 0.4);
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(93, 224, 230, 0.6);
+        }
+
+        .secondary-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* How Veré Works Section */
+        .how-it-works-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .how-it-works-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .how-it-works-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 4rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .scrollytelling-container {
+            position: relative;
+            min-height: 80vh;
+        }
+
+        .scrollytelling-content {
+            position: sticky;
+            top: 20vh;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 8rem;
+            opacity: 0.3;
+            transition: all 0.6s ease;
+        }
+
+        .step.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .step-content h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .step-content p {
+            font-size: 1.2rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Challenge Card Preview */
+        .challenge-card-preview {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .challenge-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid #5DE0E6;
+            max-width: 300px;
+            transform: rotate(-5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .challenge-card:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .card-header {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .difficulty-badge, .category-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .difficulty-badge {
+            background: #5DE0E6;
+            color: #004AAD;
+        }
+
+        .category-badge {
+            background: #004AAD;
+            color: white;
+        }
+
+        .challenge-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .challenge-card p {
+            color: #4a5568;
+            font-size: 1rem;
+        }
+
+        /* Pod Circle Preview */
+        .pod-circle-preview {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pod-circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member-avatar {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #5DE0E6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 3px solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .member-avatar:nth-child(1) { transform: rotate(0deg) translateX(100px) rotate(0deg); animation-delay: 0s; }
+        .member-avatar:nth-child(2) { transform: rotate(90deg) translateX(100px) rotate(-90deg); animation-delay: 0.5s; }
+        .member-avatar:nth-child(3) { transform: rotate(180deg) translateX(100px) rotate(-180deg); animation-delay: 1s; }
+        .member-avatar:nth-child(4) { transform: rotate(270deg) translateX(100px) rotate(-270deg); animation-delay: 1.5s; }
+
+        .challenge-card-center {
+            width: 60px;
+            height: 60px;
+            background: #004AAD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 74, 173, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Streak Rings Preview */
+        .streak-rings-preview {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .streak-ring {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(#5DE0E6 0deg, #5DE0E6 calc(var(--progress) * 3.6deg), #e2e8f0 calc(var(--progress) * 3.6deg), #e2e8f0 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate 3s linear infinite;
+        }
+
+        .streak-ring::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .streak-count {
+            position: relative;
+            z-index: 1;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #004AAD;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Challenge of the Week Section */
+        .challenge-of-the-week-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenge-container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .challenge-title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .challenge-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+
+        .challenge-card-3d {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .challenge-card-3d:hover {
+            transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+        }
+
+        .card-glow-halo {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: radial-gradient(circle, rgba(93, 224, 230, 0.3) 0%, transparent 70%);
+            border-radius: 30px;
+            animation: pulse-glow 2s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        .challenge-card-content {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            border: 3px solid #5DE0E6;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .challenge-card-3d:hover .challenge-card-content {
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .difficulty-badge, .category-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .difficulty-badge {
+            background: #5DE0E6;
+            color: #004AAD;
+        }
+
+        .category-badge {
+            background: #004AAD;
+            color: white;
+        }
+
+        .challenge-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .challenge-description {
+            font-size: 1.2rem;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .expand-btn {
+            background: linear-gradient(135deg, #5DE0E6 0%, #004AAD 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(93, 224, 230, 0.4);
+        }
+
+        .expand-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(93, 224, 230, 0.6);
+        }
+
+        .challenge-expanded {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            border: 3px solid #5DE0E6;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            z-index: 2;
+        }
+
+        .challenge-expanded.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .expanded-content h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #004AAD;
+            margin: 2rem 0 1rem 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .expanded-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .expanded-content p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .accept-challenge-btn {
+            background: #5DE0E6;
+            color: #004AAD;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .accept-challenge-btn:hover {
+            background: #004AAD;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Pods Section */
+        .pods-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pods-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pods-title {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .pods-subtitle {
+            text-align: center;
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pods-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .pods-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .pods-description h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #5DE0E6;
+            margin-bottom: 1.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pods-description p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .pods-features {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .pod-feature {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(93, 224, 230, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .pod-feature:hover {
+            background: rgba(93, 224, 230, 0.1);
+            border-color: rgba(93, 224, 230, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pod-feature h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pod-feature p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+
+        /* Veré Pro Section */
+        .vere-pro-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #004AAD 0%, #1a202c 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+        }
+
+        .pro-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .pro-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(93, 224, 230, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: ripple 4s ease-in-out infinite;
+        }
+
+        @keyframes ripple {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.1; }
+        }
+
+        .pro-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .pro-container {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .pro-title {
+            font-size: 5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #5DE0E6 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .pro-subtitle {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+
+        .pro-features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .pro-feature {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(93, 224, 230, 0.2);
+            border-radius: 25px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pro-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(93, 224, 230, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .pro-feature:hover::before {
+            left: 100%;
+        }
+
+        .pro-feature:hover {
+            background: rgba(93, 224, 230, 0.1);
+            border-color: rgba(93, 224, 230, 0.5);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(93, 224, 230, 0.2);
+        }
+
+        .pro-feature .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .pro-feature h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pro-feature p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .upgrade-pro-btn {
+            background: linear-gradient(135deg, #5DE0E6 0%, #004AAD 100%);
+            color: white;
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(93, 224, 230, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upgrade-pro-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .upgrade-pro-btn:hover::before {
+            left: 100%;
+        }
+
+        .upgrade-pro-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(93, 224, 230, 0.6);
+        }
+
+        /* Closing CTA Section */
+        .closing-cta-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #5DE0E6 0%, #004AAD 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+        }
+
+        .cta-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .cta-sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .cta-container {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .cta-title {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-subtitle {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-cta-btn {
+            background: white;
+            color: #004AAD;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .primary-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+        }
+
+        .secondary-cta-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .secondary-cta-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Mobile Responsive Design for New Sections */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .how-it-works-title {
+                font-size: 2.5rem;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .step:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .challenge-title {
+                font-size: 2.5rem;
+            }
+            
+            .challenge-card-3d {
+                max-width: 90%;
+            }
+            
+            .pods-title {
+                font-size: 2.5rem;
+            }
+            
+            .pods-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .pro-title {
+                font-size: 3rem;
+            }
+            
+            .pro-features-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         .hero-content h1 {
@@ -4658,162 +5615,190 @@
 
     <main>
         <section class="hero-section" role="banner" aria-label="Hero section">
-            
-            <div class="hero-side hero-left" style="padding:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;position:relative;overflow:hidden;">
-                <video src="I wish it were easier to make new friends.mp4" autoplay loop muted playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;max-height:100vh;border-radius:0;position:absolute;top:0;left:0;z-index:0;" aria-label="Video showing people making new friends"></video>
-                <div class="hero-content" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <div class="hero-illustration" style="background:rgba(255,255,255,0.25);backdrop-filter:none;margin-bottom:1.5rem;" aria-hidden="true">☕</div>
-                    <h1 style="text-shadow:none;text-align:center;margin-bottom:1.2rem;">I wish it were easier to make new friends</h1>
-                    <button class="hero-btn sora-btn" data-section="a" aria-label="Show me how to make new friends">Show me how</button>
-                </div>
-            </div>
-            
-            <div class="hero-side hero-right" style="padding:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;position:relative;overflow:hidden;">
-                <video src="I want deeper relationships with the friends I already have.mp4" autoplay loop muted playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;max-height:100vh;border-radius:0;position:absolute;top:0;left:0;z-index:0;" aria-label="Video showing people building deeper relationships"></video>
-                <div class="hero-content" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <div class="hero-illustration" style="background:rgba(255,255,255,0.25);backdrop-filter:none;margin-bottom:1.5rem;" aria-hidden="true">🤝</div>
-                    <h1 style="text-shadow:none;text-align:center;margin-bottom:1.2rem;">I want deeper relationships with the friends I already have</h1>
-                    <button class="hero-btn sora-btn" data-section="b" aria-label="Help me grow deeper relationships">Help me grow</button>
+            <div class="hero-canvas" id="heroCanvas"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Step into a life less ordinary</h1>
+                <p class="hero-subtitle">Weekly challenges that pull you out of autopilot and into discovery</p>
+                <div class="hero-buttons">
+                    <button class="hero-btn primary-btn" id="startFreeBtn">Start Free</button>
+                    <button class="hero-btn secondary-btn" id="exploreProBtn">Explore Pro</button>
                 </div>
             </div>
         </section>
 
-    <section id="sectionA" class="content-section section-a hidden-section">
-        <svg class="section-a-bg-plane" viewBox="0 0 100 100" fill="none"><path d="M10 90 L90 50 L10 10 L30 50 L10 90" stroke="#5DE0E6" stroke-width="4" fill="#fff" fill-opacity="0.7"/></svg>
-        <div class="section-a-container">
-            <div class="section-a-left">
-                <h2 class="section-a-headline">Making New Friends Is Hard</h2>
-                <h3 class="section-a-subheading">But you're not alone</h3>
-                <p class="section-a-paragraph">It's not just you. Making friends as an adult is awkward and messy. Veré offers gentle structure to meet people without the pressure of being "on."</p>
-                <a href="#" class="section-a-cta sora-btn" id="showAnalogModalBtn">Try a low-pressure challenge</a>
-            </div>
-            <div class="section-a-right">
-                <ul class="vision-feature-list">
-                    <li class="vision-feature-item">
-                        <span class="icon">🌱</span>
-                        <div>
-                            <h4>Start Small</h4>
-                            <p>Low-pressure challenges that help you practice connection without overwhelming social anxiety. Every expert was once a beginner.</p>
-            </div>
-                    </li>
-                    <li class="vision-feature-item">
-                        <span class="icon">💪</span>
-                        <div>
-                            <h4>Build Confidence</h4>
-                            <p>Each small step builds your social muscles and comfort with new interactions. Progress over perfection, always.</p>
-            </div>
-                    </li>
-                    <li class="vision-feature-item">
-                        <span class="icon">🎯</span>
-                        <div>
-                            <h4>Find Your People</h4>
-                            <p>Connect with others who share your interests and values, naturally and authentically. Quality over quantity.</p>
-        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="sectionB" class="content-section section-b hidden-section">
-        <div class="section-b-bg-dots">
-            <div class="section-b-dot dot1"></div>
-            <div class="section-b-dot dot2"></div>
-            <div class="section-b-dot dot3"></div>
-            <div class="section-b-dot dot4"></div>
-            </div>
-        <svg class="section-b-bg-visual" viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="50" rx="40" ry="20" fill="#5DE0E6" fill-opacity="0.3"/><ellipse cx="60" cy="60" rx="20" ry="8" fill="#fff" fill-opacity="0.13"/></svg>
-        <div class="section-b-container">
-            <div class="section-b-left">
-                <h2 class="section-b-headline">Deeper Bonds Are Built</h2>
-                <h3 class="section-b-subheading">Not born.</h3>
-                <p class="section-b-paragraph">You already have people in your life, but you want to feel <em>closer</em>. Veré helps you ask better questions, share more of yourself, and invite others to do the same. Because intimacy isn't about time, it's about <em>intention</em>.</p>
-                <a href="#" class="section-b-cta sora-btn" id="showReflectionModalBtn">Start with a reflection you can share today</a>
-            </div>
-            <div class="section-b-right">
-                <ul class="vision-feature-list-b">
-                    <li class="vision-feature-item-b">
-                        <span class="icon">❓</span>
-                        <div>
-                            <h4>Better Questions</h4>
-                            <p>Move beyond small talk with thoughtful prompts that create meaningful conversations.</p>
-            </div>
-                    </li>
-                    <li class="vision-feature-item-b">
-                        <span class="icon">💝</span>
-                        <div>
-                            <h4>Vulnerable Sharing</h4>
-                            <p>Learn to share more of yourself and create space for others to do the same.</p>
-        </div>
-                    </li>
-                    <li class="vision-feature-item-b">
-                        <span class="icon">🌊</span>
-                        <div>
-                            <h4>Intentional Connection</h4>
-                            <p>Transform surface-level friendships into sincerely worthwhile relationships.</p>
+    <section id="howItWorks" class="how-it-works-section">
+        <div class="how-it-works-container">
+            <h2 class="how-it-works-title">How Veré Works</h2>
+            
+            <div class="scrollytelling-container">
+                <div class="scrollytelling-content">
+                    <div class="step step-1">
+                        <div class="step-content">
+                            <h3>A glowing challenge card drops in</h3>
+                            <p>Each week, discover a new adventure designed to break you out of autopilot and into discovery.</p>
                         </div>
-                    </li>
-                </ul>
+                        <div class="challenge-card-preview">
+                            <div class="challenge-card">
+                                <div class="card-header">
+                                    <span class="difficulty-badge">Easy</span>
+                                    <span class="category-badge">Discovery</span>
+                                </div>
+                                <h4>Off Script</h4>
+                                <p>Change one habit you usually do on autopilot this week.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step step-2">
+                        <div class="step-content">
+                            <h3>Cards multiply → form a Pod circle</h3>
+                            <p>Join friends in private groups to tackle challenges together and build streaks.</p>
+                        </div>
+                        <div class="pod-circle-preview">
+                            <div class="pod-circle">
+                                <div class="member-avatar">👤</div>
+                                <div class="member-avatar">👤</div>
+                                <div class="member-avatar">👤</div>
+                                <div class="member-avatar">👤</div>
+                                <div class="challenge-card-center">🎯</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step step-3">
+                        <div class="step-content">
+                            <h3>Pod activates streak rings</h3>
+                            <p>Watch your collective progress fill as you complete challenges and build momentum together.</p>
+                        </div>
+                        <div class="streak-rings-preview">
+                            <div class="streak-ring">
+                                <div class="ring-fill" style="--progress: 75%"></div>
+                                <span class="streak-count">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-        <!-- Podcast hero section moved here -->
-        <section class="vere-podcast-wow-hero">
-            <div class="vere-podcast-wow-bg">
-                <svg width="100%" height="100%" viewBox="0 0 1440 700" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"><defs><linearGradient id="vereBlob2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5DE0E6"/><stop offset="100%" stop-color="#004AAD"/></linearGradient></defs><ellipse cx="320" cy="180" rx="220" ry="120" fill="url(#vereBlob2)" opacity="0.13"/><ellipse cx="1200" cy="520" rx="180" ry="90" fill="url(#vereBlob2)" opacity="0.10"/><ellipse cx="900" cy="100" rx="120" ry="60" fill="#5DE0E6" opacity="0.08"/></svg>
-            </div>
-            <div class="vere-podcast-wow-left">
-                <div class="vere-podcast-wow-title poppins-header">🎧 Hear how people really connect</div>
-                <div class="vere-podcast-wow-support inter-normal">Want more like this? The Veré Content Hub is full of 1-on-1 interviews, mini-podcasts, and people-centered video content.</div>
-                <a href="https://app.vereofficial.com" class="vere-podcast-wow-cta sora-btn">Browse the Content Hub &rarr;</a>
-            </div>
-            <div class="vere-podcast-wow-right">
-                <div class="vere-podcast-wow-card">
-                    <div class="vere-podcast-wow-nowplaying">Now Playing</div>
-                    <div class="vere-podcast-wow-embed">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1yzgbtf5MwuZnX4aBaVH6i?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+    <section id="challengeOfTheWeek" class="challenge-of-the-week-section">
+        <div class="challenge-container">
+            <h2 class="challenge-title">Challenge of the Week</h2>
+            <p class="challenge-subtitle">Live Preview</p>
+            
+            <div class="challenge-card-3d" id="challengeCard3D">
+                <div class="card-glow-halo"></div>
+                <div class="challenge-card-content">
+                    <div class="card-header">
+                        <span class="difficulty-badge">Easy</span>
+                        <span class="category-badge">Mindfulness</span>
                     </div>
-                    <div class="vere-podcast-wow-meta">
+                    <h3 class="challenge-name">Off Script</h3>
+                    <p class="challenge-description">Change one habit you usually do on autopilot this week. Take a new route, sit somewhere different, or try a new café.</p>
+                    <button class="expand-btn" id="expandChallengeBtn">Learn More</button>
+                </div>
+                
+                <!-- Expanded content (hidden by default) -->
+                <div class="challenge-expanded" id="challengeExpanded">
+                    <div class="expanded-content">
+                        <h4>The Why</h4>
+                        <p>Think about how much of your day runs on a loop. Your brain loves efficiency, so it turns repetitive actions into habits to save energy. But when you're always on autopilot, you miss out on the rich, unexpected details of life.</p>
+                        
+                        <h4>The Insight</h4>
+                        <p>Psychologists call this "conscious living." When you deliberately break a small routine, it forces your brain to pay attention. You notice a different color on a building, the way the light hits the floor, or the sound of someone's laugh you've never heard before.</p>
+                        
+                        <h4>The Challenge</h4>
+                        <p>Choose one micro-habit you do every day on autopilot and deliberately do it differently. Instead of sitting in your usual spot, sit somewhere else. Instead of taking the same route, take a new turn halfway through.</p>
+                        
+                        <button class="accept-challenge-btn">Accept Challenge</button>
                     </div>
-                    <div class="vere-podcast-wow-waveform"><div class="vere-podcast-wow-wave"></div></div>
-                    <div class="vere-podcast-wow-episode-desc sora-episode-desc">3 min • Episode 2 of Social Blueprint</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Pods Section -->
+        <section id="podsSection" class="pods-section">
+            <div class="pods-container">
+                <h2 class="pods-title">Pods</h2>
+                <p class="pods-subtitle">Abstract glowing orbs drift across the screen. On scroll: the orbs link together into clusters (Pods).</p>
+                
+                <div class="pods-canvas" id="podsCanvas"></div>
+                
+                <div class="pods-content">
+                    <div class="pods-description">
+                        <h3>Pods keep challenges social, streaks alive, and accountability real.</h3>
+                        <p>Join private groups of 2-10 friends to tackle challenges together, build collective streaks, and cheer each other on through shared experiences.</p>
+                    </div>
+                    
+                    <div class="pods-features">
+                        <div class="pod-feature">
+                            <div class="feature-icon">👥</div>
+                            <h4>Private Groups</h4>
+                            <p>Invite-only pods with 2-10 members for intimate, meaningful connections.</p>
+                        </div>
+                        <div class="pod-feature">
+                            <div class="feature-icon">🔥</div>
+                            <h4>Collective Streaks</h4>
+                            <p>Build momentum together as your pod completes challenges and maintains streaks.</p>
+                        </div>
+                        <div class="pod-feature">
+                            <div class="feature-icon">📸</div>
+                            <h4>Shared Stories</h4>
+                            <p>Post proof, share discoveries, and celebrate wins on your pod's bulletin board.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- End podcast hero section move -->
 
-<!-- Visually Stunning Goals Tracker Section -->
-<section class="goals-stunning-bg">
-    <!-- Animated SVG Blobs for background -->
-    <svg class="goals-blob goals-blob1" width="420" height="420" viewBox="0 0 420 420" fill="none" style="position:absolute;top:-100px;left:-120px;z-index:0;animation: blobMove1 12s infinite alternate;">
-      <ellipse cx="210" cy="210" rx="180" ry="120" fill="#5DE0E6" opacity="0.18"/>
-    </svg>
-    <svg class="goals-blob goals-blob2" width="320" height="320" viewBox="0 0 320 320" fill="none" style="position:absolute;bottom:-80px;right:-100px;z-index:0;animation: blobMove2 14s infinite alternate;">
-      <ellipse cx="160" cy="160" rx="120" ry="80" fill="#004AAD" opacity="0.13"/>
-    </svg>
-    <div class="goals-stunning-content">
-      <div class="goals-stunning-left">
-        <div class="goals-stunning-card">
-          <div class="goals-stunning-mockup">
-            <img src="goals-demo-screenshot.png" alt="Personal Social Goals Tracker Screenshot" class="goals-mockup-img">
-            <div class="goals-mockup-glow"></div>
-          </div>
-        </div>
-        <div class="goals-stunning-caption">
-          In Veré, you're free to set personal goals that make sense for you. No streaks, no pressure, no scoreboard.
-        </div>
-      </div>
-      <div class="goals-stunning-right">
-        <h2 class="goals-stunning-title poppins-header">
-          Track what<br>matters
-        </h2>
-                        <a href="https://app.vereofficial.com" class="goals-stunning-cta sora-btn">Set your first goal &rarr;</a>
-      </div>
+<!-- Veré Pro Spotlight Section -->
+<section id="vereProSection" class="vere-pro-section">
+    <div class="pro-background">
+        <div class="pro-ripple"></div>
+        <div class="pro-particles" id="proParticles"></div>
     </div>
-  </section>
-
-        <div class="bleed-divider-blue-black"></div>
+    
+    <div class="pro-container">
+        <h2 class="pro-title">Veré Pro</h2>
+        <p class="pro-subtitle">Go Pro. Unlock the full Veré experience.</p>
+        
+        <div class="pro-features-container">
+            <div class="pro-feature" data-feature="quizzes">
+                <div class="feature-icon">🧠</div>
+                <h3>Quizzes</h3>
+                <p>Discover your social strengths and blind spots with personalized assessments.</p>
+            </div>
+            
+            <div class="pro-feature" data-feature="packs">
+                <div class="feature-icon">📦</div>
+                <h3>Special Edition Packs</h3>
+                <p>Access exclusive challenge collections like "New City Explorer" and "Deep Conversations."</p>
+            </div>
+            
+            <div class="pro-feature" data-feature="pods">
+                <div class="feature-icon">👥</div>
+                <h3>Unlimited Pods</h3>
+                <p>Create and join unlimited private groups. Free users can only join one pod at a time.</p>
+            </div>
+            
+            <div class="pro-feature" data-feature="streaks">
+                <div class="feature-icon">🔥</div>
+                <h3>Streaks & Leaderboards</h3>
+                <p>Track your progress with detailed analytics and compete with friends on leaderboards.</p>
+            </div>
+            
+            <div class="pro-feature" data-feature="history">
+                <div class="feature-icon">📚</div>
+                <h3>Unlimited Challenge History</h3>
+                <p>Access your complete journey with unlimited challenge history and personal insights.</p>
+            </div>
+        </div>
+        
+        <button class="upgrade-pro-btn" id="upgradeProBtn">Upgrade to Pro</button>
+    </div>
+</section>
 
 <!-- Veré Pro Grid Section -->
 <section class="vere-pro-bg">
@@ -4904,22 +5889,32 @@
 
     </main>
 
-    <footer class="footer" role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-prompt">
-                💬 What's one thing you wish someone asked you today?
-            </div>
-            <div class="footer-input">
-                <input type="text" placeholder="Type your answer..." id="footerInput" aria-label="Share what you wish someone asked you today">
-                <a href="https://app.vereofficial.com" class="footer-btn sora-btn">Get started with Veré</a>
-            </div>
-            <nav class="footer-links" role="navigation" aria-label="Footer navigation">
-                <a href="https://sites.google.com/view/vereofficial-privacy-policy/home" class="footer-link">Privacy Policy</a>
-                <a href="https://sites.google.com/view/vereofficial-terms-conditions/home" class="footer-link">Terms</a>
-                <a href="mailto:atvereofficial@gmail.com" class="footer-link">Contact</a>
-            </nav>
+    <!-- Closing CTA Section -->
+    <section id="closingCTA" class="closing-cta-section">
+        <div class="cta-background">
+            <div class="cta-sparkles" id="ctaSparkles"></div>
         </div>
-    </footer>
+        
+        <div class="cta-container">
+            <h2 class="cta-title">Your next challenge is waiting</h2>
+            <p class="cta-subtitle">Step out of autopilot</p>
+            
+            <div class="cta-buttons">
+                <button class="cta-btn primary-cta-btn" id="startFreeFinalBtn">Start Free</button>
+                <button class="cta-btn secondary-cta-btn" id="goProFinalBtn">Go Pro</button>
+            </div>
+        </div>
+        
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content">
+                <nav class="footer-links" role="navigation" aria-label="Footer navigation">
+                    <a href="https://sites.google.com/view/vereofficial-privacy-policy/home" class="footer-link">Privacy Policy</a>
+                    <a href="https://sites.google.com/view/vereofficial-terms-conditions/home" class="footer-link">Terms</a>
+                    <a href="mailto:atvereofficial@gmail.com" class="footer-link">Contact</a>
+                </nav>
+            </div>
+        </footer>
+    </section>
 
     <div class="analog-modal-backdrop" id="analogModalBackdrop">
         <div class="analog-modal">
@@ -5029,7 +6024,565 @@
             if (menuToggle) {
                 menuToggle.addEventListener('click', toggleMobileMenu);
             }
+            
+            // Initialize hero canvas animation
+            initHeroCanvas();
+            
+            // Initialize scrollytelling
+            initScrollytelling();
+            
+            // Initialize challenge card 3D interaction
+            initChallengeCard3D();
+            
+            // Initialize pods orbs animation
+            initPodsOrbs();
+            
+            // Initialize Pro section animations
+            initProAnimations();
+            
+            // Initialize closing CTA sparkles
+            initCTASparkles();
         });
+
+        // Hero Canvas Animation - Floating Challenge Cards
+        function initHeroCanvas() {
+            const canvas = document.getElementById('heroCanvas');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            let animationId;
+            
+            // Set canvas size
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            
+            // Challenge card data
+            const challenges = [
+                { text: "Find a mural you've never noticed", color: "#5DE0E6" },
+                { text: "Ask a stranger for their favorite song", color: "#004AAD" },
+                { text: "Take a new route to class", color: "#5DE0E6" },
+                { text: "Try a new coffee shop", color: "#004AAD" },
+                { text: "Sit somewhere different today", color: "#5DE0E6" },
+                { text: "Strike up a conversation", color: "#004AAD" }
+            ];
+            
+            // Card class
+            class ChallengeCard {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * 0.5;
+                    this.vy = (Math.random() - 0.5) * 0.5;
+                    this.rotation = Math.random() * Math.PI * 2;
+                    this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+                    this.scale = 0.8 + Math.random() * 0.4;
+                    this.challenge = challenges[Math.floor(Math.random() * challenges.length)];
+                    this.alpha = 0.3 + Math.random() * 0.4;
+                    this.pulsePhase = Math.random() * Math.PI * 2;
+                }
+                
+                update(mouseX, mouseY) {
+                    // Move card
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.rotation += this.rotationSpeed;
+                    
+                    // Bounce off edges
+                    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+                    
+                    // Keep within bounds
+                    this.x = Math.max(0, Math.min(canvas.width, this.x));
+                    this.y = Math.max(0, Math.min(canvas.height, this.y));
+                    
+                    // Mouse interaction
+                    const dx = mouseX - this.x;
+                    const dy = mouseY - this.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 150) {
+                        const force = (150 - distance) / 150;
+                        this.x -= dx * force * 0.01;
+                        this.y -= dy * force * 0.01;
+                    }
+                    
+                    // Pulsing effect
+                    this.pulsePhase += 0.02;
+                    this.currentScale = this.scale + Math.sin(this.pulsePhase) * 0.1;
+                }
+                
+                draw() {
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.rotation);
+                    ctx.scale(this.currentScale, this.currentScale);
+                    
+                    // Card background
+                    ctx.fillStyle = this.challenge.color + Math.floor(this.alpha * 255).toString(16).padStart(2, '0');
+                    ctx.fillRect(-60, -40, 120, 80);
+                    
+                    // Card border
+                    ctx.strokeStyle = this.challenge.color;
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(-60, -40, 120, 80);
+                    
+                    // Card text
+                    ctx.fillStyle = 'white';
+                    ctx.font = '12px Inter, sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    
+                    // Wrap text
+                    const words = this.challenge.text.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    
+                    words.forEach(word => {
+                        const testLine = currentLine + word + ' ';
+                        const metrics = ctx.measureText(testLine);
+                        if (metrics.width > 100 && currentLine !== '') {
+                            lines.push(currentLine);
+                            currentLine = word + ' ';
+                        } else {
+                            currentLine = testLine;
+                        }
+                    });
+                    if (currentLine) lines.push(currentLine);
+                    
+                    lines.forEach((line, index) => {
+                        ctx.fillText(line, 0, -10 + index * 15);
+                    });
+                    
+                    ctx.restore();
+                }
+            }
+            
+            // Create cards
+            const cards = [];
+            for (let i = 0; i < 8; i++) {
+                cards.push(new ChallengeCard());
+            }
+            
+            let mouseX = canvas.width / 2;
+            let mouseY = canvas.height / 2;
+            
+            // Mouse tracking
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+            });
+            
+            // Animation loop
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                cards.forEach(card => {
+                    card.update(mouseX, mouseY);
+                    card.draw();
+                });
+                
+                animationId = requestAnimationFrame(animate);
+            }
+            
+            animate();
+        }
+
+        // Scrollytelling Animation
+        function initScrollytelling() {
+            const steps = document.querySelectorAll('.step');
+            if (steps.length === 0) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '-10% 0px -10% 0px'
+            });
+
+            steps.forEach(step => {
+                observer.observe(step);
+            });
+        }
+
+        // Challenge Card 3D Interaction
+        function initChallengeCard3D() {
+            const card = document.getElementById('challengeCard3D');
+            const expandBtn = document.getElementById('expandChallengeBtn');
+            const expanded = document.getElementById('challengeExpanded');
+            
+            if (!card || !expandBtn || !expanded) return;
+
+            // 3D mouse tracking
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            });
+
+            // Expand functionality
+            expandBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                expanded.classList.toggle('active');
+                
+                if (expanded.classList.contains('active')) {
+                    expandBtn.textContent = 'Close';
+                } else {
+                    expandBtn.textContent = 'Learn More';
+                }
+            });
+
+            // Close on outside click
+            document.addEventListener('click', (e) => {
+                if (!card.contains(e.target) && expanded.classList.contains('active')) {
+                    expanded.classList.remove('active');
+                    expandBtn.textContent = 'Learn More';
+                }
+            });
+        }
+
+        // Pods Orbs Animation
+        function initPodsOrbs() {
+            const canvas = document.getElementById('podsCanvas');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            let animationId;
+            let orbs = [];
+            let clusters = [];
+            
+            // Set canvas size
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+            
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            
+            // Orb class
+            class Orb {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * 0.5;
+                    this.vy = (Math.random() - 0.5) * 0.5;
+                    this.radius = 20 + Math.random() * 30;
+                    this.color = Math.random() > 0.5 ? '#5DE0E6' : '#004AAD';
+                    this.alpha = 0.3 + Math.random() * 0.4;
+                    this.pulsePhase = Math.random() * Math.PI * 2;
+                    this.isInCluster = false;
+                }
+                
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    
+                    // Bounce off edges
+                    if (this.x < this.radius || this.x > canvas.width - this.radius) this.vx *= -1;
+                    if (this.y < this.radius || this.y > canvas.height - this.radius) this.vy *= -1;
+                    
+                    // Keep within bounds
+                    this.x = Math.max(this.radius, Math.min(canvas.width - this.radius, this.x));
+                    this.y = Math.max(this.radius, Math.min(canvas.height - this.radius, this.y));
+                    
+                    // Pulsing effect
+                    this.pulsePhase += 0.02;
+                    this.currentRadius = this.radius + Math.sin(this.pulsePhase) * 5;
+                }
+                
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.alpha;
+                    
+                    // Glow effect
+                    const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.currentRadius * 2);
+                    gradient.addColorStop(0, this.color);
+                    gradient.addColorStop(0.5, this.color + '80');
+                    gradient.addColorStop(1, this.color + '00');
+                    
+                    ctx.fillStyle = gradient;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.currentRadius * 2, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Main orb
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.currentRadius, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    ctx.restore();
+                }
+                
+                distanceTo(other) {
+                    const dx = this.x - other.x;
+                    const dy = this.y - other.y;
+                    return Math.sqrt(dx * dx + dy * dy);
+                }
+            }
+            
+            // Cluster class
+            class Cluster {
+                constructor(orbs) {
+                    this.orbs = orbs;
+                    this.centerX = orbs.reduce((sum, orb) => sum + orb.x, 0) / orbs.length;
+                    this.centerY = orbs.reduce((sum, orb) => sum + orb.y, 0) / orbs.length;
+                }
+                
+                update() {
+                    // Update center
+                    this.centerX = this.orbs.reduce((sum, orb) => sum + orb.x, 0) / this.orbs.length;
+                    this.centerY = this.orbs.reduce((sum, orb) => sum + orb.y, 0) / this.orbs.length;
+                }
+                
+                draw() {
+                    // Draw connections between orbs
+                    ctx.strokeStyle = '#5DE0E6';
+                    ctx.lineWidth = 2;
+                    ctx.globalAlpha = 0.3;
+                    
+                    for (let i = 0; i < this.orbs.length; i++) {
+                        for (let j = i + 1; j < this.orbs.length; j++) {
+                            const distance = this.orbs[i].distanceTo(this.orbs[j]);
+                            if (distance < 150) {
+                                ctx.beginPath();
+                                ctx.moveTo(this.orbs[i].x, this.orbs[i].y);
+                                ctx.lineTo(this.orbs[j].x, this.orbs[j].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    
+                    ctx.globalAlpha = 1;
+                }
+            }
+            
+            // Create orbs
+            for (let i = 0; i < 12; i++) {
+                orbs.push(new Orb());
+            }
+            
+            // Mouse tracking
+            let mouseX = canvas.width / 2;
+            let mouseY = canvas.height / 2;
+            
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+            });
+            
+            // Animation loop
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Update orbs
+                orbs.forEach(orb => {
+                    orb.update();
+                    
+                    // Mouse interaction
+                    const dx = mouseX - orb.x;
+                    const dy = mouseY - orb.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 100) {
+                        const force = (100 - distance) / 100;
+                        orb.x -= dx * force * 0.01;
+                        orb.y -= dy * force * 0.01;
+                    }
+                });
+                
+                // Check for clusters
+                clusters = [];
+                const processed = new Set();
+                
+                orbs.forEach((orb, i) => {
+                    if (processed.has(i)) return;
+                    
+                    const cluster = [orb];
+                    processed.add(i);
+                    
+                    orbs.forEach((otherOrb, j) => {
+                        if (i !== j && !processed.has(j) && orb.distanceTo(otherOrb) < 120) {
+                            cluster.push(otherOrb);
+                            processed.add(j);
+                        }
+                    });
+                    
+                    if (cluster.length > 1) {
+                        clusters.push(new Cluster(cluster));
+                    }
+                });
+                
+                // Draw clusters
+                clusters.forEach(cluster => {
+                    cluster.update();
+                    cluster.draw();
+                });
+                
+                // Draw orbs
+                orbs.forEach(orb => orb.draw());
+                
+                animationId = requestAnimationFrame(animate);
+            }
+            
+            animate();
+        }
+
+        // Pro Section Animations
+        function initProAnimations() {
+            const particlesContainer = document.getElementById('proParticles');
+            const features = document.querySelectorAll('.pro-feature');
+            
+            if (!particlesContainer) return;
+
+            // Create floating particles
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 4 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = Math.random() > 0.5 ? '#5DE0E6' : '#004AAD';
+                particle.style.borderRadius = '50%';
+                particle.style.opacity = Math.random() * 0.6 + 0.2;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animation = `float-up ${Math.random() * 3 + 2}s linear infinite`;
+                
+                particlesContainer.appendChild(particle);
+                
+                // Remove particle after animation
+                setTimeout(() => {
+                    if (particle.parentNode) {
+                        particle.parentNode.removeChild(particle);
+                    }
+                }, 5000);
+            }
+
+            // Create particles periodically
+            setInterval(createParticle, 300);
+
+            // Feature reveal animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            features.forEach(feature => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(30px)';
+                feature.style.transition = 'all 0.6s ease';
+                observer.observe(feature);
+            });
+
+            // Add CSS for particle animation
+            if (!document.getElementById('proParticleStyles')) {
+                const style = document.createElement('style');
+                style.id = 'proParticleStyles';
+                style.textContent = `
+                    @keyframes float-up {
+                        0% {
+                            transform: translateY(100vh) rotate(0deg);
+                            opacity: 0;
+                        }
+                        10% {
+                            opacity: 1;
+                        }
+                        90% {
+                            opacity: 1;
+                        }
+                        100% {
+                            transform: translateY(-100px) rotate(360deg);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+
+        // Closing CTA Sparkles Animation
+        function initCTASparkles() {
+            const sparklesContainer = document.getElementById('ctaSparkles');
+            if (!sparklesContainer) return;
+
+            // Create sparkle
+            function createSparkle() {
+                const sparkle = document.createElement('div');
+                sparkle.style.position = 'absolute';
+                sparkle.style.width = Math.random() * 6 + 2 + 'px';
+                sparkle.style.height = sparkle.style.width;
+                sparkle.style.background = 'white';
+                sparkle.style.borderRadius = '50%';
+                sparkle.style.opacity = Math.random() * 0.8 + 0.2;
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animation = `sparkle-twinkle ${Math.random() * 2 + 1}s ease-in-out infinite`;
+                sparkle.style.boxShadow = '0 0 10px white';
+                
+                sparklesContainer.appendChild(sparkle);
+                
+                // Remove sparkle after animation
+                setTimeout(() => {
+                    if (sparkle.parentNode) {
+                        sparkle.parentNode.removeChild(sparkle);
+                    }
+                }, 3000);
+            }
+
+            // Create sparkles periodically
+            setInterval(createSparkle, 200);
+
+            // Add CSS for sparkle animation
+            if (!document.getElementById('ctaSparkleStyles')) {
+                const style = document.createElement('style');
+                style.id = 'ctaSparkleStyles';
+                style.textContent = `
+                    @keyframes sparkle-twinkle {
+                        0%, 100% {
+                            opacity: 0;
+                            transform: scale(0) rotate(0deg);
+                        }
+                        50% {
+                            opacity: 1;
+                            transform: scale(1) rotate(180deg);
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
         
         function showSection(section) {
             console.log('showSection called with:', section); // Debug log
