@@ -1324,9 +1324,56 @@
                 align-items: center;
             }
 
-            .pods-content {
+            .pods-main {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
+            }
+
+            .pods-intro {
+                margin-bottom: 3rem;
+            }
+
+            .pods-intro h2 {
+                font-size: 2.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .pods-intro p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .pods-text {
+                font-size: 1.1rem;
+                line-height: 1.7;
+                margin-bottom: 2rem;
+            }
+
+            .pods-text p {
+                margin-bottom: 1.5rem;
+            }
+
+            .pods-features {
+                gap: 1.5rem;
+            }
+
+            .pod-feature {
+                padding: 1.5rem;
+            }
+
+            .pod-feature-icon {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .pod-feature-text h4 {
+                font-size: 1.3rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .pod-feature-text p {
+                font-size: 1rem;
+                line-height: 1.6;
             }
 
             .cta-buttons {
@@ -1355,6 +1402,36 @@
 
             .guides-sidebar {
                 order: -1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pods-intro h2 {
+                font-size: 2.2rem;
+            }
+
+            .pods-intro p {
+                font-size: 1.1rem;
+            }
+
+            .pods-text {
+                font-size: 1rem;
+            }
+
+            .pod-feature {
+                padding: 1.25rem;
+            }
+
+            .pod-feature-icon {
+                font-size: 1.75rem;
+            }
+
+            .pod-feature-text h4 {
+                font-size: 1.2rem;
+            }
+
+            .pod-feature-text p {
+                font-size: 0.95rem;
             }
         }
 
