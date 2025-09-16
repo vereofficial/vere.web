@@ -12,7 +12,7 @@
     
     <meta name="google-site-verification" content="A2KP6_Az1P9Y5fjWgJGq4DKk1TZmiZB8S8-fmyBcoMw" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     
     <!-- Primary Meta Tags -->
     <title>Veré - Challenge Your Normal</title>
@@ -72,17 +72,6 @@
             box-sizing: border-box;
         }
 
-        /* Ensure all elements respect container bounds */
-        html {
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-        /* Prevent horizontal overflow on all elements */
-        * {
-            max-width: 100%;
-        }
-
         :root {
             --primary-blue: #004AAD;
             --accent-cyan: #5DE0E6;
@@ -110,8 +99,6 @@
             font-size: 16px;
             font-weight: 400;
             letter-spacing: -0.01em;
-            width: 100%;
-            max-width: 100vw;
         }
 
         p {
@@ -223,7 +210,8 @@
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             position: relative;
             overflow: hidden;
-            width: 100%;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
             padding: 2rem 0;
         }
 
@@ -355,7 +343,8 @@
         /* Full Width Sections */
         .section {
             padding: 6rem 0;
-            width: 100%;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .section-content {
@@ -3003,22 +2992,6 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            /* Prevent horizontal overflow */
-            body {
-                overflow-x: hidden;
-            }
-            
-            /* Container improvements */
-            .container {
-                padding: 0 1rem;
-                max-width: 100%;
-            }
-            
-            .section-content {
-                padding: 0 1rem;
-                max-width: 100%;
-            }
-
             .nav-container {
                 padding: 1rem;
             }
@@ -3029,13 +3002,11 @@
 
             .hero-content {
                 padding: 0 1rem;
-                text-align: center;
             }
 
             .hero-cta {
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
             }
 
             .pods-demo {
@@ -3059,8 +3030,6 @@
             .pods-intro h2 {
                 font-size: 2.8rem;
                 margin-bottom: 1.5rem;
-                word-wrap: break-word;
-                hyphens: auto;
             }
 
             .pods-intro p {
@@ -3104,7 +3073,6 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
             }
 
             .footer-links {
@@ -3128,17 +3096,6 @@
 
             .guides-sidebar {
                 order: -1;
-            }
-
-            /* Ensure all text wraps properly */
-            h1, h2, h3, h4, h5, h6 {
-                word-wrap: break-word;
-                hyphens: auto;
-            }
-            
-            p, span, div {
-                word-wrap: break-word;
-                overflow-wrap: break-word;
             }
 
         }
@@ -3181,39 +3138,18 @@
         }
 
         @media (max-width: 480px) {
-            /* Extra small mobile devices */
-            .container {
-                padding: 0 0.75rem;
-            }
-            
-            .section-content {
-                padding: 0 0.75rem;
-            }
-            
-            .hero {
-                padding: 1.5rem 0;
-            }
-            
-            .hero-content {
-                padding: 0 0.75rem;
-            }
-
             .hero-subtitle {
                 font-size: 0.95rem;
-                max-width: 95%;
-                word-wrap: break-word;
+                max-width: 90%;
             }
 
             .section-subtitle {
                 font-size: 0.9rem;
-                max-width: 95%;
-                word-wrap: break-word;
+                max-width: 90%;
             }
 
             .pods-intro h2 {
                 font-size: 2.2rem;
-                word-wrap: break-word;
-                hyphens: auto;
             }
 
             .pods-intro p {
@@ -3234,7 +3170,6 @@
 
             .pod-feature-text h4 {
                 font-size: 1.2rem;
-                word-wrap: break-word;
             }
 
             .pod-feature-text p {
@@ -3259,43 +3194,171 @@
 
             .cta-subtitle {
                 font-size: 0.95rem;
-                max-width: 95%;
-                word-wrap: break-word;
-            }
-            
-            /* Ensure buttons fit properly */
-            .btn {
-                width: 100%;
-                max-width: 280px;
-                text-align: center;
-            }
-            
-            .cta-buttons {
-                gap: 0.75rem;
+                max-width: 90%;
             }
         }
 
-        /* Additional mobile fixes for very small screens */
-        @media (max-width: 360px) {
-            .container {
-                padding: 0 0.5rem;
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            /* Fix horizontal overflow */
+            * {
+                max-width: 100%;
+                box-sizing: border-box;
             }
             
-            .section-content {
-                padding: 0 0.5rem;
+            body {
+                overflow-x: hidden;
+                width: 100%;
             }
             
-            .hero-content {
-                padding: 0 0.5rem;
+            /* Container fixes */
+            .container, .nav-container, .hero-content, .section-content {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
             
-            .pods-intro h2 {
-                font-size: 1.8rem;
+            /* Text overflow prevention */
+            h1, h2, h3, h4, h5, h6, p, span, div {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+                max-width: 100%;
             }
             
-            .btn {
+            /* Grid fixes */
+            .pods-demo, .pack-preview, .pods-what, .why-content, .steps-grid, .upgrade-cards, .guides-showcase, .feature-details {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem;
+            }
+            
+            /* Image responsiveness */
+            img, video {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+            
+            /* Button fixes */
+            .btn, .btn-primary, .btn-white, .btn-outline {
+                width: 100%;
+                max-width: 300px;
+                margin: 0.5rem auto;
+                display: block;
+                text-align: center;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            /* Hero section fixes */
+            .hero-title {
+                font-size: clamp(2rem, 8vw, 3.5rem);
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-subtitle {
+                font-size: clamp(1rem, 4vw, 1.25rem);
+                line-height: 1.5;
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+            
+            /* Section titles */
+            .section-title {
+                font-size: clamp(2rem, 6vw, 2.5rem);
+                line-height: 1.3;
+                margin-bottom: 1rem;
+            }
+            
+            .section-subtitle {
+                font-size: clamp(0.9rem, 3vw, 1.1rem);
+                line-height: 1.6;
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+            
+            /* Card fixes */
+            .pod-feature, .step-card, .challenge-card, .pack-card, .guide-feature {
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            /* Phone screen fixes */
+            .phone-screen {
+                max-width: 280px;
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            /* Navigation fixes */
+            .nav-container {
+                padding: 1rem;
+            }
+            
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+            
+            /* Footer fixes */
+            .footer-content {
+                padding: 0 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            /* CTA section fixes */
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            /* Prevent horizontal scroll */
+            .hero, .section, .footer {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Extra small mobile fixes */
+            .hero-title {
+                font-size: clamp(1.8rem, 10vw, 2.5rem);
+            }
+            
+            .section-title {
+                font-size: clamp(1.8rem, 8vw, 2.2rem);
+            }
+            
+            .pod-feature, .step-card, .challenge-card, .pack-card, .guide-feature {
+                padding: 1rem;
+            }
+            
+            .btn, .btn-primary, .btn-white, .btn-outline {
+                padding: 0.875rem 1.25rem;
                 font-size: 0.9rem;
-                padding: 0.8rem 1.5rem;
+            }
+            
+            .phone-screen {
+                max-width: 250px;
+            }
+            
+            /* Ensure no text is cut off */
+            .challenge-description, .pack-description, .feature-text p, .pod-feature-text p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
         }
 
