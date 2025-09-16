@@ -92,10 +92,23 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-primary);
             overflow-x: hidden;
             background: var(--bg-primary);
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+            font-size: 16px;
+            color: var(--text-secondary);
+            word-wrap: break-word;
+            hyphens: auto;
+            text-align: left;
         }
 
         /* Smooth scrolling */
@@ -169,14 +182,18 @@
         }
 
         .cta-button {
-            background: var(--gradient-primary);
-            color: var(--text-light);
-            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            color: white !important;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 0.8rem;
             transition: var(--transition);
-            box-shadow: var(--shadow-soft);
+            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .cta-button:hover {
@@ -195,6 +212,7 @@
             overflow: hidden;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
+            padding: 2rem 0;
         }
 
         .hero::before {
@@ -234,6 +252,7 @@
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 700;
             line-height: 1.1;
+            margin-top: 2rem;
             margin-bottom: 1.5rem;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -255,13 +274,17 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
             color: var(--text-secondary);
             margin-bottom: 3rem;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             animation: fadeInUp 0.8s ease-out 0.4s both;
+            line-height: 1.7;
+            text-align: center;
+            word-wrap: break-word;
+            hyphens: auto;
         }
 
         .hero-cta {
@@ -273,17 +296,24 @@
         }
 
         .btn-primary {
-            background: var(--gradient-primary);
-            color: var(--text-light);
-            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            color: white !important;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
             transition: var(--transition);
-            box-shadow: var(--shadow-soft);
+            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
             border: none;
             cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary * {
+            color: white !important;
         }
 
         .btn-primary:hover {
@@ -328,6 +358,16 @@
             margin-bottom: 4rem;
         }
 
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #004AAD, #5DE0E6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .section-badge {
             display: inline-block;
             background: var(--gradient-secondary);
@@ -350,11 +390,972 @@
         }
 
         .section-subtitle {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        /* App Showcase Section */
+        .app-showcase-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-showcase-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .app-showcase-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 74, 173, 0.06) 0%, transparent 50%);
+            animation: morph 15s ease-in-out infinite;
+        }
+
+        .app-showcase-section .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .app-showcase-section .floating-shapes::before,
+        .app-showcase-section .floating-shapes::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(0, 74, 173, 0.05), rgba(93, 224, 230, 0.03));
+            animation: drift 20s linear infinite;
+        }
+
+        .app-showcase-section .floating-shapes::before {
+            top: -100px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .app-showcase-section .floating-shapes::after {
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -10s;
+        }
+
+        @keyframes morph {
+            0% { 
+                background: 
+                    radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(0, 74, 173, 0.06) 0%, transparent 50%);
+            }
+            50% { 
+                background: 
+                    radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.12) 0%, transparent 60%),
+                    radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at 60% 60%, rgba(0, 74, 173, 0.1) 0%, transparent 50%);
+            }
+            100% { 
+                background: 
+                    radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(0, 74, 173, 0.06) 0%, transparent 50%);
+            }
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(50px, -25px) rotate(180deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        .app-showcase-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-card {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .screenshot-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 74, 173, 0.1);
+        }
+
+        .screenshot-placeholder {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .phone-screenshot {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .phone-mockup {
+            width: 200px;
+            height: 400px;
+            background: #1a1a1a;
+            border-radius: 25px;
+            padding: 20px 15px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: #f8fafc;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .notch {
+            width: 100px;
+            height: 20px;
+            background: #000;
+            border-radius: 10px;
             margin: 0 auto;
         }
+
+        .status-icons {
+            display: flex;
+            gap: 0.3rem;
+            font-size: 0.7rem;
+        }
+
+        /* Challenge Screen */
+        .challenge-header {
+            text-align: center;
+            padding: 1rem;
+            background: #f8fafc;
+        }
+
+        .mission-badge {
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-header h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #004AAD;
+        }
+
+        .highlight {
+            color: #5DE0E6;
+        }
+
+        .challenge-header p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.3;
+        }
+
+        .challenge-card {
+            background: white;
+            margin: 0 1rem;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .challenge-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .category-badge {
+            background: #ff4444;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.6rem;
+            font-weight: 600;
+        }
+
+        .flame {
+            color: #ff8800;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .challenge-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #004AAD;
+            margin-bottom: 0.5rem;
+        }
+
+        .challenge-card p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-details {
+            font-size: 0.7rem;
+        }
+
+        .detail-item {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.3rem;
+        }
+
+        .bullet.blue {
+            color: #5DE0E6;
+        }
+
+        .bullet.purple {
+            color: #8B5CF6;
+        }
+
+        /* Pod Screen */
+        .pod-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #f8fafc;
+        }
+
+        .app-brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #004AAD;
+        }
+
+        .profile-section {
+            text-align: right;
+        }
+
+        .profile-section span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .profile-section small {
+            color: #666;
+            font-size: 0.7rem;
+        }
+
+        .pod-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            background: #f8fafc;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .pod-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pod-icon {
+            width: 30px;
+            height: 30px;
+            background: #004AAD;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        .pod-info strong {
+            color: #004AAD;
+            font-size: 0.9rem;
+        }
+
+        .pod-info small {
+            color: #666;
+            font-size: 0.7rem;
+        }
+
+        .pod-actions {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .action-btn {
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #666;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .action-btn.primary {
+            background: #004AAD;
+            color: white;
+        }
+
+        .pod-tabs {
+            display: flex;
+            padding: 0 1rem;
+            background: #f8fafc;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 0.8rem 0.5rem;
+            font-size: 0.8rem;
+            color: #666;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab.active {
+            color: #004AAD;
+            border-bottom-color: #004AAD;
+        }
+
+        .custom-challenge-card {
+            background: #e0f2fe;
+            margin: 1rem;
+            padding: 1.2rem;
+            border-radius: 15px;
+        }
+
+        .challenge-type-selector {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .type-btn {
+            padding: 0.3rem 0.8rem;
+            border: none;
+            border-radius: 15px;
+            background: white;
+            color: #666;
+            font-size: 0.7rem;
+            cursor: pointer;
+        }
+
+        .type-btn.active {
+            background: #004AAD;
+            color: white;
+        }
+
+        .custom-challenge-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .custom-challenge-card p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .custom-challenge-card textarea {
+            width: 100%;
+            height: 60px;
+            border: none;
+            border-radius: 10px;
+            padding: 0.8rem;
+            font-size: 0.8rem;
+            resize: none;
+            margin-bottom: 0.8rem;
+        }
+
+        .custom-tag {
+            background: #e0f2fe;
+            color: #004AAD;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .suggest-btn {
+            background: linear-gradient(135deg, #004AAD, #5DE0E6);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Challenge Packs Screen */
+        .packs-header {
+            text-align: center;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .special-badge {
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .packs-header h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .packs-header p {
+            font-size: 0.8rem;
+            color: #ccc;
+            line-height: 1.3;
+        }
+
+        .pack-card-featured {
+            background: #2a2a2a;
+            margin: 0 1rem;
+            padding: 1.2rem;
+            border-radius: 15px;
+            color: white;
+            position: relative;
+        }
+
+        .pack-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .pack-icon {
+            width: 40px;
+            height: 40px;
+            background: #5DE0E6;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .pack-info h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .pack-info small {
+            color: #ccc;
+            font-size: 0.7rem;
+        }
+
+        .pack-card-featured p {
+            font-size: 0.8rem;
+            color: #ccc;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .completion-status {
+            margin-bottom: 1rem;
+        }
+
+        .completion-status .flame {
+            color: #ff8800;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .completion-status small {
+            color: #ccc;
+            font-size: 0.7rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .start-pack-btn {
+            background: linear-gradient(135deg, #004AAD, #5DE0E6);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+        }
+
+        .nav-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .nav-arrow {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            pointer-events: all;
+        }
+
+        /* Guides Screen */
+        .guides-header {
+            padding: 1rem;
+            background: #f8fafc;
+        }
+
+        .guides-header h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #004AAD;
+            margin-bottom: 0.5rem;
+        }
+
+        .guides-header p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.3;
+        }
+
+        .filter-bar {
+            display: flex;
+            background: #e5e7eb;
+            margin: 0 1rem;
+            border-radius: 20px;
+            padding: 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-btn {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            background: transparent;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .filter-btn.active {
+            background: #004AAD;
+            color: white;
+        }
+
+        .guide-card-featured {
+            background: #fef3c7;
+            margin: 0 1rem;
+            padding: 1.2rem;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .guide-badges {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .free-badge {
+            background: #10b981;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.6rem;
+            font-weight: 600;
+        }
+
+        .duration-badge {
+            background: #f59e0b;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.6rem;
+            font-weight: 600;
+        }
+
+        .guide-icon {
+            width: 40px;
+            height: 40px;
+            background: #f59e0b;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-card-featured h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #004AAD;
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-card-featured p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .guide-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat:first-child {
+            color: #004AAD;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .stat:not(:first-child) {
+            color: #666;
+            font-size: 0.7rem;
+        }
+
+        .progress-section {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.7rem;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #004AAD;
+            border-radius: 3px;
+        }
+
+        .continue-btn {
+            background: #f59e0b;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            display: flex;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 0.5rem 0;
+            margin-top: auto;
+        }
+
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.7rem;
+            color: #666;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        .nav-item.active {
+            color: #004AAD;
+        }
+
+        .nav-item.active::after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background: #004AAD;
+            border-radius: 1px;
+        }
+
+        .app-header {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .challenge-preview h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .challenge-preview p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .challenge-timer {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .pack-preview {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .pack-item {
+            background: rgba(0, 74, 173, 0.1);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .pro-badge {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .pod-preview {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .pod-member {
+            background: rgba(93, 224, 230, 0.1);
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-primary);
+            border-left: 3px solid var(--accent-cyan);
+        }
+
+        .challenge-details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .detail-section {
+            background: rgba(0, 74, 173, 0.05);
+            padding: 10px 12px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-cyan);
+        }
+
+        .detail-section h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .detail-section p {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+
+        .guide-preview {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .guide-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .guide-progress {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: rgba(0, 74, 173, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+        }
+
+        .guide-progress span {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        .guide-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .guide-lesson {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .guide-exercise {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            background: rgba(93, 224, 230, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .screenshot-card h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .screenshot-card p {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
 
         /* Weekly Challenges Section */
         .challenges-section {
@@ -516,8 +1517,9 @@
 
         .challenge-description {
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.5;
             margin-bottom: 1.5rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
         }
 
         .challenge-examples {
@@ -603,11 +1605,168 @@
             margin-bottom: 2rem;
         }
 
+        .packs-showcase {
+            margin-top: 3rem;
+        }
+
+        .pack-featured {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .pack-hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .pack-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+
+        .pack-info h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .pack-info p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .pack-stats {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .stat {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .pack-preview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .preview-challenge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(0, 74, 173, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-cyan);
+        }
+
+        .challenge-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+
+        .challenge-text h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .challenge-text p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
         .packs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pack-card.compact {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .pack-card.compact:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 74, 173, 0.1);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .pack-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .pack-icon-small {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+
+        .pack-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .pack-desc {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .pack-meta {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
         }
 
         .pack-card {
@@ -670,8 +1829,9 @@
 
         .pack-description {
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.5;
             margin-bottom: 1.5rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
         }
 
         .pack-features {
@@ -712,141 +1872,664 @@
 
         /* Pods Section */
         .pods-section {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: var(--text-light);
+            background: #000000;
+            color: #ffffff;
             position: relative;
             overflow: hidden;
+            padding: 6rem 0;
         }
 
-        .pods-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circles" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%235DE0E6" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23circles)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .pods-content {
+        .pods-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
             position: relative;
             z-index: 2;
         }
 
-        .pods-intro {
+        .floating-bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            opacity: 0.03;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .bubble-1 {
+            width: 60px;
+            height: 60px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bubble-2 {
+            width: 40px;
+            height: 40px;
+            top: 20%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+
+        .bubble-3 {
+            width: 80px;
+            height: 80px;
+            top: 60%;
+            left: 5%;
+            animation-delay: 2s;
+        }
+
+        .bubble-4 {
+            width: 50px;
+            height: 50px;
+            top: 70%;
+            right: 20%;
+            animation-delay: 3s;
+        }
+
+        .bubble-5 {
+            width: 30px;
+            height: 30px;
+            top: 30%;
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .bubble-6 {
+            width: 70px;
+            height: 70px;
+            top: 80%;
+            left: 30%;
+            animation-delay: 5s;
+        }
+
+        .bubble-7 {
+            width: 45px;
+            height: 45px;
+            top: 40%;
+            right: 5%;
+            animation-delay: 6s;
+        }
+
+        .bubble-8 {
+            width: 35px;
+            height: 35px;
+            top: 15%;
+            left: 70%;
+            animation-delay: 7s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.1;
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 0.3;
+            }
+        }
+
+        .pods-header {
             text-align: center;
-            margin-bottom: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 6rem;
         }
 
-        .pods-intro h2 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .pods-intro p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.8);
+        .pods-header .section-badge {
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            color: #000;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
             margin-bottom: 2rem;
         }
 
-        .pods-main {
+        .pods-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff, #5DE0E6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pods-what {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            margin-top: 3rem;
+            margin-bottom: 6rem;
         }
 
-        .pods-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .pods-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .pods-features {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .pod-feature {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--border-radius);
-            border: 1px solid rgba(93, 224, 230, 0.2);
-            transition: var(--transition);
+        .orbiting-visual {
             position: relative;
-            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
         }
 
-        .pod-feature::before {
-            content: '';
+        .center-pod {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gradient-secondary);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .pod-feature:hover {
-            background: rgba(93, 224, 230, 0.1);
-            border-color: rgba(93, 224, 230, 0.4);
-            transform: translateX(10px);
-        }
-
-        .pod-feature:hover::before {
-            opacity: 0.1;
-        }
-
-        .pod-feature-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-secondary);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
-            color: var(--text-light);
-            position: relative;
             z-index: 2;
+            animation: podPulse 3s ease-in-out infinite;
         }
 
-        .pod-feature-text {
-            position: relative;
-            z-index: 2;
+        .pod-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
-        .pod-feature-text h4 {
-            font-size: 1.25rem;
+        .pod-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            z-index: 1;
+        }
+
+        .orbit-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            border: 2px solid rgba(93, 224, 230, 0.3);
+            border-radius: 50%;
+            animation: orbit 10s linear infinite;
+        }
+
+        .orbit-ring::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background: #5DE0E6;
+            border-radius: 50%;
+        }
+
+        @keyframes podPulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                opacity: 0.3;
+            }
+            to {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes orbit {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .pods-explanation {
+            animation: fadeInLeft 1s ease-out 0.5s both;
+        }
+
+        .pods-explanation p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .pods-explanation p:last-child {
+            margin-bottom: 0;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .pods-how {
+            margin-bottom: 6rem;
+        }
+
+        .pods-how h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .step-card:hover {
+            background: rgba(93, 224, 230, 0.1);
+            border-color: rgba(93, 224, 230, 0.6);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-card h4 {
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
+            margin-bottom: 1rem;
+            color: #ffffff;
         }
 
-        .pod-feature-text p {
+        .step-card p {
+            font-size: 1rem;
+            line-height: 1.5;
             color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
         }
+
+        .pods-why {
+            margin-bottom: 6rem;
+        }
+
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .streak-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .streak-circle {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .streak-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000;
+            line-height: 1;
+        }
+
+        .streak-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            text-align: center;
+        }
+
+        .why-text {
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .why-text h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .why-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .why-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        @keyframes streakPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .pods-upgrade {
+            text-align: center;
+        }
+
+        .upgrade-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .card.pro {
+            border-color: rgba(93, 224, 230, 0.5);
+            background: rgba(93, 224, 230, 0.1);
+        }
+
+        .card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            color: #000;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: ctaGlow 2s ease-in-out infinite alternate;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(93, 224, 230, 0.4);
+        }
+
+        @keyframes ctaGlow {
+            from {
+                box-shadow: 0 0 20px rgba(93, 224, 230, 0.3);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(93, 224, 230, 0.6);
+            }
+        }
+
+        .message-bubbles {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bubble {
+            position: absolute;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        .bubble-1 {
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .bubble-2 {
+            width: 16px;
+            height: 16px;
+            top: 25px;
+            right: 15px;
+        }
+
+        .bubble-3 {
+            width: 12px;
+            height: 12px;
+            bottom: 15px;
+            left: 20px;
+        }
+
+        .progress-chart {
+            display: flex;
+            align-items: end;
+            gap: 4px;
+            height: 100%;
+        }
+
+        .chart-bar {
+            background: var(--gradient-secondary);
+            border-radius: 2px;
+            width: 12px;
+        }
+
+        .bar-1 {
+            height: 30%;
+        }
+
+        .bar-2 {
+            height: 60%;
+        }
+
+        .bar-3 {
+            height: 80%;
+        }
+
+        .bar-4 {
+            height: 45%;
+        }
+
+        .accountability-ring {
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .ring-outer {
+            width: 100%;
+            height: 100%;
+            border: 3px solid rgba(93, 224, 230, 0.3);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .ring-inner {
+            width: 60%;
+            height: 60%;
+            border: 3px solid var(--accent-cyan);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .pro-badge {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pro-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .badge-inner {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #000;
+            z-index: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pods-what {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .why-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .upgrade-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .orbiting-visual {
+                width: 250px;
+                height: 250px;
+            }
+
+            .center-pod {
+                width: 100px;
+                height: 100px;
+            }
+
+            .orbit-ring {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
 
         /* Companion Guides Section */
         .guides-section {
@@ -957,7 +2640,7 @@
         .feature-text p {
             color: var(--text-secondary);
             line-height: 1.5;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
         }
 
         .feature-details {
@@ -1035,7 +2718,7 @@
         .preview-content p {
             color: var(--text-secondary);
             line-height: 1.4;
-            font-size: 0.85rem;
+            font-size: clamp(0.8rem, 1.5vw, 0.85rem);
             margin-bottom: 0.75rem;
         }
 
@@ -1093,12 +2776,15 @@
         }
 
         .cta-subtitle {
-            font-size: 1.25rem;
+            font-size: clamp(1.1rem, 2.8vw, 1.3rem);
             margin-bottom: 3rem;
-            opacity: 0.9;
-            max-width: 600px;
+            color: white;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7;
+            text-align: center;
+            word-wrap: break-word;
         }
 
         .cta-buttons {
@@ -1167,6 +2853,7 @@
         .footer-text {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 2rem;
+            text-align: center;
         }
 
         .footer-links {
@@ -1191,6 +2878,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 2rem;
             color: rgba(255, 255, 255, 0.5);
+            text-align: center;
         }
 
         /* Animations */
@@ -1276,9 +2964,6 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        .pulse {
-            /* Removed pulsating animation */
-        }
 
         .bounce-in {
             animation: fadeInUp 0.8s ease-out;
@@ -1324,9 +3009,18 @@
                 align-items: center;
             }
 
-            .pods-main {
+            .pods-demo {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
+            }
+
+            .phone-screen {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .pack-preview {
+                grid-template-columns: 1fr;
             }
 
             .pods-intro {
@@ -1403,19 +3097,67 @@
             .guides-sidebar {
                 order: -1;
             }
+
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .hero-subtitle {
+                font-size: 1.1rem;
+                max-width: 80%;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                max-width: 80%;
+            }
+
+            .challenge-description {
+                font-size: 0.95rem;
+            }
+
+            .pack-description {
+                font-size: 0.95rem;
+            }
+
+            .pods-text {
+                font-size: 1.05rem;
+            }
+
+            .pod-feature-text p {
+                font-size: 0.9rem;
+            }
+
+            .feature-text p {
+                font-size: 0.95rem;
+            }
+
+            .cta-subtitle {
+                font-size: 1.05rem;
+                max-width: 80%;
+            }
         }
 
         @media (max-width: 480px) {
+            .hero-subtitle {
+                font-size: 0.95rem;
+                max-width: 90%;
+            }
+
+            .section-subtitle {
+                font-size: 0.9rem;
+                max-width: 90%;
+            }
+
             .pods-intro h2 {
                 font-size: 2.2rem;
             }
 
             .pods-intro p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .pods-text {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .pod-feature {
@@ -1431,7 +3173,28 @@
             }
 
             .pod-feature-text p {
+                font-size: 0.85rem;
+            }
+
+            .challenge-description {
+                font-size: 0.85rem;
+            }
+
+            .pack-description {
+                font-size: 0.85rem;
+            }
+
+            .feature-text p {
+                font-size: 0.85rem;
+            }
+
+            .preview-content p {
+                font-size: 0.75rem;
+            }
+
+            .cta-subtitle {
                 font-size: 0.95rem;
+                max-width: 90%;
             }
         }
 
@@ -1505,12 +3268,54 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">Stop living the same week on repeat</div>
-            <h1 class="hero-title">Get Off Autopilot</h1>
-            <p class="hero-subtitle">Think you've done it all? These challenges prove you haven't. College life just got interesting.</p>
+            <h1 class="hero-title">Challenge Your Normal</h1>
+                    <p class="hero-subtitle">Every Sunday, get one unique challenge that pushes you to explore, grow, or connect. Experiences that make you think "I never would've thought of that."</p>
             <div class="hero-cta">
                 <a href="https://web.vereofficial.com" target="_blank" class="btn-primary">Start Getting Challenges</a>
                 <a href="https://www.instagram.com/vere.app/" target="_blank" class="btn-secondary">Check Out the Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section -->
+    <section class="section app-showcase-section">
+        <div class="floating-shapes"></div>
+        <div class="section-content">
+            <div class="app-showcase-content">
+                <div class="section-header">
+                    <div class="section-badge">See It In Action</div>
+                    <h2>What You're Getting</h2>
+                </div>
+                <div class="screenshots-grid">
+                    <div class="screenshot-card">
+                        <div class="screenshot-placeholder">
+                            <img src="Simulator Screenshot - iPhone 15 - 2025-09-15 at 10.16.33.PNG" alt="Weekly Challenges Screen" class="phone-screenshot">
+                        </div>
+                        <h4>Weekly Challenges</h4>
+                        <p style="text-align: center;">Get one unique experience every Sunday. Learn why. Reflect on it.</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <div class="screenshot-placeholder">
+                            <img src="Simulator Screenshot - iPhone 15 - 2025-09-15 at 10.17.31.PNG" alt="Pods Screen" class="phone-screenshot">
+                        </div>
+                        <h4>Pods</h4>
+                        <p style="text-align: center;">Tackle challenges with friends and make memories</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <div class="screenshot-placeholder">
+                            <img src="Simulator Screenshot - iPhone 15 - 2025-09-15 at 10.18.58.PNG" alt="Challenge Packs Screen" class="phone-screenshot">
+                        </div>
+                        <h4>Challenge Packs</h4>
+                        <p style="text-align: center;">Collections of themed challenges with exclusive completion badges</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <div class="screenshot-placeholder">
+                            <img src="Simulator Screenshot - iPhone 15 - 2025-09-15 at 11.40.02.PNG" alt="Companion Guides Screen" class="phone-screenshot">
+                        </div>
+                        <h4>Companion Guides</h4>
+                        <p style="text-align: center;">Multi-week personal growth crash courses</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1520,9 +3325,9 @@
         <div class="section-content">
             <div class="challenges-content">
                 <div class="challenges-intro">
-                    <div class="section-badge">Weekly Challenges</div>
-                    <h2>Challenges That Really Make You Think</h2>
-                    <p>No basic stuff. These challenges actually make you think deeper and do things you wouldn't normally do. Every week gives you a "why" backed by scientific insights. Knock challenges out of the park and build up a streak with reflections.</p>
+                    <div class="section-badge">How It Works</div>
+                    <h2>One Challenge Per Week</h2>
+                    <p style="text-align: center;">Every Sunday, you get one unique experience that disappears after 7 days.</p>
                 </div>
                 <div class="challenge-stats">
                     <div class="stat-item">
@@ -1542,39 +3347,36 @@
                     <div class="challenge-card fade-in" style="animation-delay: 0.1s;">
                         <div class="challenge-icon">🗺️</div>
                         <h3 class="challenge-title">Exploration</h3>
-                        <p class="challenge-description">See your city in a way you've never seen it before. Hunt for hidden spots, local secrets, and experiences that make the familiar feel new.</p>
+                        <p class="challenge-description">Discover hidden spots and experiences that make your campus and city feel new again.</p>
                         <div class="challenge-examples">
-                            <h4>Challenge Examples:</h4>
+                            <h4>Basic Examples:</h4>
                             <ul>
-                                <li>Sneak into a campus building you've never been in and find its coolest hidden feature</li>
+                                <li>Attend a lecture in the most intimidating academic department on your campus</li>
                                 <li>Discover a rooftop or hidden viewpoint most people overlook</li>
-                                <li>Explore a neighborhood you've never set foot in before</li>
                             </ul>
                         </div>
                     </div>
                     <div class="challenge-card fade-in" style="animation-delay: 0.2s;">
                         <div class="challenge-icon">🧠</div>
-                        <h3 class="challenge-title">Mindfulness</h3>
-                        <p class="challenge-description">Step outside your comfort zone and try something that challenges your usual habits. Growth often comes from doing the things that feel a little awkward or unfamiliar.</p>
+                        <h3 class="challenge-title">Personal Growth</h3>
+                        <p class="challenge-description">Break habits and try things that push you outside your comfort zone in meaningful ways.</p>
                         <div class="challenge-examples">
-                            <h4>Challenge Examples:</h4>
+                            <h4>Basic Examples:</h4>
                             <ul>
                                 <li>Go 24 hours without checking your reflection, mirrors, or screens</li>
                                 <li>Join a group activity where you're clearly the beginner</li>
-                                <li>Attend a lecture in the most intimidating academic department on your campus</li>
                             </ul>
                         </div>
                     </div>
                     <div class="challenge-card fade-in" style="animation-delay: 0.3s;">
                         <div class="challenge-icon">👥</div>
-                        <h3 class="challenge-title">Connection</h3>
-                        <p class="challenge-description">Turn everyday interactions into chances for genuine connection. Embrace situations that feel uncomfortable and see where curiosity and openness can take you.</p>
+                        <h3 class="challenge-title">Social Connection</h3>
+                        <p class="challenge-description">Turn everyday interactions into chances for genuine connection with people around you.</p>
                         <div class="challenge-examples">
-                            <h4>Challenge Examples:</h4>
+                            <h4>Basic Examples:</h4>
                             <ul>
-                                <li>Attend a poetry slam or open mic night and stay for the whole thing</li>
-                                <li>Text three people from high school you haven't talked to since graduation</li>
-                                <li>Attend three different club meetings in one week for organizations you know nothing about</li>
+                                <li>Text a person from high school you haven't talked to since graduation</li>
+                                <li>Attend three different club meetings in one week for orgs you know nothing about</li>
                             </ul>
                         </div>
                     </div>
@@ -1583,61 +3385,84 @@
         </div>
     </section>
 
+
     <!-- Special Edition Challenge Packs Section -->
     <section class="section packs-section" id="packs">
         <div class="section-content">
             <div class="packs-content">
                 <div class="packs-intro">
-                    <div class="section-badge">Special Edition Challenge Packs</div>
-                    <h2>Curated Packs of Unforgettable Dares and Adventures.</h2>
-                    <p>Challenge packs that flip your routine. Wild dares, couples experiments, road trip adventures, and even UT-themed drops you won't find anywhere else.</p>
+                    <div class="section-badge">Challenge Packs</div>
+                    <h2>Level Up Your Experience</h2>
+                    <p style="text-align: center;">When you want more than weekly challenges, dive into themed collections designed for specific goals and situations.</p>
+                </div>
+                <div class="packs-showcase">
+                    <div class="pack-featured">
+                        <div class="pack-hero">
+                            <div class="pack-icon">🔥</div>
+                            <div class="pack-info">
+                                <h3>Extreme Dares</h3>
+                                <p>High-intensity social risks that push you way outside your comfort zone</p>
+                                <div class="pack-stats">
+                                    <span class="stat">10 challenges</span>
+                                    <span class="stat">•</span>
+                                    <span class="stat">2-3 weeks</span>
+                                    <span class="stat">•</span>
+                                    <span class="stat">Exclusive badge</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pack-preview">
+                            <div class="preview-challenge">
+                                <div class="challenge-icon">🎤</div>
+                                <div class="challenge-text">
+                                    <h4>Perform at an open mic night</h4>
+                                    <p>Share your talent (or lack thereof) with a live audience</p>
+                                </div>
+                            </div>
+                            <div class="preview-challenge">
+                                <div class="challenge-icon">👥</div>
+                                <div class="challenge-text">
+                                    <h4>Go to a party where you know no one</h4>
+                                    <p>Walk into a social situation completely alone</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <div class="packs-grid">
-                    <div class="pack-card fade-in">
-                        <div class="pack-image">😈</div>
-                        <div class="pack-content">
-                            <h3 class="pack-title">Extreme Dares</h3>
-                            <p class="pack-description">Not for the faint of heart. These aren't your average challenges. They're bold, messy, and unforgettable.</p>
-                            <div class="pack-features">
-                                <h4>What's Inside</h4>
-                                <ul>
-                                    <li>10 high-intensity dares</li>
-                                    <li>Bold stunts and social risks</li>
-                                    <li>Unforgettable story material</li>
-                                    <li>Exclusive completion badge</li>
-                                </ul>
+                        <div class="pack-card compact">
+                            <div class="pack-header">
+                                <div class="pack-icon-small">💕</div>
+                                <div class="pack-title">Couples Challenges</div>
                             </div>
+                            <p class="pack-desc">Transform your relationship with adventures that create inside jokes and stories you'll tell for years.</p>
+                            <div class="pack-meta">
+                                <span>10 challenges</span>
+                                <span>•</span>
+                                <span>2-3 weeks</span>
                         </div>
                     </div>
-                    <div class="pack-card fade-in">
-                        <div class="pack-image">💕</div>
-                        <div class="pack-content">
-                            <h3 class="pack-title">Partner in Crime</h3>
-                            <p class="pack-description">For couples who want more than dinner dates. Challenges that spark memories, inside jokes, and stories you'll definitely tell later.</p>
-                            <div class="pack-features">
-                                <h4>What's Inside</h4>
-                                <ul>
-                                    <li>10 couple-focused challenges</li>
-                                    <li>Adventures that strengthen connection</li>
-                                    <li>Playful dares to break routine</li>
-                                    <li>Exclusive completion badge</li>
-                                </ul>
+                        <div class="pack-card compact">
+                            <div class="pack-header">
+                                <div class="pack-icon-small">🎓</div>
+                                <div class="pack-title">Campus Adventures</div>
                             </div>
+                            <p class="pack-desc">Make the most of your college years with experiences designed specifically for campus life.</p>
+                            <div class="pack-meta">
+                                <span>10 challenges</span>
+                                <span>•</span>
+                                <span>2-3 weeks</span>
                         </div>
                     </div>
-                    <div class="pack-card fade-in">
-                        <div class="pack-image">🤘</div>
-                        <div class="pack-content">
-                            <h3 class="pack-title">Hook 'Em Horns</h3>
-                            <p class="pack-description">A collection of campus and Austin-based challenges built to make your time at UT something to remember.</p>
-                            <div class="pack-features">
-                                <h4>What's Inside</h4>
-                                <ul>
-                                    <li>10 UT-exclusive challenges</li>
-                                    <li>Campus adventures + Austin gems</li>
-                                    <li>School spirit meets exploration</li>
-                                    <li>Exclusive completion badge</li>
-                                </ul>
+                        <div class="pack-card compact">
+                            <div class="pack-header">
+                                <div class="pack-icon-small">🌍</div>
+                                <div class="pack-title">Travel Challenges</div>
+                            </div>
+                            <p class="pack-desc">Explore your city and beyond with adventures that push you to discover new places.</p>
+                            <div class="pack-meta">
+                                <span>10 challenges</span>
+                                <span>•</span>
+                                <span>2-3 weeks</span>
                             </div>
                         </div>
                     </div>
@@ -1648,50 +3473,54 @@
 
     <!-- Pods Section -->
     <section class="section pods-section" id="pods">
-        <div class="section-content">
-            <div class="pods-content">
-                <div class="pods-intro">
-                    <div class="section-badge">Pods</div>
-                    <h2>Your Challenge Squad</h2>
-                    <p>Because trying new things is way better with friends.</p>
+        <div class="pods-container">
+            
+            <!-- Header -->
+            <div class="pods-header">
+                <div class="section-badge">👥 Pods: Do It Together</div>
+                <h2>Because doing cool stuff alone is fine, but with friends? It hits different.</h2>
                 </div>
-                <div class="pods-main">
-                    <div class="pods-text fade-in">
-                        <p>Pods are private groups of 2–10 people you invite (or join through a friend's invite). They're your go-to crew for tackling challenges together, keeping each other accountable, and turning "we should do something" into actual experiences worth remembering.</p>
-                        <p>Create your own pod and invite your friends, or join a friend's pod using their invite code. Each pod is private and only includes people you actually want to do challenges with.</p>
+            
+            <!-- What Pods Are -->
+            <div class="pods-what">
+                <div class="orbiting-visual">
+                    <div class="center-pod">
+                        <div class="pod-glow"></div>
+                        <div class="pod-text">Pod</div>
                     </div>
-                    <div class="pods-features">
-                        <div class="pod-feature fade-in">
-                            <div class="pod-feature-icon">💬</div>
-                            <div class="pod-feature-text">
-                                <h4>Bulletin Board</h4>
-                                <p>Stay connected with your pod through dedicated messaging that doesn't get lost in other notifications</p>
+                    <div class="orbit-ring"></div>
+                            </div>
+                <div class="pods-explanation">
+                    <p><strong>Pods = small groups (2–10 people).</strong></p>
+                    <p>You all take on the same weekly challenge.</p>
+                    <p>Share updates, reactions, and inside jokes as you go.</p>
+                    <p>Pods keep you accountable and make boring weeks unforgettable.</p>
+                        </div>
+                            </div>
+            
+            <!-- How It Works -->
+            <div class="pods-how">
+                <h3>How It Works</h3>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Join or Create</h4>
+                        <p>Hop into a pod with an invite code, or start your own (Pro feature).</p>
+                        </div>
+                            <div class="step-card">
+                                <div class="step-number">2</div>
+                                <h4>Take on the Drop</h4>
+                                <p>Everyone gets the same weekly or custom challenge. Post proof, stories, or fails.</p>
+                            </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Track the Streak</h4>
+                        <p>Watch your pod's streak climb week after week. Break it, and everyone feels it.</p>
+                        </div>
                             </div>
                         </div>
-                        <div class="pod-feature fade-in">
-                            <div class="pod-feature-icon">🏆</div>
-                            <div class="pod-feature-text">
-                                <h4>Pod Leaderboards</h4>
-                                <p>Friendly competition with pod-specific leaderboards and achievements that actually mean something</p>
-                            </div>
-                        </div>
-                        <div class="pod-feature fade-in">
-                            <div class="pod-feature-icon">🎯</div>
-                            <div class="pod-feature-text">
-                                <h4>Shared Goals</h4>
-                                <p>Work on challenges together and actually celebrate when someone does something cool</p>
-                            </div>
-                        </div>
-                        <div class="pod-feature fade-in">
-                            <div class="pod-feature-icon">⭐</div>
-                            <div class="pod-feature-text">
-                                <h4>Flexibility</h4>
-                                <p>Create and manage your own pods with a Pro subscription</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            
         </div>
     </section>
 
@@ -1702,15 +3531,15 @@
                 <div class="guides-intro">
                     <div class="section-badge">Companion Guides</div>
                     <h2>Your Personal Life Coach</h2>
-                    <p>Deep-dive crash courses designed to transform specific areas of your life. Each guide combines expert insights, practical challenges, and reflective exercises.</p>
+                    <p style="text-align: center;">Deep-dive crash courses designed to transform specific areas of your life. Each guide combines expert insights, practical challenges, and reflective exercises.</p>
                 </div>
                 <div class="guides-showcase">
                     <div class="guide-feature main-feature fade-in" style="animation-delay: 0.1s;">
                         <div class="feature-content">
                             <div class="feature-icon">📚</div>
                             <div class="feature-text">
-                                <h3>Multi-Week Programs</h3>
-                                <p>Personal development mini-guides that actually work. Each guide walks you through expert insights, hands-on challenges, and reflection exercises that stick.</p>
+                                <h3>Structured Learning Programs</h3>
+                                <p>2-4 week courses that teach specific skills through expert content and practical exercises.</p>
                             </div>
                         </div>
                         <div class="feature-details">
@@ -1770,8 +3599,8 @@
     <!-- CTA Section -->
     <section class="cta-section" id="cta">
         <div class="section-content">
-            <div class="cta-title">Ready to Stop Living the Same Week?</div>
-            <p class="cta-subtitle">Join other college students who are actually doing cool stuff instead of just talking about it.</p>
+                <div class="cta-title">Ready to Turn Your Week Into an Adventure?</div>
+                <p class="cta-subtitle">Join other college students who are actually doing cool stuff<br>instead of just talking about it.</p>
         <div class="cta-buttons">
             <a href="https://web.vereofficial.com" target="_blank" class="btn-white">Download the App</a>
             <a href="https://www.instagram.com/vere.app/" target="_blank" class="btn-outline">Check Out the Instagram</a>
@@ -1783,13 +3612,14 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo"><img src="vere side-by-side logo.png" alt="Veré" style="height: 30px; width: auto;"></div>
-            <p class="footer-text">Weekly challenges that actually hit different. Stop living the same week on repeat.</p>
+            <p class="footer-text">Weekly challenges for college students. Try something new every Sunday.</p>
             <div class="footer-links">
                 <a href="https://sites.google.com/view/vereofficial-privacy-policy/home" target="_blank">Privacy</a>
                 <a href="https://sites.google.com/view/vereofficial-terms-conditions/home" target="_blank">Terms</a>
+                <a href="https://sites.google.com/view/vereofficial-help/home?authuser=2" target="_blank">Support</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Veré. All rights reserved.</p>
+                <p style="text-align: center;">&copy; 2025 Veré. All rights reserved.</p>
             </div>
         </div>
     </footer>
