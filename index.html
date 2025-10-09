@@ -3588,6 +3588,15 @@
                 margin: 1rem 0;
                 padding: 1.5rem;
                 overflow: visible;
+                min-height: auto;
+                height: auto;
+            }
+            
+            /* Fix card content overflow */
+            .card *, .feature-card *, .challenge-card * {
+                max-width: 100%;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
             }
             
             /* Fix text in cards */
@@ -3667,6 +3676,33 @@
             .footer-links {
                 justify-content: center !important;
                 text-align: center !important;
+            }
+            
+            /* Fix bottom content cutoff */
+            .section {
+                padding-bottom: 3rem !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            .container {
+                padding-bottom: 2rem !important;
+            }
+            
+            /* Ensure all content is visible */
+            .challenge-grid, .feature-grid, .app-preview {
+                margin-bottom: 3rem !important;
+            }
+            
+            /* Fix specific text overflow issues */
+            .challenge-card p, .feature-card p {
+                font-size: 0.95rem !important;
+                line-height: 1.4 !important;
+                padding: 0.5rem 0 !important;
+            }
+            
+            .challenge-card h3, .feature-card h3 {
+                font-size: 1.3rem !important;
+                margin-bottom: 0.5rem !important;
             }
             
             /* Container fixes */
