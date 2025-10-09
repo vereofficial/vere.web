@@ -3446,19 +3446,46 @@
 
         /* Enhanced Mobile Responsiveness */
         @media (max-width: 768px) {
-            /* Fix horizontal overflow */
+            /* Fix horizontal overflow and text issues */
             * {
                 max-width: 100%;
                 box-sizing: border-box;
             }
             
+            /* Prevent text hyphenation and word breaks */
+            h1, h2, h3, h4, h5, h6, p, span, div, .hero-title, .section-title, .card-title {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: none !important;
+                word-break: keep-all !important;
+                white-space: normal;
+                line-height: 1.2;
+            }
+            
+            /* Fix background issues */
+            body {
+                background: var(--bg-primary) !important;
+            }
+            
+            .hero {
+                background: var(--gradient-primary) !important;
+            }
+            
+            .section {
+                background: var(--bg-primary) !important;
+            }
+            
             /* Carousel Mobile */
             .app-carousel {
                 margin: 2rem 1rem 0;
+                width: calc(100% - 2rem);
+                overflow: hidden;
             }
             
             .carousel-container {
                 height: 400px;
+                width: 100%;
+                overflow: hidden;
             }
             
             .carousel-slide {
@@ -3466,38 +3493,104 @@
                 text-align: center;
                 gap: 2rem;
                 padding: 2rem;
+                width: 100%;
+                min-height: 400px;
+            }
+            
+            /* Fix navigation cutoff */
+            .carousel-nav {
+                width: 100%;
+                justify-content: center;
+                padding: 0 1rem;
+            }
+            
+            .carousel-arrow {
+                position: relative;
+                z-index: 10;
+            }
+            
+            /* Prevent content overflow */
+            .carousel-content {
+                width: 100%;
+                max-width: 100%;
             }
             
             .carousel-content h3 {
                 font-size: 1.8rem;
+                word-break: keep-all !important;
+                hyphens: none !important;
             }
             
             .carousel-content p {
                 font-size: 1rem;
+                word-break: keep-all !important;
+                hyphens: none !important;
             }
             
             .carousel-image {
                 width: 150px;
                 order: -1;
+                max-width: 100%;
             }
             
             .carousel-nav {
                 gap: 1rem;
+                width: 100%;
+                justify-content: center;
             }
             
             .carousel-arrow {
                 width: 40px;
                 height: 40px;
                 font-size: 1rem;
+                position: relative;
+                z-index: 10;
             }
             
             .carousel-dots {
                 gap: 0.5rem;
+                flex-wrap: wrap;
             }
             
             .carousel-dot {
                 width: 10px;
                 height: 10px;
+            }
+            
+            /* Fix general layout issues */
+            .container {
+                padding: 0 1rem;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            /* Fix card layouts */
+            .card, .feature-card, .challenge-card {
+                width: 100%;
+                max-width: 100%;
+                margin: 1rem 0;
+                padding: 1.5rem;
+            }
+            
+            /* Fix text in cards */
+            .card h3, .feature-card h3, .challenge-card h3 {
+                font-size: 1.5rem;
+                word-break: keep-all !important;
+                hyphens: none !important;
+                line-height: 1.2;
+            }
+            
+            .card p, .feature-card p, .challenge-card p {
+                font-size: 1rem;
+                word-break: keep-all !important;
+                hyphens: none !important;
+                line-height: 1.4;
             }
             
             body {
