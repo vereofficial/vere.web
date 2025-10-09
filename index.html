@@ -3487,7 +3487,7 @@
             
             /* Carousel Mobile */
             .app-carousel {
-                margin: 4rem 1rem 2rem 1rem;
+                margin: 6rem 1rem 4rem 1rem;
                 width: calc(100% - 2rem);
                 overflow: visible;
                 max-width: 100%;
@@ -3506,9 +3506,9 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 1.5rem;
-                padding: 2rem 1.5rem 4rem 1.5rem;
+                padding: 3rem 1.5rem 6rem 1.5rem;
                 width: 100%;
-                min-height: 500px;
+                min-height: 600px;
                 overflow: visible;
                 display: flex;
                 align-items: center;
@@ -3582,8 +3582,10 @@
                 gap: 1rem;
                 width: 100%;
                 justify-content: center;
-                padding: 2rem 1rem 1rem 1rem;
-                margin-top: 1rem;
+                padding: 3rem 1rem 2rem 1rem;
+                margin-top: 2rem;
+                position: relative;
+                z-index: 10;
             }
             
             .carousel-arrow {
@@ -3737,15 +3739,23 @@
             
             /* Fix app preview section spacing */
             .app-preview {
-                padding-top: 3rem !important;
-                padding-bottom: 6rem !important;
-                margin-bottom: 4rem !important;
+                padding-top: 4rem !important;
+                padding-bottom: 8rem !important;
+                margin-bottom: 6rem !important;
             }
             
             /* Ensure proper spacing before carousel */
             .app-preview .section-content {
-                margin-bottom: 3rem !important;
-                padding-bottom: 2rem !important;
+                margin-bottom: 5rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Add extra spacing after carousel */
+            .app-preview::after {
+                content: "";
+                display: block;
+                height: 4rem;
+                width: 100%;
             }
             
             /* Fix pack cards specifically */
