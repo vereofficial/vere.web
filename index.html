@@ -3566,6 +3566,8 @@
                 gap: 1rem;
                 width: 100%;
                 justify-content: center;
+                padding: 0 2rem !important;
+                margin: 2rem 0 !important;
             }
             
             .carousel-arrow {
@@ -3738,8 +3740,21 @@
             
             /* Ensure footer has proper spacing */
             .footer {
-                margin-top: 4rem !important;
-                padding-top: 2rem !important;
+                margin-top: 6rem !important;
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Fix bottom content cutoff with viewport height */
+            body {
+                min-height: 100vh !important;
+                padding-bottom: 8rem !important;
+            }
+            
+            /* Ensure all sections have enough bottom space */
+            .section:last-child {
+                padding-bottom: 8rem !important;
+                margin-bottom: 4rem !important;
             }
             
             /* Fix "What You're Getting" section spacing */
@@ -3790,11 +3805,13 @@
             
             /* Fix pack info text */
             .pack-info p {
-                font-size: 0.9rem !important;
-                line-height: 1.3 !important;
+                font-size: 0.8rem !important;
+                line-height: 1.4 !important;
                 margin-bottom: 0.5rem !important;
                 word-break: keep-all !important;
                 hyphens: none !important;
+                padding: 0.5rem !important;
+                overflow-wrap: break-word !important;
             }
             
             .pack-info h3 {
