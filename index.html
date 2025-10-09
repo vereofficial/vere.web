@@ -3487,10 +3487,12 @@
             
             /* Carousel Mobile */
             .app-carousel {
-                margin: 2rem 1rem 0;
+                margin: 4rem 1rem 2rem 1rem;
                 width: calc(100% - 2rem);
                 overflow: visible;
                 max-width: 100%;
+                position: relative;
+                z-index: 1;
             }
             
             .carousel-container {
@@ -3715,6 +3717,19 @@
                 margin-bottom: 2rem !important;
             }
             
+            /* Fix app preview section spacing */
+            .app-preview {
+                padding-top: 3rem !important;
+                padding-bottom: 6rem !important;
+                margin-bottom: 4rem !important;
+            }
+            
+            /* Ensure proper spacing before carousel */
+            .app-preview .section-content {
+                margin-bottom: 3rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
             /* Fix pack cards specifically */
             .pack-featured, .pack-card {
                 margin-bottom: 2rem !important;
@@ -3725,6 +3740,22 @@
             .footer {
                 margin-top: 4rem !important;
                 padding-top: 2rem !important;
+            }
+            
+            /* Fix "What You're Getting" section spacing */
+            .section-title {
+                margin-bottom: 2rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            .section-content {
+                margin-bottom: 3rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            /* Ensure proper spacing between sections */
+            .section {
+                margin-bottom: 4rem !important;
             }
             
             /* Fix specific text overflow issues */
