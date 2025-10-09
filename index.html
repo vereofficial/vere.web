@@ -3475,6 +3475,16 @@
                 background: var(--bg-primary) !important;
             }
             
+            /* Fix pods section background */
+            .pods-section {
+                background: #1a1a1a !important;
+                color: white !important;
+            }
+            
+            .pods-section * {
+                color: white !important;
+            }
+            
             /* Carousel Mobile */
             .app-carousel {
                 margin: 2rem 1rem 0;
@@ -3491,10 +3501,11 @@
             .carousel-slide {
                 flex-direction: column;
                 text-align: center;
-                gap: 2rem;
-                padding: 2rem;
+                gap: 1.5rem;
+                padding: 1.5rem;
                 width: 100%;
-                min-height: 400px;
+                min-height: 450px;
+                overflow: visible;
             }
             
             /* Fix navigation cutoff */
@@ -3576,6 +3587,7 @@
                 max-width: 100%;
                 margin: 1rem 0;
                 padding: 1.5rem;
+                overflow: visible;
             }
             
             /* Fix text in cards */
@@ -3584,6 +3596,7 @@
                 word-break: keep-all !important;
                 hyphens: none !important;
                 line-height: 1.2;
+                overflow: visible;
             }
             
             .card p, .feature-card p, .challenge-card p {
@@ -3591,6 +3604,37 @@
                 word-break: keep-all !important;
                 hyphens: none !important;
                 line-height: 1.4;
+                overflow: visible;
+            }
+            
+            /* Fix specific card text overflow */
+            .challenge-card .challenge-stats {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+            
+            .challenge-card .challenge-stats .stat {
+                text-align: center;
+                white-space: nowrap;
+                overflow: visible;
+            }
+            
+            /* Fix Extreme Dares card specifically */
+            .challenge-card[data-category="extreme"] {
+                padding: 1rem;
+                margin: 0.5rem 0;
+            }
+            
+            .challenge-card[data-category="extreme"] h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .challenge-card[data-category="extreme"] p {
+                font-size: 0.9rem;
+                line-height: 1.3;
             }
             
             body {
