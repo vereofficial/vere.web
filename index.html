@@ -3505,21 +3505,27 @@
             .carousel-slide {
                 flex-direction: column;
                 text-align: center;
-                gap: 1.5rem;
+                gap: 2rem;
                 padding: 2rem 1.5rem;
                 width: 100%;
-                min-height: 500px;
+                min-height: 600px;
                 overflow: visible;
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: relative;
             }
             
             /* Fix navigation cutoff */
             .carousel-nav {
                 width: 100%;
                 justify-content: center;
-                padding: 0 1rem;
+                padding: 2rem 1rem 1rem 1rem;
+                margin-top: 1rem;
+                z-index: 10;
+                position: relative;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 12px;
             }
             
             .carousel-arrow {
@@ -3535,7 +3541,10 @@
                 flex: 1;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
+                margin-bottom: 2rem;
+                z-index: 2;
+                position: relative;
             }
             
             .carousel-content h3 {
@@ -3555,19 +3564,19 @@
             }
             
             .carousel-image {
-                width: 200px;
-                max-width: 80%;
+                width: 180px;
+                max-width: 70%;
                 height: auto;
-                order: -1;
-                margin-bottom: 1rem;
+                order: 2;
+                margin: 2rem auto 0 auto;
+                z-index: 1;
+                position: relative;
             }
             
             .carousel-nav {
                 gap: 1rem;
                 width: 100%;
                 justify-content: center;
-                padding: 0 2rem !important;
-                margin: 2rem 0 !important;
             }
             
             .carousel-arrow {
@@ -3586,6 +3595,21 @@
             .carousel-dot {
                 width: 10px;
                 height: 10px;
+            }
+            
+            /* Fix carousel tags positioning */
+            .carousel-tags {
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                z-index: 3;
+                position: relative;
+            }
+            
+            .carousel-tag {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+                margin: 0.2rem;
+                display: inline-block;
             }
             
             /* Fix general layout issues */
@@ -3740,21 +3764,8 @@
             
             /* Ensure footer has proper spacing */
             .footer {
-                margin-top: 6rem !important;
-                padding-top: 3rem !important;
-                padding-bottom: 3rem !important;
-            }
-            
-            /* Fix bottom content cutoff with viewport height */
-            body {
-                min-height: 100vh !important;
-                padding-bottom: 8rem !important;
-            }
-            
-            /* Ensure all sections have enough bottom space */
-            .section:last-child {
-                padding-bottom: 8rem !important;
-                margin-bottom: 4rem !important;
+                margin-top: 4rem !important;
+                padding-top: 2rem !important;
             }
             
             /* Fix "What You're Getting" section spacing */
@@ -3805,13 +3816,11 @@
             
             /* Fix pack info text */
             .pack-info p {
-                font-size: 0.8rem !important;
-                line-height: 1.4 !important;
+                font-size: 0.9rem !important;
+                line-height: 1.3 !important;
                 margin-bottom: 0.5rem !important;
                 word-break: keep-all !important;
                 hyphens: none !important;
-                padding: 0.5rem !important;
-                overflow-wrap: break-word !important;
             }
             
             .pack-info h3 {
