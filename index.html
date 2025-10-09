@@ -63,7 +63,7 @@
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -75,30 +75,34 @@
         :root {
             --primary-blue: #004AAD;
             --accent-cyan: #5DE0E6;
+            --light-blue: #36d1e8;
+            --soft-blue: #B3E5FC;
+            --cozy-purple: #B19CD9;
             --gradient-primary: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
             --gradient-secondary: linear-gradient(135deg, #5DE0E6 0%, #36d1e8 100%);
+            --gradient-warm: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
             --text-primary: #1a1a1a;
             --text-secondary: #666666;
             --text-light: #ffffff;
             --bg-primary: #ffffff;
             --bg-secondary: #f8fafc;
-            --bg-dark: #0a0a0a;
-            --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
-            --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.12);
-            --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.15);
-            --border-radius: 20px;
+            --bg-accent: #f0f9ff;
+            --shadow-soft: 0 4px 20px rgba(0, 74, 173, 0.15);
+            --shadow-medium: 0 8px 40px rgba(0, 74, 173, 0.20);
+            --shadow-strong: 0 20px 60px rgba(0, 74, 173, 0.25);
+            --border-radius: 24px;
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
+            font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
             color: var(--text-primary);
             overflow-x: hidden;
             background: var(--bg-primary);
             font-size: 16px;
             font-weight: 400;
-            letter-spacing: -0.01em;
+            letter-spacing: 0.01em;
         }
 
         p {
@@ -207,12 +211,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
             position: relative;
             overflow: hidden;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
             padding: 2rem 0;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            animation: float 20s ease-in-out infinite;
         }
 
         .hero::before {
@@ -222,8 +237,43 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23004AAD" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-shapes::before,
+        .floating-shapes::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-shapes::before {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-shapes::after {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
         }
 
         .hero-content {
@@ -237,29 +287,30 @@
 
         .hero-badge {
             display: inline-block;
-            background: var(--gradient-secondary);
-            color: var(--text-light);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.875rem;
             font-weight: 600;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .hero-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Fredoka', sans-serif;
             font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.1;
             margin-top: 2rem;
             margin-bottom: 1.5rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: white;
             animation: fadeInUp 0.8s ease-out 0.2s both;
             position: relative;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .hero-title::after {
@@ -269,13 +320,14 @@
             left: 0;
             width: 0;
             height: 4px;
-            background: var(--gradient-secondary);
+            background: white;
             animation: expandLine 1.5s ease-out 1s both;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .hero-subtitle {
             font-size: clamp(1rem, 2.5vw, 1.25rem);
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 3rem;
             max-width: 800px;
             margin-left: auto;
@@ -285,6 +337,7 @@
             text-align: center;
             word-wrap: break-word;
             hyphens: auto;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .hero-cta {
@@ -293,23 +346,44 @@
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 0.8s ease-out 0.6s both;
+            align-items: center;
+        }
+        
+        .app-store-banner {
+            display: inline-block;
+            height: 60px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            border-radius: 12px;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .app-store-banner:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        
+        .app-store-banner img {
+            height: 100%;
+            width: auto;
+            border-radius: 12px;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            background: var(--gradient-primary);
             color: white !important;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 1.1rem;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+            box-shadow: var(--shadow-soft);
             border: none;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            font-family: 'Poppins', sans-serif;
         }
 
         .btn-primary * {
@@ -380,9 +454,9 @@
         }
 
         .section-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Fredoka', sans-serif;
             font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 600;
+            font-weight: 500;
             line-height: 1.2;
             margin-bottom: 1rem;
             color: var(--text-primary);
@@ -492,27 +566,175 @@
             z-index: 2;
         }
 
-        .screenshots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* Carousel/Slider Layout Styles */
+        .app-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .carousel-slide.prev {
+            transform: translateX(-100%);
+        }
+
+        .carousel-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .carousel-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .carousel-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .carousel-image {
+            width: 200px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .carousel-image:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .carousel-tag {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Navigation Controls */
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 2rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
-        .screenshot-card {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+        .carousel-arrow {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
         }
 
-        .screenshot-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 74, 173, 0.1);
+        .carousel-arrow:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 74, 173, 0.4);
+        }
+
+        .carousel-arrow:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 74, 173, 0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-blue);
+            transform: scale(1.2);
+        }
+
+        .carousel-dot:hover {
+            background: var(--primary-blue);
+            transform: scale(1.1);
+        }
+
+        /* Auto-play indicator */
+        .carousel-play {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-play:hover {
+            background: rgba(0, 0, 0, 0.2);
         }
 
         .screenshot-placeholder {
@@ -2796,7 +3018,7 @@
 
         .btn-white {
             background: var(--text-light);
-            color: var(--primary-blue);
+            color: #004AAD;
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
@@ -2831,8 +3053,8 @@
 
         /* Footer */
         .footer {
-            background: var(--bg-dark);
-            color: var(--text-light);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
             padding: 3rem 0 2rem;
             text-align: center;
         }
@@ -2846,12 +3068,12 @@
         .footer-logo {
             font-size: 1.5rem;
             font-weight: 800;
-            color: var(--accent-cyan);
+            color: var(--primary-blue);
             margin-bottom: 1rem;
         }
 
         .footer-text {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--text-secondary);
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -2865,19 +3087,20 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--text-secondary);
             text-decoration: none;
             transition: var(--transition);
+            font-weight: 500;
         }
 
         .footer-links a:hover {
-            color: var(--accent-cyan);
+            color: var(--primary-blue);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--primary-blue);
             padding-top: 2rem;
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--text-secondary);
             text-align: center;
         }
 
@@ -2890,6 +3113,24 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
             }
         }
 
@@ -3007,6 +3248,11 @@
             .hero-cta {
                 flex-direction: column;
                 align-items: center;
+                gap: 1.5rem;
+            }
+            
+            .app-store-banner {
+                height: 50px;
             }
 
             .pods-demo {
@@ -3206,6 +3452,54 @@
                 box-sizing: border-box;
             }
             
+            /* Carousel Mobile */
+            .app-carousel {
+                margin: 2rem 1rem 0;
+            }
+            
+            .carousel-container {
+                height: 400px;
+            }
+            
+            .carousel-slide {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            
+            .carousel-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .carousel-content p {
+                font-size: 1rem;
+            }
+            
+            .carousel-image {
+                width: 150px;
+                order: -1;
+            }
+            
+            .carousel-nav {
+                gap: 1rem;
+            }
+            
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .carousel-dots {
+                gap: 0.5rem;
+            }
+            
+            .carousel-dot {
+                width: 10px;
+                height: 10px;
+            }
+            
             body {
                 overflow-x: hidden;
                 width: 100%;
@@ -3226,6 +3520,39 @@
                 overflow-wrap: break-word;
                 hyphens: auto;
                 max-width: 100%;
+                word-break: break-word;
+                white-space: normal;
+            }
+            
+            /* Specific text handling for better mobile experience */
+            .hero-title {
+                font-size: clamp(2.2rem, 12vw, 3.5rem) !important;
+                line-height: 1.1 !important;
+                word-break: keep-all;
+                hyphens: none;
+            }
+            
+            .hero-subtitle {
+                font-size: clamp(1rem, 4.5vw, 1.2rem) !important;
+                line-height: 1.5 !important;
+                max-width: 95% !important;
+                word-break: break-word;
+                hyphens: auto;
+            }
+            
+            .section-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+                line-height: 1.2 !important;
+                word-break: keep-all;
+                hyphens: none;
+            }
+            
+            .section-subtitle {
+                font-size: clamp(0.9rem, 3.5vw, 1.1rem) !important;
+                line-height: 1.6 !important;
+                max-width: 95% !important;
+                word-break: break-word;
+                hyphens: auto;
             }
             
             /* Grid fixes */
@@ -3431,11 +3758,16 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="floating-shapes"></div>
         <div class="hero-content">
+            <div class="hero-badge">✨ Now Available on the App Store!</div>
             <h1 class="hero-title">Challenge Your Normal</h1>
                     <p class="hero-subtitle">Every Sunday, get one unique challenge that pushes you to explore, grow, or connect. Experiences that make you think "I never would've thought of that."</p>
             <div class="hero-cta">
                 <a href="https://web.vereofficial.com" target="_blank" class="btn-primary">Start Getting Challenges</a>
+                <a href="https://apps.apple.com/us/app/ver%C3%A9-challenge-your-normal/id6742329686" target="_blank" class="app-store-banner">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+                </a>
             </div>
         </div>
     </section>
@@ -3449,34 +3781,93 @@
                     <div class="section-badge">See It In Action</div>
                     <h2>What You're Getting</h2>
                 </div>
-                <div class="screenshots-grid">
-                    <div class="screenshot-card">
-                        <div class="screenshot-placeholder">
-                            <img src="weekly-challenges.png" alt="Weekly Challenges Screen" class="phone-screenshot">
+                <!-- Carousel/Slider App Features -->
+                <div class="app-carousel">
+                    <button class="carousel-play" id="playPauseBtn">⏸️ Pause</button>
+                    
+                    <div class="carousel-container">
+                        <!-- Slide 1: Weekly Challenges -->
+                        <div class="carousel-slide active">
+                            <div class="carousel-content">
+                                <h3>Weekly Challenges</h3>
+                                <p>Get one unique experience every Sunday that pushes you to explore, grow, or connect. Each challenge is designed to surprise you and create experiences that make you think "I never would've thought of that."</p>
+                                <div class="carousel-tags">
+                                    <span class="carousel-tag">Weekly Delivery</span>
+                                    <span class="carousel-tag">Personal Growth</span>
+                                    <span class="carousel-tag">Reflection Prompts</span>
+                                </div>
+                            </div>
+                            <img src="weekly-challenges.PNG" alt="Weekly Challenges Screen" class="carousel-image">
                         </div>
-                        <h4>Weekly Challenges</h4>
-                        <p style="text-align: center;">Get one unique experience every Sunday. Learn why. Reflect on it.</p>
+
+                        <!-- Slide 2: Pods -->
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Pods</h3>
+                                <p>Tackle challenges with friends and make memories. Create pods with 2-10 people and tackle challenges together. Way more fun than doing everything solo.</p>
+                                <div class="carousel-tags">
+                                    <span class="carousel-tag">Social Connection</span>
+                                    <span class="carousel-tag">Group Challenges</span>
+                                    <span class="carousel-tag">Shared Memories</span>
+                                </div>
+                            </div>
+                            <img src="group-pods.PNG" alt="Pods Screen" class="carousel-image">
+                        </div>
+
+                        <!-- Slide 3: Challenge Packs -->
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Challenge Packs</h3>
+                                <p>Collections of themed challenges with exclusive completion badges. Complete themed challenges at your own pace with 10 unique challenges per pack.</p>
+                                <div class="carousel-tags">
+                                    <span class="carousel-tag">Themed Collections</span>
+                                    <span class="carousel-tag">Achievement Badges</span>
+                                    <span class="carousel-tag">Self-Paced</span>
+                                </div>
+                            </div>
+                            <img src="challenge-packs.PNG" alt="Challenge Packs Screen" class="carousel-image">
+                        </div>
+
+                        <!-- Slide 4: Companion Guides -->
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Companion Guides</h3>
+                                <p>Multi-week personal growth crash courses. Deep-dive crash courses designed to transform specific areas of your life with expert insights and practical challenges.</p>
+                                <div class="carousel-tags">
+                                    <span class="carousel-tag">Deep Learning</span>
+                                    <span class="carousel-tag">Expert Insights</span>
+                                    <span class="carousel-tag">Life Transformation</span>
+                                </div>
+                            </div>
+                            <img src="companion-guides.PNG" alt="Companion Guides Screen" class="carousel-image">
+                        </div>
+
+                        <!-- Slide 5: Challenge Reflections -->
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Challenge Reflections</h3>
+                                <p>Track your growth and insights with guided reflection prompts. After each challenge, reflect on what you learned, how you felt, and how it changed your perspective. Build a personal journal of your journey.</p>
+                                <div class="carousel-tags">
+                                    <span class="carousel-tag">Personal Growth</span>
+                                    <span class="carousel-tag">Self-Discovery</span>
+                                    <span class="carousel-tag">Progress Tracking</span>
+                                </div>
+                            </div>
+                            <img src="challenge-reflections.PNG" alt="Challenge Reflections Screen" class="carousel-image">
+                        </div>
                     </div>
-                    <div class="screenshot-card">
-                        <div class="screenshot-placeholder">
-                            <img src="pods.png" alt="Pods Screen" class="phone-screenshot">
+
+                    <!-- Navigation Controls -->
+                    <div class="carousel-nav">
+                        <button class="carousel-arrow" id="prevBtn">‹</button>
+                        <div class="carousel-dots">
+                            <button class="carousel-dot active" data-slide="0"></button>
+                            <button class="carousel-dot" data-slide="1"></button>
+                            <button class="carousel-dot" data-slide="2"></button>
+                            <button class="carousel-dot" data-slide="3"></button>
+                            <button class="carousel-dot" data-slide="4"></button>
                         </div>
-                        <h4>Pods</h4>
-                        <p style="text-align: center;">Tackle challenges with friends and make memories</p>
-                    </div>
-                    <div class="screenshot-card">
-                        <div class="screenshot-placeholder">
-                            <img src="challenge-packs.png" alt="Challenge Packs Screen" class="phone-screenshot">
-                        </div>
-                        <h4>Challenge Packs</h4>
-                        <p style="text-align: center;">Collections of themed challenges with exclusive completion badges</p>
-                    </div>
-                    <div class="screenshot-card">
-                        <div class="screenshot-placeholder">
-                            <img src="companion-guides.png" alt="Companion Guides Screen" class="phone-screenshot">
-                        </div>
-                        <h4>Companion Guides</h4>
-                        <p style="text-align: center;">Multi-week personal growth crash courses</p>
+                        <button class="carousel-arrow" id="nextBtn">›</button>
                     </div>
                 </div>
             </div>
@@ -3765,7 +4156,7 @@
                 <div class="cta-title">Ready to Turn Your Week Into an Adventure?</div>
                 <p class="cta-subtitle">Join other college students who are actually doing cool stuff<br>instead of just talking about it.</p>
         <div class="cta-buttons">
-            <a href="https://web.vereofficial.com" target="_blank" class="btn-white">Download the App</a>
+            <a href="https://apps.apple.com/us/app/ver%C3%A9-challenge-your-normal/id6742329686" target="_blank" class="btn-white">Download the App</a>
         </div>
         </div>
     </section>
@@ -3806,6 +4197,118 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            
+            let currentSlide = 0;
+            let isPlaying = true;
+            let autoPlayInterval;
+            
+            function showSlide(index) {
+                // Remove active class from all slides and dots
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Add active class to current slide and dot
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                
+                // Update button states
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === slides.length - 1;
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, 4000);
+                isPlaying = true;
+                playPauseBtn.textContent = '⏸️ Pause';
+            }
+            
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+                isPlaying = false;
+                playPauseBtn.textContent = '▶️ Play';
+            }
+            
+            function toggleAutoPlay() {
+                if (isPlaying) {
+                    stopAutoPlay();
+                } else {
+                    startAutoPlay();
+                }
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            playPauseBtn.addEventListener('click', toggleAutoPlay);
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === ' ') {
+                    e.preventDefault();
+                    toggleAutoPlay();
+                }
+            });
+            
+            // Touch/swipe support
+            let startX = 0;
+            let endX = 0;
+            
+            document.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            document.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > 50) { // Minimum swipe distance
+                    if (diff > 0) {
+                        nextSlide(); // Swipe left = next
+                    } else {
+                        prevSlide(); // Swipe right = previous
+                    }
+                }
+            });
+            
+            // Initialize
+            showSlide(0);
+            startAutoPlay();
+            
+            // Pause on hover
+            const carousel = document.querySelector('.app-carousel');
+            carousel.addEventListener('mouseenter', stopAutoPlay);
+            carousel.addEventListener('mouseleave', () => {
+                if (isPlaying) startAutoPlay();
             });
         });
 
