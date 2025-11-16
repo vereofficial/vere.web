@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     
     <!-- Primary Meta Tags -->
-    <title>Veré - Challenge Your Normal</title>
-    <meta name="title" content="Veré - Challenge Your Normal">
-    <meta name="description" content="Think you've done it all? These challenges prove you haven't. College life just got interesting.">
-    <meta name="keywords" content="weekly challenges, college app, unique dares, exploration challenges, social connection, personal development, college students">
-    <meta name="author" content="Veré">
+    <title>Sidekix - Better Hangouts Start Here</title>
+    <meta name="title" content="Sidekix - Better Hangouts Start Here">
+    <meta name="description" content="Sidequests that make your day less predictable. Daily micro-challenges, weekend adventures, and weekly deep-dives that transform personal growth into an engaging, gamified experience.">
+    <meta name="keywords" content="daily sidequests, weekend challenges, weekly challenges, social challenge app, gamification, personal growth, college app, sidekix">
+    <meta name="author" content="Sidekix">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
@@ -27,19 +27,19 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vereofficial.com/">
-    <meta property="og:title" content="Veré - Challenge Your Normal">
-    <meta property="og:description" content="Think you've done it all? These challenges prove you haven't. College life just got interesting.">
+    <meta property="og:title" content="Sidekix - Better Hangouts Start Here">
+    <meta property="og:description" content="Sidequests that make your day less predictable. Daily micro-challenges, weekend adventures, and weekly deep-dives that transform personal growth into an engaging, gamified experience.">
     <meta property="og:image" content="https://vereofficial.com/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Veré">
+    <meta property="og:site_name" content="Sidekix">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://vereofficial.com/">
-    <meta property="twitter:title" content="Veré - Challenge Your Normal">
-    <meta property="twitter:description" content="Think you've done it all? These challenges prove you haven't. College life just got interesting.">
+    <meta property="twitter:title" content="Sidekix - Better Hangouts Start Here">
+    <meta property="twitter:description" content="Sidequests that make your day less predictable. Daily micro-challenges, weekend adventures, and weekly deep-dives that transform personal growth into an engaging, gamified experience.">
     <meta property="twitter:image" content="https://vereofficial.com/twitter-image.jpg">
     
     <!-- Additional SEO Meta Tags -->
@@ -49,15 +49,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Veré">
-    <meta name="apple-mobile-web-app-title" content="Veré">
+    <meta name="application-name" content="Sidekix">
+    <meta name="apple-mobile-web-app-title" content="Sidekix">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://vereofficial.com/">
     
     <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
-    <link rel="apple-touch-icon" href="favicon.png?v=2">
+    <link rel="icon" type="image/png" href="sidekix-logo.png">
+    <link rel="apple-touch-icon" href="sidekix-logo.png">
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- Preconnect to external domains -->
@@ -73,23 +73,25 @@
         }
 
         :root {
-            --primary-blue: #004AAD;
-            --accent-cyan: #5DE0E6;
-            --light-blue: #36d1e8;
-            --soft-blue: #B3E5FC;
-            --cozy-purple: #B19CD9;
-            --gradient-primary: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
-            --gradient-secondary: linear-gradient(135deg, #5DE0E6 0%, #36d1e8 100%);
-            --gradient-warm: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            --primary-blue: #00BFFF;
+            --accent-green: #32CD32;
+            --teal-light: #67dbd1;
+            --teal-medium: #2b9f92;
+            --green-light: #9be98f;
+            --soft-teal: #B3E5FC;
+            --gradient-primary: linear-gradient(135deg, #00BFFF 0%, #32CD32 100%);
+            --gradient-secondary: linear-gradient(135deg, #67dbd1 0%, #2b9f92 50%, #9be98f 100%);
+            --gradient-warm: linear-gradient(135deg, #00BFFF 0%, #32CD32 100%);
+            --gradient-bg: linear-gradient(135deg, #67dbd1 0%, #2b9f92 50%, #9be98f 100%);
             --text-primary: #1a1a1a;
             --text-secondary: #666666;
             --text-light: #ffffff;
             --bg-primary: #ffffff;
             --bg-secondary: #f8fafc;
             --bg-accent: #f0f9ff;
-            --shadow-soft: 0 4px 20px rgba(0, 74, 173, 0.15);
-            --shadow-medium: 0 8px 40px rgba(0, 74, 173, 0.20);
-            --shadow-strong: 0 20px 60px rgba(0, 74, 173, 0.25);
+            --shadow-soft: 0 4px 20px rgba(0, 191, 255, 0.15);
+            --shadow-medium: 0 8px 40px rgba(0, 191, 255, 0.20);
+            --shadow-strong: 0 20px 60px rgba(0, 191, 255, 0.25);
             --border-radius: 24px;
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -137,9 +139,22 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-container .logo {
+            justify-self: start;
+        }
+
+        .nav-container .nav-links {
+            justify-self: center;
+        }
+
+        .nav-container .cta-button {
+            justify-self: end;
         }
 
         .logo {
@@ -167,7 +182,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent-cyan);
+            color: var(--accent-green);
         }
 
         .nav-links a::after {
@@ -177,7 +192,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-cyan);
+            background: var(--accent-green);
             transition: var(--transition);
         }
 
@@ -186,7 +201,7 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            background: linear-gradient(135deg, #00BFFF 0%, #32CD32 100%);
             color: white !important;
             padding: 0.5rem 1rem;
             border-radius: 50px;
@@ -194,7 +209,7 @@
             font-weight: 700;
             font-size: 0.8rem;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -211,7 +226,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #004AAD 0%, #5DE0E6 100%);
+            background: linear-gradient(135deg, #00BFFF 0%, #32CD32 100%);
             position: relative;
             overflow: hidden;
             width: 100vw;
@@ -302,7 +317,7 @@
 
         .hero-title {
             font-family: 'Fredoka', sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: clamp(2.5rem, 7vw, 5rem);
             font-weight: 600;
             line-height: 1.1;
             margin-top: 2rem;
@@ -436,7 +451,7 @@
             font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #004AAD, #5DE0E6);
+            background: linear-gradient(135deg, #00BFFF, #32CD32);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -496,9 +511,9 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(0, 74, 173, 0.06) 0%, transparent 50%);
+                radial-gradient(circle at 40% 40%, rgba(0, 191, 255, 0.06) 0%, transparent 50%);
             animation: morph 15s ease-in-out infinite;
         }
 
@@ -518,7 +533,7 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: linear-gradient(45deg, rgba(0, 74, 173, 0.05), rgba(93, 224, 230, 0.03));
+            background: linear-gradient(45deg, rgba(0, 191, 255, 0.05), rgba(50, 205, 50, 0.03));
             animation: drift 20s linear infinite;
         }
 
@@ -537,21 +552,21 @@
         @keyframes morph {
             0% { 
                 background: 
-                    radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 20% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 50%),
                     radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.08) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 40%, rgba(0, 74, 173, 0.06) 0%, transparent 50%);
+                    radial-gradient(circle at 40% 40%, rgba(0, 191, 255, 0.06) 0%, transparent 50%);
             }
             50% { 
                 background: 
                     radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.12) 0%, transparent 60%),
-                    radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.08) 0%, transparent 40%),
-                    radial-gradient(circle at 60% 60%, rgba(0, 74, 173, 0.1) 0%, transparent 50%);
+                    radial-gradient(circle at 20% 80%, rgba(0, 191, 255, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at 60% 60%, rgba(0, 191, 255, 0.1) 0%, transparent 50%);
             }
             100% { 
                 background: 
-                    radial-gradient(circle at 20% 80%, rgba(0, 74, 173, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 20% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 50%),
                     radial-gradient(circle at 80% 20%, rgba(93, 224, 230, 0.08) 0%, transparent 50%),
-                    radial-gradient(circle at 40% 40%, rgba(0, 74, 173, 0.06) 0%, transparent 50%);
+                    radial-gradient(circle at 40% 40%, rgba(0, 191, 255, 0.06) 0%, transparent 50%);
             }
         }
 
@@ -679,12 +694,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 74, 173, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
         }
 
         .carousel-arrow:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 74, 173, 0.4);
+            box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4);
         }
 
         .carousel-arrow:disabled {
@@ -702,7 +717,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(0, 74, 173, 0.3);
+            background: rgba(0, 191, 255, 0.3);
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -810,7 +825,7 @@
         }
 
         .mission-badge {
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
@@ -824,11 +839,11 @@
             font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            color: #004AAD;
+            color: #00BFFF;
         }
 
         .highlight {
-            color: #5DE0E6;
+            color: #32CD32;
         }
 
         .challenge-header p {
@@ -870,7 +885,7 @@
         .challenge-card h4 {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #004AAD;
+            color: #00BFFF;
             margin-bottom: 0.5rem;
         }
 
@@ -893,7 +908,7 @@
         }
 
         .bullet.blue {
-            color: #5DE0E6;
+            color: #32CD32;
         }
 
         .bullet.purple {
@@ -912,7 +927,7 @@
         .app-brand {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #004AAD;
+            color: #00BFFF;
         }
 
         .profile-section {
@@ -947,7 +962,7 @@
         .pod-icon {
             width: 30px;
             height: 30px;
-            background: #004AAD;
+            background: #00BFFF;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -957,7 +972,7 @@
         }
 
         .pod-info strong {
-            color: #004AAD;
+            color: #00BFFF;
             font-size: 0.9rem;
         }
 
@@ -983,7 +998,7 @@
         }
 
         .action-btn.primary {
-            background: #004AAD;
+            background: #00BFFF;
             color: white;
         }
 
@@ -1004,8 +1019,8 @@
         }
 
         .tab.active {
-            color: #004AAD;
-            border-bottom-color: #004AAD;
+            color: #00BFFF;
+            border-bottom-color: #00BFFF;
         }
 
         .custom-challenge-card {
@@ -1032,7 +1047,7 @@
         }
 
         .type-btn.active {
-            background: #004AAD;
+            background: #00BFFF;
             color: white;
         }
 
@@ -1063,7 +1078,7 @@
 
         .custom-tag {
             background: #e0f2fe;
-            color: #004AAD;
+            color: #00BFFF;
             padding: 0.2rem 0.6rem;
             border-radius: 10px;
             font-size: 0.6rem;
@@ -1073,7 +1088,7 @@
         }
 
         .suggest-btn {
-            background: linear-gradient(135deg, #004AAD, #5DE0E6);
+            background: linear-gradient(135deg, #00BFFF, #32CD32);
             color: white;
             border: none;
             padding: 0.8rem 1.5rem;
@@ -1093,7 +1108,7 @@
         }
 
         .special-badge {
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
@@ -1134,7 +1149,7 @@
         .pack-icon {
             width: 40px;
             height: 40px;
-            background: #5DE0E6;
+            background: #32CD32;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -1179,7 +1194,7 @@
         }
 
         .start-pack-btn {
-            background: linear-gradient(135deg, #004AAD, #5DE0E6);
+            background: linear-gradient(135deg, #00BFFF, #32CD32);
             color: white;
             border: none;
             padding: 0.8rem 1.5rem;
@@ -1223,7 +1238,7 @@
         .guides-header h3 {
             font-size: 1.4rem;
             font-weight: 700;
-            color: #004AAD;
+            color: #00BFFF;
             margin-bottom: 0.5rem;
         }
 
@@ -1254,7 +1269,7 @@
         }
 
         .filter-btn.active {
-            background: #004AAD;
+            background: #00BFFF;
             color: white;
         }
 
@@ -1308,7 +1323,7 @@
         .guide-card-featured h4 {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #004AAD;
+            color: #00BFFF;
             margin-bottom: 0.5rem;
         }
 
@@ -1330,7 +1345,7 @@
         }
 
         .stat:first-child {
-            color: #004AAD;
+            color: #00BFFF;
             font-weight: 700;
             font-size: 0.9rem;
         }
@@ -1358,7 +1373,7 @@
 
         .progress-fill {
             height: 100%;
-            background: #004AAD;
+            background: #00BFFF;
             border-radius: 3px;
         }
 
@@ -1396,14 +1411,14 @@
         }
 
         .nav-item.active {
-            color: #004AAD;
+            color: #00BFFF;
         }
 
         .nav-item.active::after {
             content: '';
             width: 20px;
             height: 2px;
-            background: #004AAD;
+            background: #00BFFF;
             border-radius: 1px;
         }
 
@@ -1446,7 +1461,7 @@
         }
 
         .pack-item {
-            background: rgba(0, 74, 173, 0.1);
+            background: rgba(0, 191, 255, 0.1);
             padding: 8px 12px;
             border-radius: 8px;
             font-size: 0.8rem;
@@ -1477,7 +1492,7 @@
             border-radius: 6px;
             font-size: 0.75rem;
             color: var(--text-primary);
-            border-left: 3px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-green);
         }
 
         .challenge-details {
@@ -1487,10 +1502,10 @@
         }
 
         .detail-section {
-            background: rgba(0, 74, 173, 0.05);
+            background: rgba(0, 191, 255, 0.05);
             padding: 10px 12px;
             border-radius: 8px;
-            border-left: 3px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-green);
         }
 
         .detail-section h4 {
@@ -1529,7 +1544,7 @@
         .progress-bar {
             flex: 1;
             height: 6px;
-            background: rgba(0, 74, 173, 0.1);
+            background: rgba(0, 191, 255, 0.1);
             border-radius: 3px;
             overflow: hidden;
         }
@@ -1691,14 +1706,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 74, 173, 0.05) 0%, rgba(93, 224, 230, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.05) 0%, rgba(93, 224, 230, 0.05) 100%);
             opacity: 0;
             transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .challenge-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 74, 173, 0.1);
+            box-shadow: 0 12px 40px rgba(0, 191, 255, 0.1);
             background: rgba(255, 255, 255, 0.9);
         }
 
@@ -1745,10 +1760,10 @@
         }
 
         .challenge-examples {
-            background: rgba(0, 74, 173, 0.05);
+            background: rgba(0, 191, 255, 0.05);
             border-radius: 12px;
             padding: 1rem;
-            border-left: 3px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-green);
         }
 
         .challenge-examples h4 {
@@ -1779,7 +1794,7 @@
             content: '•';
             position: absolute;
             left: 0;
-            color: var(--accent-cyan);
+            color: var(--accent-green);
             font-weight: bold;
             font-size: 1.2rem;
         }
@@ -1897,9 +1912,9 @@
             align-items: center;
             gap: 1rem;
             padding: 1.5rem;
-            background: rgba(0, 74, 173, 0.05);
+            background: rgba(0, 191, 255, 0.05);
             border-radius: 12px;
-            border-left: 4px solid var(--accent-cyan);
+            border-left: 4px solid var(--accent-green);
         }
 
         .challenge-icon {
@@ -1946,7 +1961,7 @@
 
         .pack-card.compact:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0, 74, 173, 0.1);
+            box-shadow: 0 8px 30px rgba(0, 191, 255, 0.1);
             background: rgba(255, 255, 255, 0.8);
         }
 
@@ -2016,7 +2031,7 @@
 
         .pack-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 74, 173, 0.1);
+            box-shadow: 0 12px 40px rgba(0, 191, 255, 0.1);
             background: rgba(255, 255, 255, 0.9);
         }
 
@@ -2058,10 +2073,10 @@
 
         .pack-features {
             list-style: none;
-            background: rgba(0, 74, 173, 0.05);
+            background: rgba(0, 191, 255, 0.05);
             border-radius: 12px;
             padding: 1rem;
-            border-left: 3px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-green);
             margin: 0;
         }
 
@@ -2087,7 +2102,7 @@
             content: '•';
             position: absolute;
             left: 0;
-            color: var(--accent-cyan);
+            color: var(--accent-green);
             font-weight: bold;
             font-size: 1.2rem;
         }
@@ -2121,7 +2136,7 @@
         .bubble {
             position: absolute;
             border-radius: 50%;
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             opacity: 0.03;
             animation: float 8s ease-in-out infinite;
         }
@@ -2207,7 +2222,7 @@
         }
 
         .pods-header .section-badge {
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             color: #000;
             padding: 0.5rem 1.5rem;
             border-radius: 25px;
@@ -2221,7 +2236,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             line-height: 1.1;
-            background: linear-gradient(135deg, #ffffff, #5DE0E6);
+            background: linear-gradient(135deg, #ffffff, #32CD32);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -2270,7 +2285,7 @@
             transform: translate(-50%, -50%);
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -2285,7 +2300,7 @@
             left: -10px;
             right: -10px;
             bottom: -10px;
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             border-radius: 50%;
             opacity: 0.3;
             animation: glow 2s ease-in-out infinite alternate;
@@ -2318,7 +2333,7 @@
             transform: translateX(-50%);
             width: 10px;
             height: 10px;
-            background: #5DE0E6;
+            background: #32CD32;
             border-radius: 50%;
         }
 
@@ -2396,7 +2411,7 @@
 
         .step-card {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 74, 173, 0.3);
+            border: 1px solid rgba(0, 191, 255, 0.3);
             border-radius: 16px;
             padding: 2rem;
             text-align: center;
@@ -2413,7 +2428,7 @@
         .step-number {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -2456,7 +2471,7 @@
         .streak-circle {
             width: 200px;
             height: 200px;
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             border-radius: 50%;
             display: flex;
             flex-direction: column;
@@ -2568,7 +2583,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #5DE0E6, #004AAD);
+            background: linear-gradient(135deg, #32CD32, #00BFFF);
             color: #000;
             padding: 1rem 2.5rem;
             border-radius: 50px;
@@ -2673,7 +2688,7 @@
         .ring-inner {
             width: 60%;
             height: 60%;
-            border: 3px solid var(--accent-cyan);
+            border: 3px solid var(--accent-green);
             border-radius: 50%;
             position: absolute;
             top: 50%;
@@ -2828,7 +2843,7 @@
 
         .guide-feature:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 74, 173, 0.1);
+            box-shadow: 0 12px 40px rgba(0, 191, 255, 0.1);
             background: rgba(255, 255, 255, 0.9);
         }
 
@@ -2878,13 +2893,13 @@
             padding: 0.6rem;
             background: rgba(93, 224, 230, 0.05);
             border-radius: 6px;
-            border-left: 3px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-green);
         }
 
         .detail-icon {
             width: 20px;
             height: 20px;
-            background: var(--accent-cyan);
+            background: var(--accent-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -2952,7 +2967,7 @@
 
         .tag {
             background: rgba(93, 224, 230, 0.1);
-            color: var(--accent-cyan);
+            color: var(--accent-green);
             padding: 0.2rem 0.6rem;
             border-radius: 10px;
             font-size: 0.75rem;
@@ -2978,7 +2993,7 @@
             content: '•';
             position: absolute;
             left: 0;
-            color: var(--accent-cyan);
+            color: var(--accent-green);
             font-weight: bold;
             font-size: 1.2rem;
         }
@@ -3018,7 +3033,7 @@
 
         .btn-white {
             background: var(--text-light);
-            color: #004AAD;
+            color: #00BFFF;
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
@@ -3070,6 +3085,12 @@
             font-weight: 800;
             color: var(--primary-blue);
             margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            border-radius: 12px;
+            background: transparent;
+            padding: 0;
         }
 
         .footer-text {
@@ -4044,7 +4065,7 @@
         .loading-spinner {
             width: 50px;
             height: 50px;
-            border: 3px solid rgba(0, 74, 173, 0.1);
+            border: 3px solid rgba(0, 191, 255, 0.1);
             border-top: 3px solid var(--primary-blue);
             border-radius: 50%;
             animation: spin 1s linear infinite;
@@ -4065,12 +4086,12 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="logo"><img src="vere side-by-side logo.png" alt="Veré" class="logo"></a>
+            <a href="#" class="logo"><img src="sidekix-word-green.png" alt="Sidekix" class="logo"></a>
             <ul class="nav-links">
-                <li><a href="#challenges">Challenges</a></li>
-                <li><a href="#packs">Packs</a></li>
+                <li><a href="#sidequests">Sidequests</a></li>
+                <li><a href="#weekly">Weekly</a></li>
                 <li><a href="#pods">Pods</a></li>
-                <li><a href="#guides">Guides</a></li>
+                <li><a href="#friends">Friends</a></li>
             </ul>
             <a href="https://web.vereofficial.com" target="_blank" class="cta-button">Get Started</a>
         </div>
@@ -4081,10 +4102,10 @@
         <div class="floating-shapes"></div>
         <div class="hero-content">
             <div class="hero-badge">✨ Now Available on the App Store!</div>
-            <h1 class="hero-title">Challenge Your Normal</h1>
-                    <p class="hero-subtitle">Every Sunday, get one unique challenge that pushes you to explore, grow, or connect. Experiences that make you think "I never would've thought of that."</p>
+            <h1 class="hero-title">Better Hangouts Start Here</h1>
+                    <p class="hero-subtitle">Daily challenges. Weekend adventures. Real connections.</p>
             <div class="hero-cta">
-                <a href="https://web.vereofficial.com" target="_blank" class="btn-primary">Start Getting Challenges</a>
+                <a href="https://web.vereofficial.com" target="_blank" class="btn-primary">Get Started</a>
                 <a href="https://apps.apple.com/us/app/ver%C3%A9-challenge-your-normal/id6742329686" target="_blank" class="app-store-banner">
                     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
                 </a>
@@ -4106,74 +4127,74 @@
                     <button class="carousel-play" id="playPauseBtn">⏸️ Pause</button>
                     
                     <div class="carousel-container">
-                        <!-- Slide 1: Weekly Challenges -->
+                        <!-- Slide 1: Daily Sidequests -->
                         <div class="carousel-slide active">
                             <div class="carousel-content">
-                                <h3>Weekly Challenges</h3>
-                                <p>Get one unique experience every Sunday that pushes you to explore, grow, or connect. Each challenge is designed to surprise you and create experiences that make you think "I never would've thought of that."</p>
+                                <h3>Daily Sidequests</h3>
+                                <p>When you don't know what to do, we've got ideas. Quick challenges that take 2-15 minutes. Swipe right to accept, left to skip. 3 skips per day, unlimited completions.</p>
                                 <div class="carousel-tags">
-                                    <span class="carousel-tag">Weekly Delivery</span>
-                                    <span class="carousel-tag">Personal Growth</span>
-                                    <span class="carousel-tag">Reflection Prompts</span>
+                                    <span class="carousel-tag">2-15 Minutes</span>
+                                    <span class="carousel-tag">Swipeable Cards</span>
+                                    <span class="carousel-tag">Daily XP Rewards</span>
                                 </div>
                             </div>
-                            <img src="weekly-challenges.png" alt="Weekly Challenges Screen" class="carousel-image">
+                            <img src="assets/sidequests-mobile.png" alt="Daily Sidequests Screen" class="carousel-image">
                         </div>
 
-                        <!-- Slide 2: Pods -->
+                        <!-- Slide 2: Weekend Sidequests -->
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Weekend Sidequests</h3>
+                                <p>Bigger adventures for when you have time. Unlock every Friday at 5pm. Higher stakes, higher rewards—150-300 XP.</p>
+                                <div class="carousel-tags">
+                                    <span class="carousel-tag">Friday-Sunday</span>
+                                    <span class="carousel-tag">Adventure</span>
+                                    <span class="carousel-tag">Higher Rewards</span>
+                                </div>
+                            </div>
+                            <img src="assets/weekend-sidequests-mobile.png" alt="Weekend Sidequests Screen" class="carousel-image">
+                        </div>
+
+                        <!-- Slide 3: Weekly Challenge -->
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Weekly Challenge</h3>
+                                <p>One week. One challenge. Delivered every Sunday. Everyone gets the same challenge. Real transformation.</p>
+                                <div class="carousel-tags">
+                                    <span class="carousel-tag">Week-Long</span>
+                                    <span class="carousel-tag">Theme-Based</span>
+                                    <span class="carousel-tag">Structured Growth</span>
+                                </div>
+                            </div>
+                            <img src="assets/challenges-mobile.png" alt="Weekly Challenge Screen" class="carousel-image">
+                        </div>
+
+                        <!-- Slide 4: Pods -->
                         <div class="carousel-slide">
                             <div class="carousel-content">
                                 <h3>Pods</h3>
-                                <p>Tackle challenges with friends and make memories. Create pods with 2-10 people and tackle challenges together. Way more fun than doing everything solo.</p>
+                                <p>Small, invite-only groups that create accountability and shared growth experiences.</p>
                                 <div class="carousel-tags">
-                                    <span class="carousel-tag">Social Connection</span>
-                                    <span class="carousel-tag">Group Challenges</span>
-                                    <span class="carousel-tag">Shared Memories</span>
+                                    <span class="carousel-tag">2-5 People</span>
+                                    <span class="carousel-tag">Invite-Only</span>
+                                    <span class="carousel-tag">Group Accountability</span>
                                 </div>
                             </div>
-                            <img src="group-pods.png" alt="Pods Screen" class="carousel-image">
+                            <img src="assets/pod-mobile.png" alt="Pods Screen" class="carousel-image">
                         </div>
 
-                        <!-- Slide 3: Challenge Packs -->
+                        <!-- Slide 5: Friends -->
                         <div class="carousel-slide">
                             <div class="carousel-content">
-                                <h3>Challenge Packs</h3>
-                                <p>Collections of themed challenges with exclusive completion badges. Complete themed challenges at your own pace with 10 unique challenges per pack.</p>
+                                <h3>Friends</h3>
+                                <p>Compete. Connect. Level up with friends.</p>
                                 <div class="carousel-tags">
-                                    <span class="carousel-tag">Themed Collections</span>
-                                    <span class="carousel-tag">Achievement Badges</span>
-                                    <span class="carousel-tag">Self-Paced</span>
+                                    <span class="carousel-tag">Social Competition</span>
+                                    <span class="carousel-tag">Leaderboards</span>
+                                    <span class="carousel-tag">Activity Feed</span>
                                 </div>
                             </div>
-                            <img src="challenge-packs.png" alt="Challenge Packs Screen" class="carousel-image">
-                        </div>
-
-                        <!-- Slide 4: Companion Guides -->
-                        <div class="carousel-slide">
-                            <div class="carousel-content">
-                                <h3>Companion Guides</h3>
-                                <p>Multi-week personal growth crash courses. Deep-dive crash courses designed to transform specific areas of your life with expert insights and practical challenges.</p>
-                                <div class="carousel-tags">
-                                    <span class="carousel-tag">Deep Learning</span>
-                                    <span class="carousel-tag">Expert Insights</span>
-                                    <span class="carousel-tag">Life Transformation</span>
-                                </div>
-                            </div>
-                            <img src="companion-guides.png" alt="Companion Guides Screen" class="carousel-image">
-                        </div>
-
-                        <!-- Slide 5: Challenge Reflections -->
-                        <div class="carousel-slide">
-                            <div class="carousel-content">
-                                <h3>Challenge Reflections</h3>
-                                <p>Track your growth and insights with guided reflection prompts. After each challenge, reflect on what you learned, how you felt, and how it changed your perspective. Build a personal journal of your journey.</p>
-                                <div class="carousel-tags">
-                                    <span class="carousel-tag">Personal Growth</span>
-                                    <span class="carousel-tag">Self-Discovery</span>
-                                    <span class="carousel-tag">Progress Tracking</span>
-                                </div>
-                            </div>
-                            <img src="challenge-reflections.png" alt="Challenge Reflections Screen" class="carousel-image">
+                            <img src="assets/friends-mobile.png" alt="Friends Screen" class="carousel-image">
                         </div>
                     </div>
 
@@ -4194,63 +4215,52 @@
         </div>
     </section>
 
-    <!-- Weekly Challenges Section -->
-    <section class="section challenges-section" id="challenges">
+    <!-- Sidequests Section -->
+    <section class="section challenges-section" id="sidequests">
         <div class="section-content">
             <div class="challenges-content">
                 <div class="challenges-intro">
                     <div class="section-badge">How It Works</div>
-                    <h2>One Challenge Per Week</h2>
-                    <p style="text-align: center;">Every Sunday, you get one unique experience that disappears after 7 days.</p>
-                </div>
-                <div class="challenge-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">1</span>
-                        <span class="stat-label">New Challenge</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">7</span>
-                        <span class="stat-label">Days to Complete</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">∞</span>
-                        <span class="stat-label">Possibilities</span>
-                    </div>
+                    <h2>"I don't know what to do with my friends"</h2>
+                    <p style="text-align: center;">We've got ideas.</p>
                 </div>
                 <div class="challenges-grid">
                     <div class="challenge-card fade-in" style="animation-delay: 0.1s;">
-                        <div class="challenge-icon">🗺️</div>
-                        <h3 class="challenge-title">Exploration</h3>
-                        <p class="challenge-description">Discover hidden spots and experiences that make your campus and city feel new again.</p>
+                        <div class="challenge-icon">📱</div>
+                        <h3 class="challenge-title">Daily Sidequests</h3>
+                        <p class="challenge-description">Quick ideas when you need them. 2-15 minutes. Swipe right to accept, left to skip. 3 skips per day, unlimited completions.</p>
                         <div class="challenge-examples">
-                            <h4>Basic Examples:</h4>
+                            <h4>Example Daily Sidequests:</h4>
                             <ul>
-                                <li>Attend a lecture in the most intimidating academic department on your campus</li>
-                                <li>Discover a rooftop or hidden viewpoint most people overlook</li>
+                                <li>Check a "Free & For Sale" group and make or find the most unhinged listing (5-10 min, 25 XP)</li>
+                                <li>Read the first page of a book in the campus bookstore from a genre you'd never touch (5 min, 30 XP)</li>
+                                <li>Do your normal morning or night routine but 2x faster than usual (10-15 min, 35 XP)</li>
                             </ul>
                         </div>
                     </div>
                     <div class="challenge-card fade-in" style="animation-delay: 0.2s;">
-                        <div class="challenge-icon">🧠</div>
-                        <h3 class="challenge-title">Personal Growth</h3>
-                        <p class="challenge-description">Break habits and try things that push you outside your comfort zone in meaningful ways.</p>
+                        <div class="challenge-icon">📅</div>
+                        <h3 class="challenge-title">Weekly Challenge</h3>
+                        <p class="challenge-description">One week. One challenge. Delivered every Sunday. Everyone gets the same challenge. Real transformation.</p>
                         <div class="challenge-examples">
-                            <h4>Basic Examples:</h4>
+                            <h4>Example Weekly Challenges:</h4>
                             <ul>
-                                <li>Go 24 hours without checking your reflection, mirrors, or screens</li>
-                                <li>Join a group activity where you're clearly the beginner</li>
+                                <li><strong>Memory Bank</strong> - "Choose a large set of information you're genuinely curious about and memorize it over the course of a week."</li>
+                                <li><strong>Name Game</strong> - "Introduce yourself to strangers around campus or your neighborhood until you meet someone whose first name starts with the same letter as either your first or last name."</li>
+                                <li><strong>Paper Trail</strong> - "Hunt down a flyer or poster advertising an upcoming event near campus, then actually show up."</li>
                             </ul>
                         </div>
                     </div>
                     <div class="challenge-card fade-in" style="animation-delay: 0.3s;">
-                        <div class="challenge-icon">👥</div>
-                        <h3 class="challenge-title">Social Connection</h3>
-                        <p class="challenge-description">Turn everyday interactions into chances for genuine connection with people around you.</p>
+                        <div class="challenge-icon">🌅</div>
+                        <h3 class="challenge-title">Weekend Sidequests</h3>
+                        <p class="challenge-description">Bigger adventures for when you have time. Unlock Friday at 5pm. Higher stakes, higher rewards—150-300 XP.</p>
                         <div class="challenge-examples">
-                            <h4>Basic Examples:</h4>
+                            <h4>Example Weekend Sidequests:</h4>
                             <ul>
-                                <li>Text a person from high school you haven't talked to since graduation</li>
-                                <li>Attend three different club meetings in one week for orgs you know nothing about</li>
+                                <li>Learn the lyrics to a full song in another language (1-2 hours, 180 XP)</li>
+                                <li>Try to cook something your mom/dad makes (45-90 min, 200 XP)</li>
+                                <li>Go to a sporting event that's not football (2-3 hours, 250 XP)</li>
                             </ul>
                         </div>
                     </div>
@@ -4259,45 +4269,74 @@
         </div>
     </section>
 
+    <!-- Weekly Challenge Section -->
+    <section class="section challenges-section" id="weekly">
+        <div class="section-content">
+            <div class="challenges-content">
+                <div class="challenges-intro">
+                    <div class="section-badge">Deep Transformation</div>
+                    <h2>One week. One challenge. Delivered every Sunday.</h2>
+                    <p style="text-align: center;">Everyone gets the same challenge. Real transformation.</p>
+                </div>
+                <div class="challenges-grid">
+                    <div class="challenge-card fade-in" style="animation-delay: 0.1s;">
+                        <div class="challenge-icon">📅</div>
+                        <h3 class="challenge-title">Delivered Every Sunday</h3>
+                        <p class="challenge-description">One new challenge drops every Sunday. You have 7 days to complete it.</p>
+                    </div>
+                    <div class="challenge-card fade-in" style="animation-delay: 0.2s;">
+                        <div class="challenge-icon">🌍</div>
+                        <h3 class="challenge-title">Everyone Gets the Same</h3>
+                        <p class="challenge-description">It's global. Everyone sees the same challenge. Share the experience.</p>
+                    </div>
+                    <div class="challenge-card fade-in" style="animation-delay: 0.3s;">
+                        <div class="challenge-icon">🔥</div>
+                        <h3 class="challenge-title">Build Your Streak</h3>
+                        <p class="challenge-description">Track your progress. Watch your streak grow. See how far you've come.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Special Edition Challenge Packs Section -->
-    <section class="section packs-section" id="packs">
+    <!-- Friends Section -->
+    <section class="section packs-section" id="friends">
         <div class="section-content">
             <div class="packs-content">
                 <div class="packs-intro">
-                    <div class="section-badge">Challenge Packs</div>
-                    <h2>Level Up Your Experience</h2>
-                    <p style="text-align: center;">When you want more than weekly challenges, dive into themed collections designed for specific goals and situations.</p>
+                    <div class="section-badge">Social Competition</div>
+                    <h2>Compete. Connect. Level up with friends.</h2>
+                    <p style="text-align: center;">See what your friends are doing. Compete on leaderboards. Build a community around growth.</p>
                 </div>
                 <div class="packs-showcase">
                     <div class="pack-featured">
                         <div class="pack-hero">
-                            <div class="pack-icon">🔥</div>
+                            <div class="pack-icon">🏆</div>
                             <div class="pack-info">
-                                <h3>Extreme Dares</h3>
-                                <p>High-intensity social risks that push you way outside your comfort zone</p>
+                                <h3>Leaderboards</h3>
+                                <p>See who's winning. Track completions, streaks, and XP. All time, this week, this month.</p>
                                 <div class="pack-stats">
-                                    <span class="stat">10 challenges</span>
+                                    <span class="stat">All Time</span>
                                     <span class="stat">•</span>
-                                    <span class="stat">2-3 weeks</span>
+                                    <span class="stat">This Week</span>
                                     <span class="stat">•</span>
-                                    <span class="stat">Exclusive badge</span>
+                                    <span class="stat">This Month</span>
                                 </div>
                             </div>
                         </div>
                         <div class="pack-preview">
                             <div class="preview-challenge">
-                                <div class="challenge-icon">🎤</div>
+                                <div class="challenge-icon">👥</div>
                                 <div class="challenge-text">
-                                    <h4>Perform at an open mic night</h4>
-                                    <p>Share your talent (or lack thereof) with a live audience</p>
+                                    <h4>Activity Feed</h4>
+                                    <p>See when friends complete sidequests. Stay connected. Get motivated.</p>
                                 </div>
                             </div>
                             <div class="preview-challenge">
-                                <div class="challenge-icon">👥</div>
+                                <div class="challenge-icon">⚔️</div>
                                 <div class="challenge-text">
-                                    <h4>Go to a party where you know no one</h4>
-                                    <p>Walk into a social situation completely alone</p>
+                                    <h4>Head-to-Head Comparison</h4>
+                                    <p>Compare stats with any friend. See who's winning.</p>
                                 </div>
                             </div>
                         </div>
@@ -4305,38 +4344,38 @@
                 <div class="packs-grid">
                         <div class="pack-card compact">
                             <div class="pack-header">
-                                <div class="pack-icon-small">💕</div>
-                                <div class="pack-title">Couples Challenges</div>
+                                <div class="pack-icon-small">🔍</div>
+                                <div class="pack-title">Find Friends</div>
                             </div>
-                            <p class="pack-desc">Transform your relationship with adventures that create inside jokes and stories you'll tell for years.</p>
+                                <p class="pack-desc">Find friends by username or contacts. Discover new people on similar journeys.</p>
                             <div class="pack-meta">
-                                <span>10 challenges</span>
+                                <span>Friend Requests</span>
                                 <span>•</span>
-                                <span>2-3 weeks</span>
+                                <span>Search & Discovery</span>
                         </div>
                     </div>
                         <div class="pack-card compact">
                             <div class="pack-header">
-                                <div class="pack-icon-small">🎓</div>
-                                <div class="pack-title">Campus Adventures</div>
+                                <div class="pack-icon-small">💬</div>
+                                <div class="pack-title">Direct Messaging</div>
                             </div>
-                            <p class="pack-desc">Make the most of your college years with experiences designed specifically for campus life.</p>
+                                <p class="pack-desc">Chat directly in the app. Share wins. Discuss challenges. Build deeper connections.</p>
                             <div class="pack-meta">
-                                <span>10 challenges</span>
+                                <span>Real-Time Chat</span>
                                 <span>•</span>
-                                <span>2-3 weeks</span>
+                                <span>Unread Counts</span>
                         </div>
                     </div>
                         <div class="pack-card compact">
                             <div class="pack-header">
-                                <div class="pack-icon-small">🌍</div>
-                                <div class="pack-title">Travel Challenges</div>
+                                <div class="pack-icon-small">📊</div>
+                                <div class="pack-title">Progress Tracking</div>
                             </div>
-                            <p class="pack-desc">Explore your city and beyond with adventures that push you to discover new places.</p>
+                                <p class="pack-desc">See friends' levels, streaks, and stats. Watch each other grow. Celebrate together.</p>
                             <div class="pack-meta">
-                                <span>10 challenges</span>
+                                <span>Level Badges</span>
                                 <span>•</span>
-                                <span>2-3 weeks</span>
+                                <span>Streak Tracking</span>
                             </div>
                         </div>
                     </div>
@@ -4352,7 +4391,8 @@
             <!-- Header -->
             <div class="pods-header">
                 <div class="section-badge">👥 Pods: Do It Together</div>
-                <h2>Because doing cool stuff alone is fine, but with friends? It hits different.</h2>
+                <h2>"I'm not sure how to reach out."</h2>
+                <p style="text-align: center; margin-top: 1rem; font-size: 1.2rem;">Pods give you a reason.</p>
                 </div>
             
             <!-- What Pods Are -->
@@ -4365,10 +4405,10 @@
                     <div class="orbit-ring"></div>
                             </div>
                 <div class="pods-explanation">
-                    <p><strong>Pods = small groups (2–10 people).</strong></p>
-                    <p>You all take on the same weekly challenge.</p>
-                    <p>Share updates, reactions, and inside jokes as you go.</p>
-                    <p>Pods keep you accountable and make boring weeks unforgettable.</p>
+                    <p><strong>Pods = private friend groups. Up to 3 friends on Free, or up to 100 on Pro.</strong></p>
+                    <p>Invite-only groups that commit to completing challenges together.</p>
+                    <p>Each pod has a unique invite code. Track progress together. Build your pod streak.</p>
+                    <p>Create your own pod or join with an invite code.</p>
                         </div>
                             </div>
             
@@ -4379,102 +4419,30 @@
                     <div class="step-card">
                         <div class="step-number">1</div>
                         <h4>Join or Create</h4>
-                        <p>Hop into a pod with an invite code, or start your own (Pro feature).</p>
+                        <p>Hop into a pod with an invite code, or start your own.</p>
                         </div>
                             <div class="step-card">
                                 <div class="step-number">2</div>
-                                <h4>Take on the Drop</h4>
-                                <p>Everyone gets the same weekly or custom challenge. Post proof, stories, or fails.</p>
+                                <h4>Complete Challenges Together</h4>
+                                <p>Everyone does the same challenge. Track progress. See who's done. Build your streak.</p>
                             </div>
                     <div class="step-card">
                         <div class="step-number">3</div>
-                        <h4>Track the Streak</h4>
-                        <p>Watch your pod's streak climb week after week. Break it, and everyone feels it.</p>
+                                <h4>Track the Streak</h4>
+                                <p>Watch your pod's streak climb. Break it, and everyone feels it.</p>
                         </div>
                             </div>
                         </div>
             
             
-        </div>
-    </section>
-
-    <!-- Companion Guides Section -->
-    <section class="section guides-section" id="guides">
-        <div class="section-content">
-            <div class="guides-content">
-                <div class="guides-intro">
-                    <div class="section-badge">Companion Guides</div>
-                    <h2>Your Personal Life Coach</h2>
-                    <p style="text-align: center;">Deep-dive crash courses designed to transform specific areas of your life. Each guide combines expert insights, practical challenges, and reflective exercises.</p>
-                </div>
-                <div class="guides-showcase">
-                    <div class="guide-feature main-feature fade-in" style="animation-delay: 0.1s;">
-                        <div class="feature-content">
-                            <div class="feature-icon">📚</div>
-                            <div class="feature-text">
-                                <h3>Structured Learning Programs</h3>
-                                <p>2-4 week courses that teach specific skills through expert content and practical exercises.</p>
-                            </div>
-                        </div>
-                        <div class="feature-details">
-                            <div class="detail-item">
-                                <span class="detail-icon">✓</span>
-                                <span>2-4 week structured programs</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-icon">✓</span>
-                                <span>Interactive quizzes & challenges</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-icon">✓</span>
-                                <span>Progress tracking & completion rewards</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-icon">✓</span>
-                                <span>Pro subscription integration</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="guides-sidebar">
-                        <div class="guide-preview fade-in" style="animation-delay: 0.2s;">
-                            <div class="preview-icon">🎯</div>
-                            <div class="preview-content">
-                                <h4>Week-by-Week Structure</h4>
-                                <p>Each week unlocks after completing the previous one, with 5 types of content per week.</p>
-                                <div class="preview-tags">
-                                    <span class="tag">Intro content</span>
-                                    <span class="tag">Educational articles</span>
-                                    <span class="tag">Self-discovery quizzes</span>
-                                    <span class="tag">Practical challenges</span>
-                                    <span class="tag">Reflection prompts</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="guide-preview fade-in" style="animation-delay: 0.3s;">
-                            <div class="preview-icon">🏆</div>
-                            <div class="preview-content">
-                                <h4>Completion System</h4>
-                                <p>Track your progress, unlock new weeks, and celebrate achievements with animated completion screens.</p>
-                                <div class="preview-tags">
-                                    <span class="tag">Progress tracking</span>
-                                    <span class="tag">Achievement badges</span>
-                                    <span class="tag">Reset capability</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section" id="cta">
         <div class="section-content">
-                <div class="cta-title">Ready to Turn Your Week Into an Adventure?</div>
-                <p class="cta-subtitle">Join other college students who are actually doing cool stuff<br>instead of just talking about it.</p>
+                <div class="cta-title">Better Hangouts Start Here</div>
+                <p class="cta-subtitle">Your next good story starts Sunday.</p>
         <div class="cta-buttons">
             <a href="https://apps.apple.com/us/app/ver%C3%A9-challenge-your-normal/id6742329686" target="_blank" class="btn-white">Download the App</a>
         </div>
@@ -4484,16 +4452,16 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo"><img src="vere side-by-side logo.png" alt="Veré" style="height: 30px; width: auto;"></div>
-            <p class="footer-text">Weekly challenges for college students. Try something new every Sunday.</p>
+            <div class="footer-logo"><img src="sidekix-word-green.png" alt="Sidekix" style="height: 30px; width: auto;"></div>
+            <p class="footer-text">Track your challenges. Share your wins. Sidequests that make your day less predictable.</p>
             <div class="footer-links">
                 <a href="https://sites.google.com/view/vereofficial-privacy-policy/home" target="_blank">Privacy</a>
                 <a href="https://sites.google.com/view/vereofficial-terms-conditions/home" target="_blank">Terms</a>
                 <a href="https://sites.google.com/view/vereofficial-help/home?authuser=2" target="_blank">Support</a>
-                <a href="https://www.instagram.com/vere.app/" target="_blank">Instagram</a>
+                <a href="https://sidekix.app" target="_blank">Instagram</a>
             </div>
             <div class="footer-bottom">
-                <p style="text-align: center;">&copy; 2025 Veré. All rights reserved.</p>
+                <p style="text-align: center;">&copy; 2025 Sidekix. All rights reserved.</p>
             </div>
         </div>
     </footer>
