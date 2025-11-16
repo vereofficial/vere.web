@@ -11,6 +11,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
       "src": "*.{png,jpg,jpeg,gif,ico,svg,mp4,webp}",
       "use": "@vercel/static"
     },
