@@ -11,6 +11,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    },
+    {
       "src": "public/**",
       "use": "@vercel/static"
     },
@@ -19,7 +23,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "*.{txt,xml}",
+      "src": "*.{txt,xml,webmanifest}",
       "use": "@vercel/static"
     }
   ],
