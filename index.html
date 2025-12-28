@@ -256,9 +256,9 @@
             transition: var(--transition);
             position: relative;
             z-index: 1;
-            display: block;
-            opacity: 1;
-            visibility: visible;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
         }
 
@@ -5165,11 +5165,6 @@
             .nav-logo-link::before,
             .nav-logo-link::after {
                 display: none !important;
-            }
-
-            .nav-logo-link .logo {
-                opacity: 0;
-                visibility: hidden;
             }
 
             .drop-timer-section {
