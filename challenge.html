@@ -846,6 +846,26 @@
             color: var(--text-primary);
         }
 
+        @media (max-width: 768px) {
+            .prize-section {
+                position: relative;
+            }
+
+            .prize-meme {
+                position: absolute;
+                top: -10px;
+                right: 5px;
+                z-index: 11;
+                width: 50px !important;
+                height: 50px !important;
+                display: block !important;
+            }
+
+            .sidequest-item img.meme-sticker {
+                display: block !important;
+            }
+        }
+
         .cta-box {
             background: var(--gradient-primary);
             color: white;
@@ -963,14 +983,11 @@
             }
 
             /* Reposition memes to be within notebook bounds */
-            .meme-sticker:nth-of-type(1) { top: 5% !important; right: 5% !important; left: auto !important; }
-            .meme-sticker:nth-of-type(2) { top: 15% !important; left: 5% !important; right: auto !important; }
-            .meme-sticker:nth-of-type(3) { top: 25% !important; right: 3% !important; left: auto !important; }
-            .meme-sticker:nth-of-type(4) { top: 40% !important; left: 3% !important; right: auto !important; }
-            .meme-sticker:nth-of-type(5) { top: 55% !important; right: 5% !important; left: auto !important; }
-            .meme-sticker:nth-of-type(6) { top: 70% !important; left: 2% !important; right: auto !important; }
-            .meme-sticker:nth-of-type(7) { top: 10% !important; left: 10% !important; right: auto !important; }
-            .meme-sticker:nth-of-type(8) { top: 50% !important; right: 8% !important; left: auto !important; }
+            .chaos-layer-mobile .meme-sticker:nth-of-type(1) { top: 5% !important; right: 5% !important; left: auto !important; }
+            .chaos-layer-mobile .meme-sticker:nth-of-type(2) { top: 25% !important; right: 3% !important; left: auto !important; }
+            .chaos-layer-mobile .meme-sticker:nth-of-type(3) { top: 55% !important; right: 5% !important; left: auto !important; }
+            .chaos-layer-mobile .meme-sticker:nth-of-type(4) { top: 70% !important; left: 2% !important; right: auto !important; }
+            .chaos-layer-mobile .meme-sticker:nth-of-type(5) { top: 10% !important; left: 10% !important; right: auto !important; }
         }
 
         @media (max-width: 480px) {
@@ -1012,14 +1029,14 @@
         <div class="sticker">✨</div>
         
         <!-- Meme Stickers - positioned chaotically -->
-        <img src="/public/popcat.png.gif" alt="pop cat" class="meme-sticker small" style="top: 8%; right: 12%; transform: rotate(25deg); animation-delay: 0.5s;">
-        <img src="/public/blurryface.png.gif" alt="blurry face" class="meme-sticker medium" style="top: 20%; left: 2%; transform: rotate(-18deg); animation-delay: 1.2s;">
-        <img src="/public/bratz.png.png" alt="bratz dolls" class="meme-sticker large" style="top: 35%; right: 3%; transform: rotate(30deg); animation-delay: 2s;">
-        <img src="/public/stickwoman.png.png" alt="woman with stick" class="meme-sticker medium" style="top: 50%; left: 8%; transform: rotate(-22deg); animation-delay: 2.8s;">
-        <img src="/public/phonewoman.png.png" alt="woman with phone" class="meme-sticker small" style="top: 65%; right: 8%; transform: rotate(15deg); animation-delay: 3.5s;">
-        <img src="/public/cj.png.png" alt="CJ GTA" class="meme-sticker medium" style="top: 80%; left: 4%; transform: rotate(-28deg); animation-delay: 4.2s;">
-        <img src="/public/cryingwoman.png.png" alt="crying woman" class="meme-sticker small" style="top: 12%; left: 15%; transform: rotate(12deg) scaleX(-1); animation-delay: 0.8s;">
-        <img src="/public/yellingmeme.png.png" alt="yelling meme" class="meme-sticker large" style="top: 55%; right: 15%; transform: rotate(35deg); animation-delay: 3.8s;">
+        <img src="public/popcat.png.gif" alt="pop cat" class="meme-sticker small" style="top: 8%; right: 12%; transform: rotate(25deg); animation-delay: 0.5s;">
+        <img src="public/blurryface.png.gif" alt="blurry face" class="meme-sticker medium" style="top: 20%; left: 2%; transform: rotate(-18deg); animation-delay: 1.2s;">
+        <img src="public/bratz.png.png" alt="bratz dolls" class="meme-sticker large" style="top: 35%; right: 3%; transform: rotate(30deg); animation-delay: 2s;">
+        <img src="public/stickwoman.png.png" alt="woman with stick" class="meme-sticker medium" style="top: 50%; left: 8%; transform: rotate(-22deg); animation-delay: 2.8s;">
+        <img src="public/phonewoman.png.png" alt="woman with phone" class="meme-sticker small" style="top: 65%; right: 8%; transform: rotate(15deg); animation-delay: 3.5s;">
+        <img src="public/cj.png.png" alt="CJ GTA" class="meme-sticker medium" style="top: 80%; left: 4%; transform: rotate(-28deg); animation-delay: 4.2s;">
+        <img src="public/blurryface.png.gif" alt="blurry face" class="meme-sticker small" style="top: 12%; left: 15%; transform: rotate(12deg) scaleX(-1); animation-delay: 0.8s;">
+        <img src="public/yellingmeme.png.png" alt="yelling meme" class="meme-sticker large" style="top: 55%; right: 15%; transform: rotate(35deg); animation-delay: 3.8s;">
         
         <div class="highlighter"></div>
         <div class="highlighter"></div>
@@ -1032,14 +1049,11 @@
         <!-- Chaotic background layer - inside notebook on mobile -->
         <div class="chaos-layer-mobile">
             <!-- Meme Stickers - positioned chaotically on mobile -->
-            <img src="/public/phonewoman.png.png" alt="woman with phone" class="meme-sticker small" style="top: 5%; right: 5%; transform: rotate(15deg); animation-delay: 3.5s;">
-            <img src="/public/blurryface.png.gif" alt="blurry face" class="meme-sticker medium" style="top: 15%; left: 5%; transform: rotate(-18deg); animation-delay: 1.2s;">
-            <img src="/public/bratz.png.png" alt="bratz dolls" class="meme-sticker large" style="top: 25%; right: 3%; transform: rotate(30deg); animation-delay: 2s;">
-            <img src="/public/stickwoman.png.png" alt="woman with stick" class="meme-sticker medium" style="top: 40%; left: 3%; transform: rotate(-22deg); animation-delay: 2.8s;">
-            <img src="/public/popcat.png.gif" alt="pop cat" class="meme-sticker small" style="top: 55%; right: 5%; transform: rotate(25deg); animation-delay: 0.5s;">
-            <img src="/public/cj.png.png" alt="CJ GTA" class="meme-sticker medium" style="top: 70%; left: 2%; transform: rotate(-28deg); animation-delay: 4.2s;">
-            <img src="/public/cryingwoman.png.png" alt="crying woman" class="meme-sticker small" style="top: 10%; left: 10%; transform: rotate(12deg) scaleX(-1); animation-delay: 0.8s;">
-            <img src="/public/yellingmeme.png.png" alt="yelling meme" class="meme-sticker large" style="top: 50%; right: 8%; transform: rotate(35deg); animation-delay: 3.8s;">
+            <img src="public/phonewoman.png.png" alt="woman with phone" class="meme-sticker small" style="top: 5%; right: 5%; transform: rotate(15deg); animation-delay: 3.5s;">
+            <img src="public/bratz.png.png" alt="bratz dolls" class="meme-sticker large" style="top: 25%; right: 3%; transform: rotate(30deg); animation-delay: 2s;">
+            <img src="public/popcat.png.gif" alt="pop cat" class="meme-sticker small" style="top: 55%; right: 5%; transform: rotate(25deg); animation-delay: 0.5s;">
+            <img src="public/cj.png.png" alt="CJ GTA" class="meme-sticker medium" style="top: 70%; left: 2%; transform: rotate(-28deg); animation-delay: 4.2s;">
+            <img src="public/blurryface.png.gif" alt="blurry face" class="meme-sticker small" style="top: 10%; left: 10%; transform: rotate(12deg) scaleX(-1); animation-delay: 0.8s;">
             
             <!-- Mobile Highlighter Marks -->
             <div class="mobile-highlighter"></div>
@@ -1116,7 +1130,8 @@
                     <p class="sidequest-objective">enter the stacks and hunt down any book with "texas" in the title. take a selfie with it while "shushing" the camera. <span class="emoji">🤫</span></p>
                 </li>
 
-                <li class="sidequest-item">
+                <li class="sidequest-item" style="position: relative;">
+                    <img src="public/stickwoman.png.png" alt="woman with stick" class="meme-sticker small" style="position: absolute; top: 0px; left: 5px; transform: rotate(-15deg); animation-delay: 1s; z-index: 0; opacity: 0.4; width: 40px; height: 40px; display: none;">
                     <span class="sidequest-name">the hall of fame</span>
                     <span class="sidequest-location">greg gym</span>
                     <p class="sidequest-objective">locate the intramural championship plaques. find the most unhinged or hilarious team name from ut history. snap a pic of you and/or your team pointing to the name. <span class="emoji">🏆</span></p>
@@ -1148,6 +1163,7 @@
             <p><strong>follow check:</strong> we'll verify that everyone on the list is following the ig.</p>
 
             <div class="prize-section">
+                <img src="public/yellingmeme.png.png" alt="yelling meme" class="meme-sticker small prize-meme" style="transform: rotate(25deg); animation-delay: 0.5s; display: none;">
                 <h3>the prizes</h3>
                 <p><strong>sidekix tote bags:</strong> canvas totes with a cool, minimalist vibe.</p>
                 <p><strong>goodie bags:</strong> ultimate campus survival kit.</p>
