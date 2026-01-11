@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wanna be spontaneous? | Sidekix</title>
+    <meta name="description" content="winter break is over. stop scrolling and go outside. you have 60 minutes to complete 4 sidequests on the 40 acres.">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sidekix-green: #00D481;
+            --teal: #57cbc0;
+            --green-light: #81d88f;
+            --deep-space-navy: #0A0E27;
+            --gradient-primary: linear-gradient(135deg, #81d88f 0%, #57cbc0 100%);
+            --text-primary: #0A0E27;
+            --bg-primary: #ffffff;
+            --bg-note: #fffef7;
+            --border-note: #e8e6d9;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--gradient-primary);
+            font-size: 17px;
+            font-weight: 400;
+            text-transform: lowercase;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Chaotic background elements */
+        .chaos-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .sticker {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.15;
+            animation: floatSticker 8s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        .sticker:nth-child(1) { top: 10%; left: 5%; transform: rotate(-15deg); animation-delay: 0s; }
+        .sticker:nth-child(2) { top: 25%; right: 8%; transform: rotate(20deg); animation-delay: 1s; font-size: 2.5rem; }
+        .sticker:nth-child(3) { top: 45%; left: 3%; transform: rotate(-25deg); animation-delay: 2s; font-size: 3.5rem; }
+        .sticker:nth-child(4) { top: 60%; right: 5%; transform: rotate(12deg); animation-delay: 3s; font-size: 2.8rem; }
+        .sticker:nth-child(5) { top: 75%; left: 7%; transform: rotate(-18deg); animation-delay: 4s; font-size: 3.2rem; }
+        .sticker:nth-child(6) { top: 85%; right: 10%; transform: rotate(22deg); animation-delay: 5s; font-size: 2.3rem; }
+
+        .highlighter {
+            position: absolute;
+            height: 30px;
+            opacity: 0.2;
+            border-radius: 3px;
+            animation: floatHighlighter 10s ease-in-out infinite;
+        }
+
+        .highlighter:nth-child(7) { 
+            top: 15%; 
+            left: 0; 
+            width: 200px; 
+            background: linear-gradient(135deg, #ffeb3b 0%, #ffc107 100%);
+            transform: rotate(-5deg);
+            animation-delay: 0s;
+        }
+        .highlighter:nth-child(8) { 
+            top: 35%; 
+            right: 0; 
+            width: 180px; 
+            background: linear-gradient(135deg, #81d88f 0%, #57cbc0 100%);
+            transform: rotate(8deg);
+            animation-delay: 2s;
+        }
+        .highlighter:nth-child(9) { 
+            top: 55%; 
+            left: 10%; 
+            width: 220px; 
+            background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%);
+            transform: rotate(-12deg);
+            animation-delay: 4s;
+        }
+        .highlighter:nth-child(10) { 
+            top: 70%; 
+            right: 15%; 
+            width: 160px; 
+            background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+            transform: rotate(15deg);
+            animation-delay: 6s;
+        }
+        .highlighter:nth-child(11) { 
+            top: 90%; 
+            left: 5%; 
+            width: 190px; 
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            transform: rotate(-8deg);
+            animation-delay: 8s;
+        }
+
+        @keyframes floatSticker {
+            0%, 100% { transform: translateY(0) rotate(var(--rotation, 0deg)); }
+            50% { transform: translateY(-20px) rotate(calc(var(--rotation, 0deg) + 10deg)); }
+        }
+
+        @keyframes floatHighlighter {
+            0%, 100% { transform: translateX(0) rotate(var(--rotation, 0deg)); }
+            50% { transform: translateX(15px) rotate(calc(var(--rotation, 0deg) + 5deg)); }
+        }
+
+        .note-container {
+            background: #fffef7;
+            border: none;
+            border-radius: 0;
+            padding: 40px 30px;
+            margin: 0;
+            box-shadow: none;
+            position: relative;
+            min-height: 100vh;
+            z-index: 1;
+        }
+
+        .note-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient-primary);
+        }
+
+        /* iPhone note lines effect */
+        .note-container {
+            background-image: 
+                repeating-linear-gradient(
+                    transparent,
+                    transparent 31px,
+                    rgba(0, 0, 0, 0.03) 31px,
+                    rgba(0, 0, 0, 0.03) 32px
+                );
+            background-position: 0 0;
+            padding-left: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--deep-space-navy);
+            text-transform: lowercase;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 30px 0 15px 0;
+            color: var(--deep-space-navy);
+            text-transform: lowercase;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 20px 0 10px 0;
+            color: var(--deep-space-navy);
+            text-transform: lowercase;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+
+        .header-section {
+            text-align: left;
+            padding: 20px 0 30px 0;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .header-section::before {
+            content: '⭐';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.2;
+            transform: rotate(25deg);
+            animation: floatSticker 6s ease-in-out infinite;
+        }
+
+        .header-section::after {
+            content: '💥';
+            position: absolute;
+            top: 30px;
+            left: -30px;
+            font-size: 1.5rem;
+            opacity: 0.2;
+            transform: rotate(-15deg);
+            animation: floatSticker 8s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .header-section h1 {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .stakes-section {
+            background: linear-gradient(135deg, rgba(129, 216, 143, 0.08) 0%, rgba(87, 203, 192, 0.08) 100%);
+            border-left: 3px solid;
+            border-image: var(--gradient-primary) 1;
+            padding: 20px 20px 20px 15px;
+            margin: 25px 0;
+            border-radius: 0;
+            position: relative;
+        }
+
+        .stakes-section::before {
+            content: '🎁';
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            font-size: 2rem;
+            opacity: 0.15;
+            transform: rotate(-20deg);
+            animation: floatSticker 7s ease-in-out infinite;
+        }
+
+        .sidequest-section {
+            position: relative;
+        }
+
+        .sidequest-section::before {
+            content: '🗺️';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 2.5rem;
+            opacity: 0.12;
+            transform: rotate(-25deg);
+            animation: floatSticker 9s ease-in-out infinite;
+        }
+
+        .sidequest-list {
+            list-style: none;
+            counter-reset: sidequest-counter;
+        }
+
+        .sidequest-item {
+            counter-increment: sidequest-counter;
+            margin-bottom: 25px;
+            padding: 15px 15px 15px 0;
+            background: transparent;
+            border-radius: 0;
+            border-left: none;
+            position: relative;
+            margin-left: 0;
+        }
+
+        .sidequest-item::before {
+            content: counter(sidequest-counter) '.';
+            position: absolute;
+            left: -45px;
+            top: 15px;
+            width: auto;
+            height: auto;
+            background: transparent;
+            border-radius: 0;
+            display: block;
+            color: var(--sidekix-green);
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: none;
+        }
+
+        .sidequest-item::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 40px;
+            height: 40px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="50" font-size="30" text-anchor="middle" dominant-baseline="middle">📌</text></svg>');
+            opacity: 0.1;
+            transform: rotate(15deg);
+            pointer-events: none;
+        }
+
+        .sidequest-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--deep-space-navy);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .sidequest-location {
+            color: var(--sidekix-green);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .sidequest-objective {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            margin: 0 3px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(129, 216, 143, 0.2) 0%, rgba(87, 203, 192, 0.2) 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .prize-section {
+            background: linear-gradient(135deg, rgba(129, 216, 143, 0.15) 0%, rgba(87, 203, 192, 0.15) 100%);
+            color: var(--text-primary);
+            padding: 20px 20px 20px 15px;
+            border-radius: 0;
+            margin: 25px 0;
+            border-left: 3px solid;
+            border-image: var(--gradient-primary) 1;
+        }
+
+        .prize-section h3 {
+            color: var(--deep-space-navy);
+            margin-bottom: 12px;
+        }
+
+        .prize-section p {
+            color: var(--text-primary);
+        }
+
+        .cta-box {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 0;
+            margin: 35px 0;
+            text-align: left;
+            border-left: 4px solid var(--deep-space-navy);
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 15px;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 25px;
+            background: var(--deep-space-navy);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: lowercase;
+        }
+
+        .cta-box a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-note {
+            text-align: left;
+            padding: 30px 0 20px 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        .footer-note a {
+            color: rgba(255, 255, 255, 1);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .note-container {
+                padding: 30px 20px 30px 40px;
+            }
+
+            .header-section {
+                padding: 15px 0 25px 0;
+            }
+
+            .header-section h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .sidequest-item {
+                padding: 12px 12px 12px 0;
+            }
+
+            .sidequest-item::before {
+                left: -35px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .note-container {
+                padding: 25px 15px 25px 35px;
+            }
+
+            .header-section h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .sidequest-item {
+                padding: 10px 10px 10px 0;
+            }
+
+            .sidequest-item::before {
+                left: -30px;
+                font-size: 0.85rem;
+            }
+
+            .cta-box {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="note-container">
+        <div class="header-section">
+            <h1>wanna be spontaneous? <span class="emoji">🤔</span></h1>
+            <p>winter break is over. stop scrolling and go outside. you have 60 minutes to complete 4 sidequests on the 40 acres.</p>
+        </div>
+
+        <div class="stakes-section">
+            <h2>the stakes:</h2>
+            
+            <h3>the podium:</h3>
+            <p>first 3 teams to dm proof get <span class="highlight">sidekix tote bags + goodie bags</span>.</p>
+            
+            <h3>the jackpot:</h3>
+            <p>every single person who finishes gets an entry into a <span class="highlight">$50 visa gift card raffle</span>. <span class="highlight">do it in a team? get an extra entry.</span></p>
+            
+            <h3>the final boss:</h3>
+            <p>to officially finish, you must dm <a href="https://www.instagram.com/direct/t/sidekix.app/" target="_blank" style="color: var(--sidekix-green); text-decoration: none; font-weight: 500;">@sidekix.app</a> on ig with proof of all 4 stops + your team members' names + ig handles. (everyone in the group must be following to win). <span class="emoji">🤘</span></p>
+        </div>
+
+        <div class="sidequest-section">
+            <h2>🤘 the sidequest log (the 4 stops)</h2>
+            
+            <ol class="sidequest-list">
+                <li class="sidequest-item">
+                    <span class="sidequest-name">shushhh</span>
+                    <span class="sidequest-location">PCL</span>
+                    <p class="sidequest-objective">enter the stacks and hunt down any book with "texas" in the title. take a selfie with it while "shushing" the camera. <span class="emoji">🤫</span></p>
+                </li>
+
+                <li class="sidequest-item">
+                    <span class="sidequest-name">the hall of fame</span>
+                    <span class="sidequest-location">greg gym</span>
+                    <p class="sidequest-objective">locate the intramural championship plaques. find the most unhinged or hilarious team name from ut history. snap a pic of you and/or your team pointing to the name. <span class="emoji">🏆</span></p>
+                </li>
+
+                <li class="sidequest-item">
+                    <span class="sidequest-name">the $9.99 hunt</span>
+                    <span class="sidequest-location">co-op</span>
+                    <p class="sidequest-objective">scour the shelves for a burnt orange item priced exactly $9.99. photo proof of you and/or your team holding the tag or the receipt. <span class="emoji">🧾</span></p>
+                </li>
+
+                <li class="sidequest-item">
+                    <span class="sidequest-name">squirrel & tower</span>
+                    <span class="sidequest-location">the 40 acres</span>
+                    <p class="sidequest-objective">capture a squirrel and the ut tower in the same frame. it doesn't have to be a portrait, but the squirrel better be the star. you and/or your team must have your hook 'em horns visible somewhere in the shot. <span class="emoji">🐿️</span></p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="finale-section">
+            <h2>🏁 the finale & logistics</h2>
+            
+            <h3>1. how to finish</h3>
+            <p>once the 4th stop is complete, one person from the team must send a single dm to <a href="https://www.instagram.com/direct/t/sidekix.app/" target="_blank" style="color: var(--sidekix-green); text-decoration: none; font-weight: 500;">@sidekix.app</a> containing:</p>
+            <ul style="margin-left: 20px; margin-bottom: 15px; line-height: 1.8;">
+                <li>all 4 photos/videos.</li>
+                <li>a list of all team members' names + ig handles.</li>
+            </ul>
+            <p><strong>follow check:</strong> we'll verify that everyone on the list is following the ig.</p>
+
+            <div class="prize-section">
+                <h3>2. the prizes</h3>
+                <p><strong>sidekix tote bags:</strong> canvas totes with a cool, minimalist vibe.</p>
+                <p><strong>goodie bags:</strong> ultimate campus survival kit.</p>
+                <p><strong>the $50 visa gift card:</strong> enter for your chance to win.</p>
+                <p style="margin-top: 15px; font-style: italic; color: #666;"><strong>sidenote:</strong> every person outside of top 3 teams still gets a smaller goodie bag while supplies last just for participating.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>ready to start? <span class="emoji">🚀</span></h3>
+            <p>grab your team and get moving. the clock starts now.</p>
+            <a href="https://www.instagram.com/direct/t/sidekix.app/" target="_blank">dm @sidekix.app</a>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <p>made with chaos by <a href="/">sidekix</a></p>
+    </div>
+</body>
+</html>

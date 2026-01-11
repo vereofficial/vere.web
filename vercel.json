@@ -35,6 +35,14 @@
     {
       "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/challenge",
+      "destination": "/challenge.html"
+    },
+    {
+      "source": "/spontaneous",
+      "destination": "/challenge.html"
     }
   ],
   "headers": [
