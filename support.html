@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Sidekix</title>
+    <meta name="description" content="Get help with the Sidekix app. Contact us or browse FAQs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/sidekix-logo.png?v=2">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --sidekix-green: #00D481;
+            --deep-space-navy: #0A0E27;
+            --gradient-primary: linear-gradient(135deg, #81d88f 0%, #57cbc0 100%);
+            --text-primary: #0A0E27;
+            --text-secondary: #666666;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --border-radius: 24px;
+            --transition: all 0.3s ease;
+        }
+        body {
+            font-family: 'Outfit', 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            font-size: 16px;
+        }
+        .support-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            color: var(--sidekix-green);
+        }
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--deep-space-navy);
+            margin-bottom: 0.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+        .support-content h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--deep-space-navy);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(129, 216, 143, 0.25);
+        }
+        .support-content h2:first-of-type { margin-top: 0; }
+        .contact-card {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(129, 216, 143, 0.2);
+        }
+        .contact-card p { margin-bottom: 0.5rem; }
+        .contact-card a {
+            color: var(--sidekix-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-card a:hover { text-decoration: underline; }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        .faq-item dt {
+            font-weight: 600;
+            color: var(--deep-space-navy);
+            margin-bottom: 0.35rem;
+        }
+        .faq-item dd {
+            color: var(--text-primary);
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .support-content a {
+            color: var(--sidekix-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .support-content a:hover { text-decoration: underline; }
+        .footer-policy {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .footer-policy a {
+            color: var(--sidekix-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-policy a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            .support-wrap { padding: 2rem 1.25rem 3rem; }
+            h1 { font-size: 1.85rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="support-wrap">
+        <a href="/" class="back-link">← Back to Sidekix</a>
+        <h1>Sidekix Support</h1>
+        <p class="subtitle">Need assistance with the Sidekix app? You’re in the right place.</p>
+
+        <div class="support-content">
+            <h2>Get Help</h2>
+            <div class="contact-card">
+                <p><strong>Contact Us</strong></p>
+                <p>📧 Email: <a href="mailto:sidekix.team@gmail.com">sidekix.team@gmail.com</a></p>
+                <p style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.95rem;">We’ll do our best to respond within 24–48 hours.</p>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+            <dl class="faq-list">
+                <div class="faq-item">
+                    <dt>How do I reset my password?</dt>
+                    <dd>Use the “Forgot Password” option on the login screen.</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>The app is crashing or not working properly.</dt>
+                    <dd>Try restarting the app or reinstalling it. If the issue continues, contact us so we can help.</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>How do I create an account?</dt>
+                    <dd>Download the app and sign up with your email address.</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>How do weekly challenges work?</dt>
+                    <dd>Each week, Sidekix drops a small, real-world challenge designed to get you out of your routine and out with your friends IRL. Challenges rotate regularly, take minimal planning, and are meant to be flexible.</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>What are pods?</dt>
+                    <dd>Pods are private groups inside Sidekix where you share challenges with people you actually know. Think close friends, roommates, classmates, or teammates. Pods keep things personal and low-noise. You see what your pod is doing, get nudges to participate, and build consistency together without broadcasting to strangers.</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>Is my information private?</dt>
+                    <dd>Yes, we respect your privacy. You control what information you share with your community.</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>How do I change my email address?</dt>
+                    <dd>Go to Settings → Account → Email to update your email address.</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>Do you share my data with third parties?</dt>
+                    <dd>We only share data as described in our <a href="/privacy">Privacy Policy</a>, primarily for app functionality.</dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="footer-policy">
+            <a href="/">Back to Sidekix</a> · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms and Conditions</a>
+        </div>
+    </div>
+</body>
+</html>
