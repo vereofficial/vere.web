@@ -1,181 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support | Sidekix</title>
-    <meta name="description" content="Get help with the Sidekix app. Contact us or browse FAQs.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/sidekix-logo.png?v=2">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --sidekix-green: #00D481;
-            --deep-space-navy: #0A0E27;
-            --gradient-primary: linear-gradient(135deg, #81d88f 0%, #57cbc0 100%);
-            --text-primary: #0A0E27;
-            --text-secondary: #666666;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --border-radius: 24px;
-            --transition: all 0.3s ease;
-        }
-        body {
-            font-family: 'Outfit', 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--bg-primary);
-            font-size: 16px;
-        }
-        .support-wrap {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem 4rem;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            transition: var(--transition);
-        }
-        .back-link:hover {
-            color: var(--sidekix-green);
-        }
-        h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--deep-space-navy);
-            margin-bottom: 0.5rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-        }
-        .support-content h2 {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--deep-space-navy);
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid rgba(129, 216, 143, 0.25);
-        }
-        .support-content h2:first-of-type { margin-top: 0; }
-        .contact-card {
-            background: var(--bg-secondary);
-            border-radius: var(--border-radius);
-            padding: 1.5rem 1.75rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(129, 216, 143, 0.2);
-        }
-        .contact-card p { margin-bottom: 0.5rem; }
-        .contact-card a {
-            color: var(--sidekix-green);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .contact-card a:hover { text-decoration: underline; }
-        .faq-item {
-            margin-bottom: 1.5rem;
-        }
-        .faq-item dt {
-            font-weight: 600;
-            color: var(--deep-space-navy);
-            margin-bottom: 0.35rem;
-        }
-        .faq-item dd {
-            color: var(--text-primary);
-            margin-left: 0;
-            padding-left: 0;
-        }
-        .support-content a {
-            color: var(--sidekix-green);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .support-content a:hover { text-decoration: underline; }
-        .footer-policy {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(0,0,0,0.08);
-            text-align: center;
-        }
-        .footer-policy a {
-            color: var(--sidekix-green);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .footer-policy a:hover { text-decoration: underline; }
-        @media (max-width: 768px) {
-            .support-wrap { padding: 2rem 1.25rem 3rem; }
-            h1 { font-size: 1.85rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support | Sidekix</title>
+<meta name="description" content="Get help with the Sidekix app. Contact us or browse FAQs.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/sk-logo-dark.png">
+<link rel="apple-touch-icon" href="/sk-logo-dark.png">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--accent:#D4FF3F;--bg:#0A0A0A;--text1:#ffffff;--text2:#888;--text3:#333;--card:#111;--border:#1c1c1c}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text1);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
+.cursor{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.08s,width 0.2s,height 0.2s;mix-blend-mode:difference}
+.cursor-ring{position:fixed;width:36px;height:36px;border-radius:50%;border:1px solid rgba(212,255,63,0.4);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.18s ease-out,width 0.3s,height 0.3s}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 6vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid transparent;transition:border-color 0.3s,background 0.3s}
+nav.scrolled{background:rgba(10,10,10,0.9);backdrop-filter:blur(12px);border-color:var(--border)}
+.wordmark{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);text-decoration:none}
+.wordmark em{color:var(--accent);font-style:normal}
+.nav-cta{background:var(--accent);color:#0a0a0a;font-family:'Syne',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;padding:10px 22px;border-radius:50px;text-decoration:none;transition:opacity 0.2s,transform 0.15s}
+.nav-cta:hover{opacity:0.85;transform:scale(0.97)}
+.support-main{padding:120px 6vw 80px;max-width:720px;margin:0 auto;position:relative;z-index:2}
+.section-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,54px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin-bottom:24px}
+.support-lede{font-size:15px;color:var(--text2);line-height:1.6;margin-bottom:40px}
+.support-content h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+.support-content h2:first-of-type{margin-top:0}
+.contact-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-bottom:2rem;transition:border-color 0.2s}
+.contact-card:hover{border-color:#333}
+.contact-card p{font-size:14px;color:var(--text2);line-height:1.65;margin-bottom:0.5rem}
+.contact-card p strong{font-family:'Syne',sans-serif;color:var(--text1);font-weight:800}
+.contact-card a{color:var(--accent);text-decoration:none;font-weight:500;transition:opacity 0.2s}
+.contact-card a:hover{opacity:0.85}
+.contact-card .muted{margin-top:0.75rem;color:var(--text3);font-size:13px}
+.faq-item{margin-bottom:1.5rem}
+.faq-item dt{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--text1);margin-bottom:0.35rem;letter-spacing:-0.01em}
+.faq-item dd{font-size:14px;color:var(--text2);line-height:1.65;margin-left:0}
+.faq-item dd strong{color:var(--text1);font-weight:600}
+.faq-item dd a{color:var(--accent);text-decoration:none;font-weight:500;transition:opacity 0.2s}
+.faq-item dd a:hover{opacity:0.85}
+footer{border-top:1px solid var(--border);padding:24px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;position:relative;z-index:2}
+.footer-note{font-size:12px;color:var(--text3)}
+.footer-link{font-size:12px;color:var(--text3);text-decoration:none;letter-spacing:0.03em;transition:color 0.2s}
+.footer-link:hover{color:var(--text2)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media(max-width:600px){.support-main{padding:100px 6vw 64px}}
+</style>
 </head>
 <body>
-    <div class="support-wrap">
-        <a href="/" class="back-link">← Back to Sidekix</a>
-        <h1>Sidekix Support</h1>
-        <p class="subtitle">Need assistance with the Sidekix app? You’re in the right place.</p>
+<div class="grain"></div>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="ring"></div>
 
-        <div class="support-content">
-            <h2>Get Help</h2>
-            <div class="contact-card">
-                <p><strong>Contact Us</strong></p>
-                <p>📧 Email: <a href="mailto:sidekix.team@gmail.com">sidekix.team@gmail.com</a></p>
-                <p style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.95rem;">We’ll do our best to respond within 24–48 hours.</p>
-            </div>
+<nav id="nav">
+  <a href="/" class="wordmark">side<em>kix</em></a>
+  <a href="https://apps.apple.com/us/app/sidekix/id6742329686" class="nav-cta">download app</a>
+</nav>
 
-            <h2>Frequently Asked Questions</h2>
-            <dl class="faq-list">
-                <div class="faq-item">
-                    <dt>How do I reset my password?</dt>
-                    <dd>Use the “Forgot Password” option on the login screen.</dd>
-                </div>
-                <div class="faq-item">
-                    <dt>The app is crashing or not working properly.</dt>
-                    <dd>Try restarting the app or reinstalling it. If the issue continues, contact us so we can help.</dd>
-                </div>
-                <div class="faq-item">
-                    <dt>How do I create an account?</dt>
-                    <dd>Download the app and sign up with your email address.</dd>
-                </div>
-                <div class="faq-item">
-                    <dt>How do weekly challenges work?</dt>
-                    <dd>Each week, Sidekix drops a small, real-world challenge designed to get you out of your routine and out with your friends IRL. Challenges rotate regularly, take minimal planning, and are meant to be flexible.</dd>
-                </div>
-                <div class="faq-item">
-                    <dt>What are pods?</dt>
-                    <dd>Pods are private groups inside Sidekix where you share challenges with people you actually know. Think close friends, roommates, classmates, or teammates. Pods keep things personal and low-noise. You see what your pod is doing, get nudges to participate, and build consistency together without broadcasting to strangers.</dd>
-                </div>
-                <div class="faq-item">
-                    <dt>Is my information private?</dt>
-                    <dd>Yes, we respect your privacy. You control what information you share with your community.</dd>
-                </div>
-                <div class="faq-item">
-                    <dt>How do I change my email address?</dt>
-                    <dd>Go to Settings → Account → Email to update your email address.</dd>
-                </div>
-                <div class="faq-item">
-                    <dt>Do you share my data with third parties?</dt>
-                    <dd>We only share data as described in our <a href="/privacy.html">Privacy Policy</a>, primarily for app functionality.</dd>
-                </div>
-            </dl>
-        </div>
+<main class="support-main reveal">
+  <span class="section-label">help</span>
+  <h1 class="section-title">Sidekix Support</h1>
+  <p class="support-lede">Help with daily sidequests, the campus feed, your account, or the weekly prize—you’re in the right place.</p>
 
-        <div class="footer-policy">
-            <a href="/">Back to Sidekix</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms and Conditions</a>
-        </div>
+  <div class="support-content">
+    <h2>Get Help</h2>
+    <div class="contact-card">
+      <p><strong>Contact Us</strong></p>
+      <p>📧 Email: <a href="mailto:sidekix.team@gmail.com">sidekix.team@gmail.com</a></p>
+      <p class="muted">We’ll do our best to respond within 24–48 hours.</p>
     </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <dl>
+      <div class="faq-item">
+        <dt>What is Sidekix?</dt>
+        <dd>Sidekix is a campus app for daily <strong>sidequests</strong>: one prompt drops every morning, everyone at your school sees the same one, and you post your take in the feed—photo, video, or text. It’s built to show what your campus is actually doing, not endless scrolling.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>What’s a sidequest, and when is it due?</dt>
+        <dd>A new sidequest goes live at <strong>10am</strong> each day. You have until <strong>midnight</strong> that night to submit your response. Miss the day and you’re on to the next prompt.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>How do reactions and the weekly prize work?</dt>
+        <dd>Other people can react to your posts. Those reactions <strong>add up Monday through Sunday</strong>. The person with the <strong>most reactions when the week ends</strong> (Sunday at midnight) wins the weekly prize. The top finishers also get a <strong>share card</strong> you can post to Instagram, TikTok, or iMessage.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Can I post anonymously?</dt>
+        <dd>Yes. You can post without showing your name and still earn reactions and count toward the weekly leaderboard.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Who sees my posts?</dt>
+        <dd>Your posts show up in the <strong>campus feed</strong>—they’re visible to other students using Sidekix at your school so people can react. Don’t share anything you wouldn’t want seen on campus.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Where is Sidekix available?</dt>
+        <dd>We’re rolling out campus by campus, starting with <strong>UT Austin</strong>. When Sidekix is available where you are, use the <strong>download app</strong> button on this site to install.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>How do I create an account?</dt>
+        <dd>Download Sidekix from the App Store. <strong>Standard sign-up is with your phone number</strong> (SMS verification). If you were in our <strong>early access</strong> program, you may have created your account with <strong>email</strong> instead—same app, different onboarding path.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>How do I reset my password?</dt>
+        <dd>If you signed up with <strong>email</strong> (early access), use <strong>Forgot Password</strong> on the login screen and follow the email link. If you sign in with your <strong>phone number</strong>, use the one-time code or SMS flow shown on the login screen—there isn’t a separate “password” in the same way.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>How do I change my email address?</dt>
+        <dd>Early access accounts tied to email can usually update it under <strong>Settings → Account</strong> (labels may vary by version). If you only use <strong>phone sign-in</strong>, add or change contact info in the same area if the app offers it.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>The app is crashing or not working properly.</dt>
+        <dd>Force-quit the app, restart your phone, and make sure you’re on the latest version from the App Store. If it keeps happening, email us with your device model and iOS version so we can dig in.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Is my information private? Do you sell my data?</dt>
+        <dd>We don’t sell your personal information. What we collect and how we use it is spelled out in our <a href="/privacy.html">Privacy Policy</a>. Messaging opt-in rules for SMS are covered there too.</dd>
+      </div>
+    </dl>
+  </div>
+</main>
+
+<footer>
+  <a href="/" class="wordmark" style="font-size:14px">side<em>kix</em></a>
+  <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+    <a href="/privacy.html" class="footer-link">privacy</a>
+    <a href="/terms.html" class="footer-link">terms</a>
+    <a href="/support.html" class="footer-link">support</a>
+    <a href="https://www.instagram.com/sidekix.app/" class="footer-link">instagram</a>
+  </div>
+  <span class="footer-note">© 2026 sidekix</span>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';ring.style.width='52px';ring.style.height='52px'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='36px';ring.style.height='36px'});
+});
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60));
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
 </body>
 </html>
