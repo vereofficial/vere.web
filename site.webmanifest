@@ -8,6 +8,12 @@
     "theme_color": "#0A0A0A",
     "icons": [
         {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
             "src": "/sk-logo-dark.png",
             "sizes": "512x512",
             "type": "image/png",
