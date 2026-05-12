@@ -12,18 +12,18 @@
 <meta name="google-site-verification" content="A2KP6_Az1P9Y5fjWgJGq4DKk1TZmiZB8S8-fmyBcoMw" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-<title>Sidekix | daily sidequest drops</title>
-<meta name="title" content="Sidekix | daily sidequest drops">
-<meta name="description" content="Post your take. See what campus is doing. Daily sidequests at UT Austin. Most reactions by Sunday wins a prize. Download the app.">
-<meta name="keywords" content="daily sidequests, campus feed, UT Austin, social challenge app, sidekix, weekly prize, sidequest, beta">
+<title>Sidekix | save ideas. post adventures.</title>
+<meta name="title" content="Sidekix | save ideas. post adventures.">
+<meta name="description" content="One feed of sidequest ideas and adventures. Save what you'll try. Your personal scratch pad stays on your device. Post when you go.">
+<meta name="keywords" content="sidequests, adventures, ideas, social app, sidekix, challenges, community, save ideas">
 <meta name="author" content="Sidekix">
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
 <meta name="revisit-after" content="7 days">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://joinsidekix.com/">
-<meta property="og:title" content="Sidekix | daily sidequest drops">
-<meta property="og:description" content="Post your take. See what campus is doing. Daily sidequests at UT Austin. Most reactions by Sunday wins a prize.">
+<meta property="og:title" content="Sidekix | save ideas. post adventures.">
+<meta property="og:description" content="One feed of sidequest ideas and adventures. Save what you'll try. Post when you go.">
 <meta property="og:image" content="https://joinsidekix.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -31,10 +31,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://joinsidekix.com/">
-<meta property="twitter:title" content="Sidekix | daily sidequest drops">
-<meta property="twitter:description" content="Post your take. See what campus is doing. Daily sidequests at UT Austin. Most reactions by Sunday wins a prize.">
+<meta property="twitter:title" content="Sidekix | save ideas. post adventures.">
+<meta property="twitter:description" content="One feed of sidequest ideas and adventures. Save what you'll try. Post when you go.">
 <meta property="twitter:image" content="https://joinsidekix.com/twitter-image.jpg">
-<meta name="theme-color" content="#0A0A0A">
+<meta name="theme-color" content="#000000">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
@@ -48,136 +48,107 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--accent:#D4FF3F;--bg:#0A0A0A;--text1:#ffffff;--text2:#888;--text3:#333;--card:#111;--border:#1c1c1c}
+:root{
+  --bg:#000000;
+  --card:#141414;
+  --card2:#1A1A1A;
+  --elev:#0d0d0d;
+  --border:rgba(255,255,255,0.1);
+  --border-soft:rgba(255,255,255,0.06);
+  --text1:#ffffff;
+  --text2:#a8a8ad;
+  --text3:#636366;
+  --accent:#D4FF3F;
+  --idea:#3B82F6;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --display:'Syne',system-ui,sans-serif;
+  --serif:'DM Serif Display',Georgia,serif;
+}
 html{scroll-behavior:smooth;overflow-x:hidden;width:100%;background:var(--bg)}
-body{background:var(--bg);color:var(--text1);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
+body{background:var(--bg);color:var(--text1);font-family:var(--sans);overflow-x:hidden}
+@media(hover:hover) and (pointer:fine){body{cursor:none}}
+@media(pointer:coarse){.cursor,.cursor-ring{display:none!important}}
 .cursor{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.08s,width 0.2s,height 0.2s;mix-blend-mode:difference}
-.cursor-ring{position:fixed;width:36px;height:36px;border-radius:50%;border:1px solid rgba(212,255,63,0.4);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.18s ease-out,width 0.3s,height 0.3s}
-.grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cursor-ring{position:fixed;width:36px;height:36px;border-radius:50%;border:1px solid rgba(212,255,63,0.45);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.18s ease-out,width 0.3s,height 0.3s}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 6vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid transparent;transition:border-color 0.3s,background 0.3s}
-nav.scrolled{background:rgba(10,10,10,0.9);backdrop-filter:blur(12px);border-color:var(--border)}
-.wordmark{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);text-decoration:none}
+nav.scrolled{background:rgba(0,0,0,0.92);backdrop-filter:blur(16px);border-color:var(--border-soft)}
+.wordmark{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);text-decoration:none}
 .wordmark em{color:var(--accent);font-style:normal}
-.nav-cta{background:var(--accent);color:#0a0a0a;font-family:'Syne',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;padding:10px 22px;border-radius:50px;text-decoration:none;transition:opacity 0.2s,transform 0.15s}
-.nav-cta:hover{opacity:0.85;transform:scale(0.97)}
+.nav-cta{background:var(--accent);color:#0a0a0a;font-family:var(--display);font-size:12px;font-weight:800;letter-spacing:0.02em;text-transform:none;padding:11px 24px;border-radius:999px;text-decoration:none;transition:opacity 0.2s,transform 0.15s;box-shadow:0 0 0 1px rgba(212,255,63,0.25)}
+.nav-cta:hover{opacity:0.9;transform:scale(0.97)}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 6vw;position:relative;overflow:hidden;align-items:center}
-.hero::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,#D4FF3F10 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none}
-.hero-layout{display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;min-height:100vh;padding-top:80px;padding-bottom:80px;max-width:1400px;margin:0 auto}
-.hero-eyebrow{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;opacity:0;animation:rise 0.6s 0.1s forwards}
-.hero-headline{font-family:'Syne',sans-serif;font-size:clamp(32px,5.5vw,80px);font-weight:800;line-height:0.95;letter-spacing:-0.03em;margin-bottom:28px;opacity:0;animation:rise 0.7s 0.2s forwards;overflow-wrap:normal;word-break:normal;hyphens:none;-webkit-hyphens:none}
-.hero-headline em{color:var(--accent);font-style:normal}
-.hero-sub{font-size:clamp(15px,1.5vw,18px);color:var(--text2);line-height:1.6;max-width:420px;margin-bottom:44px;opacity:0;animation:rise 0.6s 0.4s forwards}
-.hero-actions{display:flex;align-items:center;gap:20px;opacity:0;animation:rise 0.6s 0.55s forwards}
-.btn-primary{background:var(--accent);color:#0a0a0a;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;padding:16px 36px;border-radius:50px;text-decoration:none;letter-spacing:-0.01em;transition:transform 0.15s,opacity 0.2s;display:inline-block}
-.btn-primary:hover{transform:scale(0.97);opacity:0.88}
-.hero-note{font-size:12px;color:var(--text3);letter-spacing:0.03em}
+.hero::before{content:'';position:absolute;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(212,255,63,0.07) 0%,transparent 68%);top:-120px;right:-120px;pointer-events:none}
+.hero-layout{display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;min-height:100vh;padding-top:88px;padding-bottom:100px;max-width:1400px;margin:0 auto}
+.hero-eyebrow{font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text3);margin-bottom:20px;opacity:0;animation:rise 0.6s 0.1s forwards}
+.hero-eyebrow span{color:var(--accent)}
+.hero-headline{font-family:var(--serif);font-size:clamp(34px,5.2vw,68px);font-weight:400;font-style:italic;line-height:1.08;letter-spacing:-0.02em;margin-bottom:28px;opacity:0;animation:rise 0.7s 0.2s forwards;overflow-wrap:normal;word-break:normal;color:var(--text1)}
+.hero-headline em{color:var(--accent);font-style:italic;font-weight:400}
+.hero-sub{font-size:clamp(15px,1.5vw,18px);color:var(--text2);line-height:1.65;max-width:440px;margin-bottom:44px;opacity:0;animation:rise 0.6s 0.4s forwards}
+.hero-sub em{color:var(--accent);font-style:normal;font-weight:700}
+.hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;opacity:0;animation:rise 0.6s 0.55s forwards}
+.btn-primary{background:var(--accent);color:#0a0a0a;font-family:var(--display);font-size:14px;font-weight:800;padding:16px 36px;border-radius:999px;text-decoration:none;letter-spacing:0.02em;text-transform:none;transition:transform 0.15s,opacity 0.2s,box-shadow 0.2s;display:inline-block;box-shadow:0 0 0 1px rgba(212,255,63,0.2)}
+.btn-primary:hover{transform:scale(0.98);opacity:0.92;box-shadow:0 8px 32px rgba(212,255,63,0.15)}
+.hero-note{font-size:12px;color:var(--text3);letter-spacing:0.04em}
 
-/* phone */
-.phone-mockup{width:260px;flex-shrink:0;opacity:0;animation:phoneIn 0.9s 0.6s cubic-bezier(0.34,1.1,0.64,1) forwards}
-@keyframes phoneIn{from{opacity:0;transform:translateY(30px) rotate(2deg)}to{opacity:1;transform:translateY(0) rotate(0deg)}}
-.phone-shell{width:260px;background:#111;border-radius:38px;border:2px solid #1e1e1e;overflow:hidden;box-shadow:0 60px 120px rgba(0,0,0,0.8),0 0 0 1px rgba(255,255,255,0.03);position:relative}
-.phone-notch{width:80px;height:22px;background:#111;border-radius:0 0 14px 14px;position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:10}
-.phone-screen{background:#0A0A0A;overflow:hidden}
-.ps-sb{padding:36px 14px 0;display:flex;justify-content:space-between;align-items:center}
-.ps-wm{font-family:'Syne',sans-serif;font-size:12px;font-weight:800;color:#fff;letter-spacing:-0.02em}
-.ps-wm em{color:#D4FF3F;font-style:normal}
-.ps-pill{display:flex;align-items:center;gap:4px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:20px;padding:3px 8px;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:#D4FF3F}
-.ps-dot{width:4px;height:4px;border-radius:50%;background:#D4FF3F;animation:blink 1.2s infinite}
-.ps-challenge{padding:12px 14px 0}
-.ps-tag{font-family:'Syne',sans-serif;font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#444;margin-bottom:5px}
-.ps-ctext{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;color:#fff;letter-spacing:-0.02em;line-height:1.05}
-.ps-ctext em{color:#D4FF3F;font-style:normal}
-.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:10px 14px 0;align-items:stretch}
-.ps-card{border-radius:10px;overflow:hidden;position:relative}
-.ps-maya{display:flex;flex-direction:column;min-height:0;height:100%}
-.ps-maya .ps-img{flex:1 1 auto;min-height:0;width:100%;aspect-ratio:auto;background-size:cover;background-position:center}
-.ps-img{width:100%;aspect-ratio:3/4}
-.ps-ov{position:absolute;bottom:0;left:0;right:0;padding:14px 7px 6px;background:linear-gradient(transparent,rgba(0,0,0,.75));display:flex;justify-content:space-between;align-items:flex-end}
-.ps-user{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:#fff}
-.ps-votes{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:#D4FF3F;background:rgba(212,255,63,.12);border:1px solid rgba(212,255,63,.28);border-radius:5px;padding:1px 5px}
-.ps-nav{display:flex;justify-content:space-around;padding:8px 0 14px;border-top:1px solid #1a1a1a;margin-top:8px}
-.pn-item{display:flex;flex-direction:column;align-items:center;gap:2px}
-.pn-icon{width:14px;height:14px;color:#333}
-.pn-icon.on{color:#D4FF3F}
-.pn-label{font-family:'Syne',sans-serif;font-size:7px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#333}
-.pn-label.on{color:#D4FF3F}
-.pc-a{background:linear-gradient(155deg,#fbc2eb 0%,#f093fb 22%,#e879f9 42%,#ec4899 62%,#f5576c 82%,#ff6b81 100%);background-size:100% 100%;background-repeat:no-repeat}
-.pc-b{background:linear-gradient(135deg,#f6d365,#fda085)}
-.pc-c{background:linear-gradient(135deg,#84fab0,#8fd3f4)}
-.pc-d{background:linear-gradient(135deg,#a18cd1,#fbc2eb)}
+/* feed screenshot */
+.hero-shot-wrap{width:min(300px,92vw);flex-shrink:0;opacity:0;animation:phoneIn 0.9s 0.55s cubic-bezier(0.34,1.1,0.64,1) forwards}
+.hero-shot{display:block;border-radius:28px;overflow:hidden;border:1px solid var(--border);box-shadow:0 40px 90px rgba(0,0,0,0.75),0 0 0 1px var(--border-soft) inset;background:var(--card)}
+.hero-shot img{display:block;width:100%;height:auto;vertical-align:middle}
+@keyframes phoneIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 
 /* ticker */
-.ticker-wrap{position:absolute;bottom:0;left:0;right:0;border-top:1px solid var(--border);overflow:hidden;padding:14px 0;background:var(--bg);opacity:0;animation:rise 0.5s 0.9s forwards}
-.ticker{display:flex;gap:0;white-space:nowrap;animation:ticker 32s linear infinite}
-.ticker-item{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:0 24px;color:var(--text3);flex-shrink:0}
-.ticker-item em{color:var(--accent);font-style:normal}
+.ticker-wrap{position:absolute;bottom:0;left:0;right:0;border-top:1px solid var(--border-soft);overflow:hidden;padding:16px 0;background:var(--bg);opacity:0;animation:rise 0.5s 0.9s forwards}
+.ticker{display:flex;gap:0;white-space:nowrap;animation:ticker 36s linear infinite}
+.ticker-item{font-family:var(--serif);font-size:12px;font-style:italic;font-weight:400;letter-spacing:0.02em;padding:0 20px;color:var(--text2);flex-shrink:0}
+.ticker-item em{color:var(--accent);font-style:italic}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* HOW IT WORKS */
 .section{padding:120px 6vw}
-.section-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,54px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin-bottom:64px;overflow-wrap:normal;word-break:normal;hyphens:none;-webkit-hyphens:none}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
-.step{background:var(--bg);padding:40px 36px;transition:background 0.25s}
-.step:hover{background:#0f0f0f}
-.step-num{font-family:'Syne',sans-serif;font-size:72px;font-weight:800;color:var(--border);line-height:1;margin-bottom:20px;letter-spacing:-0.04em;transition:color 0.25s}
-.step:hover .step-num{color:#1e1e1e}
-.step-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:10px;overflow-wrap:normal;word-break:normal;hyphens:none;-webkit-hyphens:none}
+.section-label{font-family:var(--display);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--text3);margin-bottom:16px;display:block}
+.section-label.accent{color:var(--accent)}
+.section-title{font-family:var(--display);font-size:clamp(28px,4vw,52px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin-bottom:48px;overflow-wrap:normal;word-break:normal;color:var(--text1)}
+.section-title em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-0.02em;color:var(--accent)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:36px 28px;transition:transform 0.2s,border-color 0.2s,background 0.2s}
+.step:hover{transform:translateY(-2px);border-color:rgba(212,255,63,0.25);background:var(--card2)}
+.step-num{font-family:var(--display);font-size:56px;font-weight:800;color:rgba(255,255,255,0.06);line-height:1;margin-bottom:16px;letter-spacing:-0.04em}
+.step-title{font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.2;color:var(--text1)}
 .step-title em{color:var(--accent);font-style:normal}
-.step-body{font-size:14px;color:var(--text2);line-height:1.65}
+.step-body{font-size:14px;color:var(--text2);line-height:1.7}
+.step-body em{color:var(--accent);font-style:normal;font-weight:600}
 
 /* SIDEQUESTS */
 .sq-section{padding:0 0 120px;overflow:hidden;max-width:100%}
-.sq-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding:0 6vw;display:block}
-.sq-title{font-family:'Syne',sans-serif;font-size:clamp(24px,3.5vw,46px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin-bottom:40px;padding:0 6vw;overflow-wrap:normal;word-break:normal;hyphens:none;-webkit-hyphens:none}
-.sq-scroll{display:flex;gap:12px;padding:0 6vw;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab;width:100%;max-width:100%;min-width:0}
+.sq-label{font-family:var(--display);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--text3);margin-bottom:16px;padding:0 6vw;display:block}
+.sq-label.accent{color:var(--accent)}
+.sq-title{font-family:var(--serif);font-size:clamp(26px,3.6vw,44px);font-weight:400;font-style:italic;letter-spacing:-0.02em;line-height:1.12;margin-bottom:36px;padding:0 6vw;color:var(--text1)}
+.sq-title em{color:var(--accent);font-style:italic;font-weight:400}
+.sq-scroll{display:flex;gap:14px;padding:0 6vw 8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab;width:100%;max-width:100%;min-width:0}
 .sq-scroll::-webkit-scrollbar{display:none}
 .sq-scroll:active{cursor:grabbing}
-.sq-card{flex-shrink:0;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;width:280px;transition:border-color 0.2s,transform 0.2s}
-.sq-card:hover{border-color:#333;transform:translateY(-3px)}
-.sq-tag{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
-.sq-text{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text1);line-height:1.35;letter-spacing:-0.01em}
-
-/* PRIZE */
-.prize-wrap{margin:0 6vw;max-width:100%;min-width:0;box-sizing:border-box}
-.prize-section{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);min-width:0;width:100%}
-.prize-left{background:var(--bg);padding:64px 56px;min-width:0}
-.prize-right{background:#0c0c0c;padding:64px 56px;min-width:0}
-.prize-sub,.pm-label,.pm-sub{overflow-wrap:break-word}
-.prize-big{font-family:'Syne',sans-serif;font-size:clamp(26px,7vw,80px);font-weight:800;letter-spacing:-0.04em;line-height:0.95;margin-bottom:14px;overflow-wrap:normal;word-break:normal;hyphens:none;-webkit-hyphens:none}
-.prize-big em{color:var(--accent);font-style:normal}
-.prize-sub{font-size:14px;color:var(--text2);line-height:1.6;max-width:360px;margin-top:16px}
-.pm-row{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid var(--border);min-width:0}
-.pm-row>div:last-child{min-width:0}
-.pm-row:last-child{border-bottom:none}
-.pm-icon{width:36px;height:36px;border-radius:8px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.pm-label{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text1);margin-bottom:2px}
-.pm-sub{font-size:12px;color:var(--text3);line-height:1.4}
-
-/* PROOF */
-.proof-section{padding:120px 6vw;border-top:1px solid var(--border)}
-.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:56px}
-.proof-card{background:var(--bg);padding:36px}
-.proof-quote{font-size:15px;color:var(--text1);line-height:1.65;margin-bottom:22px;font-style:italic}
-.proof-author{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase}
-.proof-author em{color:var(--accent);font-style:normal}
+.sq-card{flex-shrink:0;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:22px 22px 24px;width:288px;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
+.sq-card:hover{border-color:rgba(212,255,63,0.22);transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,0.45)}
+.sq-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.02em;text-transform:lowercase;color:var(--text2);margin-bottom:12px;padding:6px 11px;border-radius:999px;background:var(--elev);border:1px solid var(--border-soft)}
+.sq-text{font-family:var(--serif);font-size:17px;font-weight:400;font-style:italic;color:var(--text1);line-height:1.38;letter-spacing:-0.01em}
 
 /* CTA */
-.cta-section{padding:120px 6vw;text-align:center;border-top:1px solid var(--border);position:relative;overflow:hidden}
-.cta-section::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,#D4FF3F0e 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-.cta-title{font-family:'Syne',sans-serif;font-size:clamp(28px,5.5vw,80px);font-weight:800;letter-spacing:-0.03em;line-height:1;margin-bottom:20px;position:relative;z-index:1;overflow-wrap:normal;word-break:normal;hyphens:none;-webkit-hyphens:none}
-.cta-title em{color:var(--accent);font-style:normal}
-.cta-sub{font-size:15px;color:var(--text2);margin-bottom:40px;position:relative;z-index:1}
+.cta-section{padding:120px 6vw 100px;text-align:center;border-top:1px solid var(--border-soft);position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(212,255,63,0.06),transparent 55%)}
+.cta-section::before{content:'';position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(212,255,63,0.05) 0%,transparent 65%);top:45%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-title{font-family:var(--serif);font-size:clamp(30px,5vw,64px);font-weight:400;font-style:italic;letter-spacing:-0.02em;line-height:1.08;margin-bottom:22px;position:relative;z-index:1;color:var(--text1)}
+.cta-title em{color:var(--accent);font-style:italic;font-weight:400}
+.cta-sub{font-size:16px;color:var(--text2);margin-bottom:40px;position:relative;z-index:1;line-height:1.6;max-width:420px;margin-left:auto;margin-right:auto}
 
-footer{border-top:1px solid var(--border);padding:24px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer{border-top:1px solid var(--border-soft);padding:28px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:var(--bg)}
 .footer-note{font-size:12px;color:var(--text3)}
-.footer-link{font-size:12px;color:var(--text3);text-decoration:none;letter-spacing:0.03em;transition:color 0.2s}
-.footer-link:hover{color:var(--text2)}
+.footer-link{font-size:12px;color:var(--text3);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s}
+.footer-link:hover{color:var(--accent)}
 
 @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
@@ -186,13 +157,8 @@ footer{border-top:1px solid var(--border);padding:24px 6vw;display:flex;justify-
 
 @media(max-width:900px){
   .hero-layout{grid-template-columns:1fr;padding-top:100px}
-  .phone-mockup{display:none}
-  .steps,.prize-section,.proof-grid{grid-template-columns:1fr}
-  .prize-left,.prize-right{padding:48px clamp(20px,5vw,40px)}
-}
-@media(max-width:480px){
-  .prize-wrap{margin:0 4vw}
-  .prize-left,.prize-right{padding:36px 18px}
+  .hero-shot-wrap{justify-self:center;margin-top:8px}
+  .steps{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -209,109 +175,67 @@ footer{border-top:1px solid var(--border);padding:24px 6vw;display:flex;justify-
 <section class="hero">
   <div class="hero-layout">
     <div>
-      <div class="hero-eyebrow">ut austin · daily challenges</div>
-      <h1 class="hero-headline">every day<br>at 10am<br>a <em>sidequest</em><br>drops.</h1>
-      <p class="hero-sub">post your take. see what campus is doing. most reactions by sunday wins a prize.</p>
+      <div class="hero-eyebrow"><span>discover</span> · save · go</div>
+      <h1 class="hero-headline">save ideas.<br>post your<br><em>adventure.</em></h1>
+      <p class="hero-sub">One feed of sidequest ideas and adventures. Save what you'll try. Your personal scratch pad stays on your device. Post when you go.</p>
       <div class="hero-actions">
         <a href="https://apps.apple.com/us/app/sidekix/id6742329686" class="btn-primary">download app</a>
-        <span class="hero-note">launching at ut austin</span>
+        <span class="hero-note">free · ios</span>
       </div>
     </div>
 
-    <div class="phone-mockup">
-      <div class="phone-shell">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="ps-sb">
-            <div class="ps-wm">side<em>kix</em></div>
-            <div class="ps-pill"><div class="ps-dot"></div>13h left</div>
-          </div>
-          <div class="ps-challenge">
-            <div class="ps-tag">sidequest #52 · today</div>
-            <div class="ps-ctext">find your <em>ick</em><br>in the wild on campus</div>
-          </div>
-          <div class="ps-grid">
-            <div class="ps-card ps-maya" style="grid-row:span 2"><div class="ps-img pc-a"></div><div class="ps-ov"><div class="ps-user">@maya</div><div class="ps-votes">▲ 214</div></div></div>
-            <div class="ps-card"><div class="ps-img pc-b" style="aspect-ratio:1"></div><div class="ps-ov"><div class="ps-user" style="color:#aaa">anon</div><div class="ps-votes">▲ 97</div></div></div>
-            <div class="ps-card"><div class="ps-img pc-c" style="aspect-ratio:1"></div><div class="ps-ov"><div class="ps-user">@priya</div><div class="ps-votes">▲ 63</div></div></div>
-          </div>
-          <div class="ps-nav">
-            <div class="pn-item"><svg class="pn-icon on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><div class="pn-label on">today</div></div>
-            <div class="pn-item"><svg class="pn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><div class="pn-label">feed</div></div>
-            <div class="pn-item"><svg class="pn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="10" width="5" height="11" rx="1"/><rect x="9.5" y="5" width="5" height="16" rx="1"/><rect x="17" y="13" width="5" height="8" rx="1"/></svg><div class="pn-label">ranks</div></div>
-            <div class="pn-item"><svg class="pn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><div class="pn-label">you</div></div>
-          </div>
-        </div>
-      </div>
+    <div class="hero-shot-wrap">
+      <figure class="hero-shot" aria-label="Sidekix feed in the app">
+        <img src="assets/feed-app.png" alt="Sidekix feed showing sidequest cards and category tags" loading="eager" decoding="async" />
+      </figure>
     </div>
   </div>
 
   <div class="ticker-wrap">
     <div class="ticker">
-      <span class="ticker-item">find your <em>ick</em> in the wild</span><span class="ticker-item">·</span>
-      <span class="ticker-item">make a "day 1 of" post you're not keeping up</span><span class="ticker-item">·</span>
-      <span class="ticker-item">text someone "we need to talk"</span><span class="ticker-item">·</span>
-      <span class="ticker-item">post your actual most played song</span><span class="ticker-item">·</span>
-      <span class="ticker-item">film an <em>apology video</em></span><span class="ticker-item">·</span>
-      <span class="ticker-item">find the most <em>liminal space</em> on campus</span><span class="ticker-item">·</span>
-      <span class="ticker-item">show what's in your analog bag</span><span class="ticker-item">·</span>
-      <span class="ticker-item">find your <em>ick</em> in the wild</span><span class="ticker-item">·</span>
-      <span class="ticker-item">make a "day 1 of" post you're not keeping up</span><span class="ticker-item">·</span>
-      <span class="ticker-item">text someone "we need to talk"</span><span class="ticker-item">·</span>
-      <span class="ticker-item">post your actual most played song</span><span class="ticker-item">·</span>
-      <span class="ticker-item">film an <em>apology video</em></span><span class="ticker-item">·</span>
-      <span class="ticker-item">find the most <em>liminal space</em> on campus</span><span class="ticker-item">·</span>
-      <span class="ticker-item">show what's in your analog bag</span><span class="ticker-item">·</span>
+      <span class="ticker-item">introduce yourself in another language</span><span class="ticker-item">·</span>
+      <span class="ticker-item">find something that costs more than your rent</span><span class="ticker-item">·</span>
+      <span class="ticker-item">sing your favorite lyric to someone</span><span class="ticker-item">·</span>
+      <span class="ticker-item">order the weirdest combo on the menu</span><span class="ticker-item">·</span>
+      <span class="ticker-item">walk 20 minutes with no maps</span><span class="ticker-item">·</span>
+      <span class="ticker-item">swap coffee with the person behind you</span><span class="ticker-item">·</span>
+      <span class="ticker-item">introduce yourself in another language</span><span class="ticker-item">·</span>
+      <span class="ticker-item">find something that costs more than your rent</span><span class="ticker-item">·</span>
+      <span class="ticker-item">sing your favorite lyric to someone</span><span class="ticker-item">·</span>
+      <span class="ticker-item">order the weirdest combo on the menu</span><span class="ticker-item">·</span>
+      <span class="ticker-item">walk 20 minutes with no maps</span><span class="ticker-item">·</span>
+      <span class="ticker-item">swap coffee with the person behind you</span><span class="ticker-item">·</span>
     </div>
   </div>
 </section>
 
 <section class="section reveal">
-  <span class="section-label">how it works</span>
-  <h2 class="section-title">three things.<br>that's it.</h2>
+  <span class="section-label accent">how it works</span>
+  <h2 class="section-title">three things.<br><em>that's it.</em></h2>
   <div class="steps">
-    <div class="step"><div class="step-num">01</div><div class="step-title">a <em>sidequest</em> drops at 10am</div><p class="step-body">every day. same prompt for everyone on campus. you have until midnight.</p></div>
-    <div class="step"><div class="step-num">02</div><div class="step-title"><em>post</em> your take</div><p class="step-body">photo, video, or text. go anonymous if you want. your response is yours.</p></div>
-    <div class="step"><div class="step-num">03</div><div class="step-title">most&nbsp;reactions <em>wins</em></div><p class="step-body">reactions accumulate all week. #1 on sunday midnight wins a weekly prize.</p></div>
+    <div class="step"><div class="step-num">01</div><div class="step-title"><em>scroll</em> the feed</div><p class="step-body">ideas and adventures in one place. save anything you might actually do.</p></div>
+    <div class="step"><div class="step-num">02</div><div class="step-title"><em>save</em> + scratch pad</div><p class="step-body">first save sits on deck. private notes stay on your device.</p></div>
+    <div class="step"><div class="step-num">03</div><div class="step-title"><em>post</em> when you go</div><p class="step-body">photo, video, or text. anonymous if you want.</p></div>
   </div>
 </section>
 
 <section class="sq-section reveal">
-  <span class="sq-label">today's vibes</span>
-  <h2 class="sq-title">prompts that actually<br>make you do something.</h2>
+  <span class="sq-label accent">from the feed</span>
+  <h2 class="sq-title">sidequests worth<br><em>saving.</em></h2>
   <div class="sq-scroll" id="sqScroll">
-    <div class="sq-card"><div class="sq-tag">social dare</div><div class="sq-text">text someone "we need to talk" and post the first response you get</div></div>
-    <div class="sq-card"><div class="sq-tag">reveal</div><div class="sq-text">show the last photo someone else took of you</div></div>
-    <div class="sq-card"><div class="sq-tag">observational</div><div class="sq-text">find your ick in the wild on campus</div></div>
-    <div class="sq-card"><div class="sq-tag">honest</div><div class="sq-text">post your actual most played song this week. no lying.</div></div>
-    <div class="sq-card"><div class="sq-tag">creative</div><div class="sq-text">make a "day 1 of" post for something you're definitely not keeping up</div></div>
-    <div class="sq-card"><div class="sq-tag">observational</div><div class="sq-text">find the most liminal space on campus right now</div></div>
-    <div class="sq-card"><div class="sq-tag">reveal</div><div class="sq-text">show the stickers on your laptop or water bottle</div></div>
-    <div class="sq-card"><div class="sq-tag">social dare</div><div class="sq-text">text someone "what song am I" and post their answer</div></div>
-    <div class="sq-card"><div class="sq-tag">creative</div><div class="sq-text">give us your best two-sentence horror story</div></div>
-    <div class="sq-card"><div class="sq-tag">reveal</div><div class="sq-text">post the last thing you googled, no context</div></div>
+    <div class="sq-card"><div class="sq-tag">🤝 social</div><div class="sq-text">introduce yourself to someone in a different language</div></div>
+    <div class="sq-card"><div class="sq-tag">📈 trend</div><div class="sq-text">dress up like you're going to the met gala</div></div>
+    <div class="sq-card"><div class="sq-tag">🎨 creative</div><div class="sq-text">show off your best life hack</div></div>
+    <div class="sq-card"><div class="sq-tag">🌀 chaotic</div><div class="sq-text">text someone "we need to talk" and post the first response you get</div></div>
+    <div class="sq-card"><div class="sq-tag">🍜 food/drink</div><div class="sq-text">order the weirdest combo on the menu and eat it in the parking lot</div></div>
+    <div class="sq-card"><div class="sq-tag">🌲 outdoors</div><div class="sq-text">hike with no destination and turn around when it feels right</div></div>
   </div>
 </section>
 
-<div class="prize-wrap reveal" style="padding-bottom:120px">
-  <div class="prize-section">
-    <div class="prize-left">
-      <span class="section-label">weekly prize</span>
-      <div class="prize-big">most&nbsp;reactions<br><em>wins.</em></div>
-      <p class="prize-sub">a weekly prize up for grabs. your posts from monday through sunday all count. come back every day.</p>
-    </div>
-    <div class="prize-right">
-      <div class="pm-row"><div class="pm-icon">🏆</div><div><div class="pm-label">weekly prize up for grabs</div><div class="pm-sub">whoever has the most reactions by sunday midnight wins</div></div></div>
-      <div class="pm-row"><div class="pm-icon">📅</div><div><div class="pm-label">posts accumulate all week</div><div class="pm-sub">mon–sun · every upvote counts toward your total</div></div></div>
-      <div class="pm-row"><div class="pm-icon">↗</div><div><div class="pm-label">top 10 get a share card</div><div class="pm-sub">one tap to share your rank to instagram, tiktok, or imessage</div></div></div>
-      <div class="pm-row"><div class="pm-icon">👤</div><div><div class="pm-label">post anon if you want</div><div class="pm-sub">still earns upvotes · still leaderboard eligible</div></div></div>
-    </div>
-  </div>
-</div>
-
 <section class="cta-section reveal">
-  <h2 class="cta-title">your campus.<br>one <em>sidequest</em><br>a day.</h2>
-  <p class="cta-sub">launching at ut austin.</p>
+  <span class="section-label accent" style="display:block;text-align:center;margin-bottom:12px">stop saving things for someday</span>
+  <h2 class="cta-title">do a <em>sidequest.</em><br>today.</h2>
+  <p class="cta-sub">save one. go do it. post it.</p>
   <a href="https://apps.apple.com/us/app/sidekix/id6742329686" class="btn-primary" style="font-size:16px;padding:18px 48px">download app</a>
 </section>
 
@@ -331,7 +255,7 @@ const cur=document.getElementById('cur'),ring=document.getElementById('ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
 (function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
-document.querySelectorAll('a,button,.sq-card,.step,.btn-primary,.ps-card').forEach(el=>{
+document.querySelectorAll('a,button,.sq-card,.step,.btn-primary,.hero-shot').forEach(el=>{
   el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';ring.style.width='52px';ring.style.height='52px'});
   el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='36px';ring.style.height='36px'});
 });

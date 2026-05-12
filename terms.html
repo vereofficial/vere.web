@@ -4,42 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms and Conditions | Sidekix</title>
-<meta name="description" content="Sidekix Terms and Conditions - governing your use of the Sidekix platform.">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<meta name="description" content="Sidekix Terms—rules for using sidequests, adventures, and related Services.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/sk-logo-dark.png">
 <link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#000000">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--accent:#D4FF3F;--bg:#0A0A0A;--text1:#ffffff;--text2:#888;--text3:#333;--card:#111;--border:#1c1c1c}
+:root{--bg:#000000;--card:#141414;--card2:#1A1A1A;--elev:#0d0d0d;--border:rgba(255,255,255,0.1);--border-soft:rgba(255,255,255,0.06);--text1:#ffffff;--text2:#a8a8ad;--text3:#636366;--accent:#D4FF3F;--idea:#3B82F6;--sans:'DM Sans',system-ui,sans-serif;--display:'Syne',system-ui,sans-serif;--serif:'DM Serif Display',Georgia,serif}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text1);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
+body{background:var(--bg);color:var(--text1);font-family:var(--sans);overflow-x:hidden}
+@media(hover:hover) and (pointer:fine){body{cursor:none}}
+@media(pointer:coarse){.cursor,.cursor-ring{display:none!important}}
 .cursor{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.08s,width 0.2s,height 0.2s;mix-blend-mode:difference}
-.cursor-ring{position:fixed;width:36px;height:36px;border-radius:50%;border:1px solid rgba(212,255,63,0.4);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.18s ease-out,width 0.3s,height 0.3s}
-.grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cursor-ring{position:fixed;width:36px;height:36px;border-radius:50%;border:1px solid rgba(212,255,63,0.45);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.18s ease-out,width 0.3s,height 0.3s}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 6vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid transparent;transition:border-color 0.3s,background 0.3s}
-nav.scrolled{background:rgba(10,10,10,0.9);backdrop-filter:blur(12px);border-color:var(--border)}
-.wordmark{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);text-decoration:none}
+nav.scrolled{background:rgba(0,0,0,0.92);backdrop-filter:blur(16px);border-color:var(--border-soft)}
+.wordmark{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);text-decoration:none}
 .wordmark em{color:var(--accent);font-style:normal}
-.nav-cta{background:var(--accent);color:#0a0a0a;font-family:'Syne',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;padding:10px 22px;border-radius:50px;text-decoration:none;transition:opacity 0.2s,transform 0.15s}
-.nav-cta:hover{opacity:0.85;transform:scale(0.97)}
+.nav-cta{background:var(--accent);color:#0a0a0a;font-family:var(--display);font-size:12px;font-weight:800;letter-spacing:0.02em;text-transform:none;padding:11px 24px;border-radius:999px;text-decoration:none;transition:opacity 0.2s,transform 0.15s;box-shadow:0 0 0 1px rgba(212,255,63,0.2)}
+.nav-cta:hover{opacity:0.9;transform:scale(0.97)}
 .legal-main{padding:120px 6vw 80px;max-width:720px;margin:0 auto;position:relative;z-index:2}
-.section-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,54px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin-bottom:24px}
-.legal-meta{font-size:14px;color:var(--text2);margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+.section-label{font-family:var(--display);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
+.section-title{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:400;font-style:italic;letter-spacing:-0.02em;line-height:1.08;margin-bottom:24px;color:var(--text1)}
+.legal-meta{font-size:14px;color:var(--text2);margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border-soft)}
 .policy-content p,.policy-content li{font-size:14px;color:var(--text2);line-height:1.65}
 .policy-content p{margin-bottom:1rem}
-.policy-content h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);margin:2rem 0 0.75rem}
-.policy-content h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--text1);margin:1.5rem 0 0.5rem}
+.policy-content h2{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:-0.02em;color:var(--text1);margin:2rem 0 0.75rem;padding-bottom:6px;border-bottom:1px solid var(--border-soft)}
+.policy-content h3{font-family:var(--display);font-size:14px;font-weight:800;margin:1.5rem 0 0.5rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text3)}
 .policy-content ul{margin:0.5rem 0 1rem 1.25rem}
 .policy-content li{margin-bottom:0.5rem}
 .policy-content a{color:var(--accent);text-decoration:none;font-weight:500;transition:opacity 0.2s}
 .policy-content a:hover{opacity:0.85}
 .policy-content strong{color:var(--text1);font-weight:600}
-footer{border-top:1px solid var(--border);padding:24px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;position:relative;z-index:2}
+footer{border-top:1px solid var(--border-soft);padding:28px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;position:relative;z-index:2;background:var(--bg)}
 .footer-note{font-size:12px;color:var(--text3)}
-.footer-link{font-size:12px;color:var(--text3);text-decoration:none;letter-spacing:0.03em;transition:color 0.2s}
-.footer-link:hover{color:var(--text2)}
+.footer-link{font-size:12px;color:var(--text3);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s}
+.footer-link:hover{color:var(--accent)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s}
 .reveal.in{opacity:1;transform:translateY(0)}
 @media(max-width:600px){.legal-main{padding:100px 6vw 64px}}
@@ -58,9 +61,9 @@ footer{border-top:1px solid var(--border);padding:24px 6vw;display:flex;justify-
 <main class="legal-main reveal">
   <span class="section-label">legal</span>
   <h1 class="section-title">Sidekix Terms and Conditions</h1>
-  <p class="legal-meta">Last Updated: February 1, 2026 · Effective Date: January 28, 2026</p>
+  <p class="legal-meta">Last Updated: May 7, 2026 · Effective Date: May 7, 2026</p>
   <div class="policy-content">
-    <p>Welcome to Sidekix. These Terms and Conditions govern your use of the Sidekix platform, including our mobile app, website, private groups, challenges, partner experiences, notifications, and any related services we provide (collectively, the “Services”). By accessing or using the Services, you agree to these Terms. If you do not agree, do not use the Services.</p>
+    <p>Welcome to Sidekix. These Terms and Conditions govern your use of the Sidekix platform, including our mobile app, website, notifications, and any related services we provide (collectively, the “Services”). By accessing or using the Services, you agree to these Terms. If you do not agree, do not use the Services.</p>
 
     <h2>1. Acceptance of Terms</h2>
     <p>By using the Services, you confirm that you are at least 13 years old and legally able to enter into an agreement. If you are under 18, you must have permission from a parent or legal guardian to use Sidekix.</p>
@@ -81,16 +84,16 @@ footer{border-top:1px solid var(--border);padding:24px 6vw;display:flex;justify-
     <p>Sidekix may remove content or restrict, suspend, or terminate accounts that violate these standards.</p>
 
     <h2>4. Intellectual Property</h2>
-    <p>All content provided by Sidekix, including text, graphics, logos, designs, challenges, and partner materials, is owned by Sidekix or its licensors. You may not copy, modify, distribute, or exploit this content without written permission.</p>
+    <p>All content provided by Sidekix, including text, graphics, logos, designs, and curated prompts or challenges, is owned by Sidekix or its licensors. You may not copy, modify, distribute, or exploit this content without written permission.</p>
 
     <h2>5. User-Generated Content</h2>
     <p>You retain ownership of content you submit. By posting or submitting content, you grant Sidekix a non-exclusive, royalty-free, worldwide license to use, display, reproduce, and distribute that content solely for operating, improving, and promoting the Services.</p>
 
     <h2>6. Disclaimers</h2>
-    <p>Sidekix promotes social engagement and in-person experiences. It does not provide medical, mental health, legal, or professional advice. Participation in activities is voluntary and at your own discretion. Use reasonable judgment and consult qualified professionals when appropriate.</p>
+    <p>Sidekix promotes trying things in real life and sharing moments with a community. It does not provide medical, mental health, legal, or professional advice. Participation in prompts or activities is voluntary and at your own discretion. Use reasonable judgment and consult qualified professionals when appropriate.</p>
 
     <h2>7. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, Sidekix is not liable for indirect, incidental, consequential, or special damages arising from your use of the Services, including participation in challenges or partner activities.</p>
+    <p>To the fullest extent permitted by law, Sidekix is not liable for indirect, incidental, consequential, or special damages arising from your use of the Services, including participation in sidequests, challenges, or related activities.</p>
 
     <h2>8. Termination</h2>
     <p>Sidekix may suspend or terminate access to the Services at any time if these Terms are violated or if continued access poses risk to the community or platform.</p>
